@@ -8,7 +8,9 @@ function NewsCard() {
       border={"1px solid red"}
       mr="20px"
       mb="20px"
-    ></Flex>
+    >
+      Simplified Launch
+    </Flex>
   );
 }
 
