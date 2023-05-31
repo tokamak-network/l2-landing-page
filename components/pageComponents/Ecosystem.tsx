@@ -1,7 +1,7 @@
 "use client";
 
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
-import EcosystemCard from "./EcosystemCard";
+import EcosystemCard from "../ecosystem/EcosystemCard";
 function Eccosystem() {
   return (
     <Flex

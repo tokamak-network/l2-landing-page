@@ -1,7 +1,7 @@
 "use client";
 
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
-import FundCard from "./FundCard";
+import FundCard from "../getFunded/FundCard";
 function GetFunded () {
 
     return (

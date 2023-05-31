@@ -5,7 +5,7 @@ import MobileGNB from "@/components/MobileGNB";
 import { Providers } from "./providers";
 import useMediaView from "./hooks/useMediaView";
 import Header from "@/components/Header";
-
+import MobileHeader from "@/components/MobileHeader";
 export default function RootLayout({
   children,
 }: {
@@ -13,14 +13,14 @@ export default function RootLayout({
 }) {
 
   // const {width} = useWindowDimensions()
-  const {mobileView}  = useMediaView()
+  const {mobileView, tableView,pcView}  = useMediaView()
   // const [dWidth, setDWidth] = useState(0);
 
   // useEffect(() => {
   //   const deviceWidth = window.outerWidth;
   //   setDWidth(deviceWidth);
   // }, []);
-
+console.log('mobileView, tableView,pcView',mobileView, tableView,pcView);
 
   return (
     <html lang="en">
@@ -28,7 +28,8 @@ export default function RootLayout({
       <Providers>
     
          {mobileView? <MobileGNB/>:<GNB />} 
-         <Header/>
+         {mobileView? <MobileHeader/>:<Header/>} 
+         
           {children}
           <Footer />
         </Providers>

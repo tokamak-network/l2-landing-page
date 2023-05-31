@@ -6,7 +6,7 @@ function DeveloperResources () {
 
     return (
         <Flex>
-            <Text>DeveloperResources</Text>
+            <Text>GET STARTED WITH DARIUS</Text>
         </Flex>
     )
 }

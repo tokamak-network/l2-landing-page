@@ -1,7 +1,7 @@
 "use client";
 
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
-import MissionCard from "./MissionCard";
+import MissionCard from "../mission/MissionCard";
 
 function Mission () {
 

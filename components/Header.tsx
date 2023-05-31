@@ -17,114 +17,273 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import useMediaView from "@/app/hooks/useMediaView";
-import tokamak_symbol from "../app/assets/tokamak_symbol.png";
 import icon_arrow from "../app/assets/icon_nav arrow down_.png";
+import L2BL from "../app/assets/L2-BI.svg";
+import arrow from "../app/assets/caret-up.png";
+import github from "../app/assets/navi_icon_github.svg";
+import github_hover from "../app/assets/navi_icon_github_hover.svg";
+import explorer from "../app/assets/navi_icon_block-explorer.svg";
+import explorer_hover from "../app/assets/navi_icon_block-explorer_hover.svg";
+import guide from "../app/assets/navi_icon_guide.svg";
+import guide_hover from "../app/assets/navi_icon_guide_hover.svg";
+import grant from "../app/assets/navi_icon_granton.svg";
+import grant_hover from "../app/assets/navi_icon_granton_hover.svg";
+import bug from "../app/assets/navi_icon_bug-bounty.svg";
+import bug_hover from "../app/assets/navi_icon_bug-bounty_hover.svg";
+import discord from "../app/assets/navi_icon_discord.svg";
+import discord_hover from "../app/assets/navi_icon_discord_hover.svg";
+import kakao from "../app/assets/navi_icon_kakao.svg";
+import kakao_hover from "../app/assets/navi_icon_kakao_hover.svg";
+import telegram from "../app/assets/navi_icon_telegram.svg";
+import telegram_hover from "../app/assets/navi_icon_telegram_hover.svg";
+import twitter from "../app/assets/navi_icon_Twitter.svg";
+import twitter_hover from "../app/assets/navi_icon_Twitter_hover.svg";
+import medium from "../app/assets/navi_icon_medium.svg";
+import medium_hover from "../app/assets/navi_icon_medium_hover.svg";
+import team from "../app/assets/navi_icon_team.svg";
+import team_hover from "../app/assets/navi_icon_team_hover.svg";
+import career from "../app/assets/navi_icon_career.svg";
+import career_hover from "../app/assets/navi_icon_career_hover.svg";
+import { useState } from "react";
+
 function Header() {
+  const theme = useTheme();
+  const [menuStates, setMenuStates] = useState([false, false, false]);
+  const { tableView,pcView}  = useMediaView()
+
+  const handleMenuToggle = (index: number) => {
+    const updatedMenuStates = [...menuStates];
+    updatedMenuStates[index] = !updatedMenuStates[index];
+    setMenuStates(updatedMenuStates);
+  };
+
+  const CustomMenuItem = (props: any) => {
+    const { link, title, icon, iconHover } = props;
+    const [hover, setHover] = useState(false);
+    return (
+      <Link href={link} isExternal style={{ textDecoration: "none" }}>
+        <MenuItem
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          color={"#7a7e87"}
+          _focus={{ background: "transparent" }}
+          _hover={{ bg: "none", color: "#2a72e5" }}
+        >
+          <Flex mr="9px">
+            <Image src={hover ? iconHover : icon} alt="icon" />
+          </Flex>
+          {title}
+        </MenuItem>
+      </Link>
+    );
+  };
   return (
-    <Flex justifyContent={"space-between"}>
-      <Image
-        src={tokamak_symbol}
-        alt="tokamak_symbol"
-        height={40}
-        width={40}
-      ></Image>
+    <Flex justifyContent={"space-between"} h="78px" alignItems={"center"}>
+      <Flex height={"40px"} ml={tableView? '30px':"40px"} width={"126px"}>
+        <Image src={L2BL} alt="tokamak_symbol" height={40} width={126}></Image>
+      </Flex>
+
       <Flex>
-        <Menu>
-          <MenuButton
-            display={"flex"}
-            flexDir={"row"}
-            w="80px"
-            border={"1px solid red"}
-            mr="20px"
-          >
-            <Flex justifyContent={"space-between"} alignItems={"center"}>
-              {" "}
-              <Text>Tools</Text>
-              <Flex height={"9px"} width={"11px"}>
-                <Image src={icon_arrow} alt="icon_arrow" />
-              </Flex>
-            </Flex>
-          </MenuButton>
-          <MenuList>
-            <MenuGroup title="Profile">
-              <MenuItem>My Account</MenuItem>
-              <MenuItem>Payments </MenuItem>
-            </MenuGroup>
-            <MenuDivider />
-            <MenuGroup title="Help">
-              <MenuItem>Docs</MenuItem>
-              <MenuItem>FAQ</MenuItem>
-            </MenuGroup>
-          </MenuList>
-        </Menu>
-        <Text mr="20px" w="100px" border={"1px solid red"}>
+        <Text
+          fontSize="16px"
+          mr="60px"
+          color={"#1c1c1c"}
+          fontFamily={theme.fonts.openSans}
+          fontWeight={600}
+        >
           Ecosystem
         </Text>
-        <Menu>
-          <MenuButton mr="20px" w="100px" border={"1px solid red"}>
+        <Menu onClose={() => handleMenuToggle(0)}>
+          <MenuButton mr="33px" onClick={() => handleMenuToggle(0)}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
-              <Text>Developers</Text>
-              <Flex height={"9px"} width={"11px"}>
-                <Image src={icon_arrow} alt="icon_arrow" />
+              <Text
+                color={"#1c1c1c"}
+                fontFamily={theme.fonts.openSans}
+                fontWeight={600}
+              >
+                Developers
+              </Text>
+              <Flex
+                height={"24px"}
+                width={"24px"}
+                transform={menuStates[0] === true ? "" : "rotate(180deg)"}
+              >
+                <Image src={arrow} alt="icon_arrow" />
               </Flex>
             </Flex>
           </MenuButton>
-          <MenuList>
-            <MenuGroup title="Mainnet">
-              <MenuItem>Github</MenuItem>
-              <MenuItem>Guide </MenuItem>
-              <MenuItem>Block Explorer </MenuItem>
+          <MenuList
+            fontSize={"13px"}
+            ml="-15px"
+            border={"none"}
+            minWidth="187px"
+            boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}
+          >
+            <MenuGroup
+              title="MAINNET"
+              fontSize={"13px"}
+              fontFamily={theme.fonts.openSans}
+              fontWeight={600}
+            >
+              <CustomMenuItem
+                title={"Github"}
+                icon={github}
+                iconHover={github_hover}
+                link={""}
+              />
+
+              <CustomMenuItem
+                title={"Guide"}
+                icon={guide}
+                iconHover={guide_hover}
+                link={""}
+              />
+              <CustomMenuItem
+                title={"Block Explorer"}
+                icon={explorer}
+                iconHover={explorer_hover}
+                link={""}
+              />
             </MenuGroup>
-            <MenuDivider />
-            <MenuGroup title="Testnet">
-              <MenuItem>Guide </MenuItem>
-              <MenuItem>Block Explorer </MenuItem>
+            <MenuDivider borderColor={"#f4f7f8"} mx="10px" />
+            <MenuGroup fontSize={"13px"} title="TESTNET">
+              <CustomMenuItem
+                title={"Guide"}
+                icon={guide}
+                iconHover={guide_hover}
+                link={""}
+              />
+              <CustomMenuItem
+                title={"Block Explorer"}
+                icon={explorer}
+                iconHover={explorer_hover}
+                link={""}
+              />
             </MenuGroup>
           </MenuList>
         </Menu>
-        <Menu>
-          <MenuButton mr="20px" w="80px" border={"1px solid red"}>
+        <Menu onClose={() => handleMenuToggle(1)}>
+          <MenuButton mr="33px" w="80px" onClick={() => handleMenuToggle(1)}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
-              <Text>Grant</Text>
-              <Flex height={"9px"} width={"11px"}>
-                <Image src={icon_arrow} alt="icon_arrow" />
+              <Text
+                color={"#1c1c1c"}
+                fontFamily={theme.fonts.openSans}
+                fontWeight={600}
+              >
+                Grant
+              </Text>
+              <Flex
+                height={"24px"}
+                width={"24px"}
+                transform={menuStates[1] === true ? "" : "rotate(180deg)"}
+              >
+                <Image src={arrow} alt="icon_arrow" />
               </Flex>
             </Flex>
           </MenuButton>
-          <MenuList>
-            <MenuItem>GranTON Application </MenuItem>
-            <MenuItem>Bug Bounty</MenuItem>
+          <MenuList  fontSize={"13px"}
+            ml="-15px"
+            border={"none"}
+            minWidth="187px"
+            boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}>
+          <CustomMenuItem
+                title={"GranTON Application"}
+                icon={grant}
+                iconHover={grant_hover}
+                link={""}
+              />
+              <CustomMenuItem
+                title={"Bug Bounty"}
+                icon={bug}
+                iconHover={bug_hover}
+                link={""}
+              />
           </MenuList>
         </Menu>
-        <Menu>
-          <MenuButton mr="20px" w="80px" border={"1px solid red"}>
+        <Menu onClose={() => handleMenuToggle(2)}>
+          <MenuButton mr="30px" w="80px" onClick={() => handleMenuToggle(2)}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
-              <Text>More</Text>
-              <Flex height={"9px"} width={"11px"}>
-                <Image src={icon_arrow} alt="icon_arrow" />
+              <Text
+                color={"#1c1c1c"}
+                fontFamily={theme.fonts.openSans}
+                fontWeight={600}
+              >
+                More
+              </Text>
+              <Flex
+                height={"24px"}
+                width={"24px"}
+                transform={menuStates[2] === true ? "" : "rotate(180deg)"}
+              >
+                <Image src={arrow} alt="icon_arrow" />
               </Flex>
             </Flex>
           </MenuButton>
-          <MenuList>
-            <MenuGroup title="About">
-              <MenuItem>Team</MenuItem>
-              <MenuItem>Career </MenuItem>
+          <MenuList  fontSize={"13px"}
+            ml="-15px"
+            border={"none"}
+            minWidth="187px"
+            boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}>
+            <MenuGroup  title="ABOUT"
+              fontSize={"13px"}
+              fontFamily={theme.fonts.openSans}
+              fontWeight={600}>
+               <CustomMenuItem
+                title={"Team"}
+                icon={team}
+                iconHover={team_hover}
+                link={""}
+              />
+               <CustomMenuItem
+                title={"Career"}
+                icon={career}
+                iconHover={career_hover}
+                link={""}
+              />
             </MenuGroup>
-            <MenuDivider />
-            <MenuGroup title="Community">
-              <MenuItem>Discord </MenuItem>
-              <MenuItem>Kakao (KR)</MenuItem>
-              <MenuItem>Telegram (EN)</MenuItem>
-              <MenuItem>Twitter</MenuItem>
-              <MenuItem>Medium</MenuItem>
+            <MenuDivider borderColor={"#f4f7f8"} mx="10px" />
+            <MenuGroup title="COMMUNITY"  fontSize={"13px"}
+              fontFamily={theme.fonts.openSans}
+              fontWeight={600}>
+                <CustomMenuItem
+                title={"Discord"}
+                icon={discord}
+                iconHover={discord_hover}
+                link={""}
+              />
+                <CustomMenuItem
+                title={"Kakao (KR)"}
+                icon={kakao}
+                iconHover={kakao_hover}
+                link={""}
+              />
+                <CustomMenuItem
+                title={"Telegram (EN)"}
+                icon={telegram}
+                iconHover={telegram_hover}
+                link={""}
+              />
+                <CustomMenuItem
+                title={"Twitter"}
+                icon={twitter}
+                iconHover={twitter_hover}
+                link={""}
+              />
+                <CustomMenuItem
+                title={"Medium"}
+                icon={medium}
+                iconHover={medium_hover}
+                link={""}
+              />
             </MenuGroup>
           </MenuList>
         </Menu>
       </Flex>
-      <Flex></Flex>
+      {!tableView &&  <Flex></Flex>}
+     
     </Flex>
   );
 }
