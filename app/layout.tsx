@@ -13,14 +13,14 @@ export default function RootLayout({
 }) {
 
   // const {width} = useWindowDimensions()
-  const {mobileView, tableView,pcView}  = useMediaView()
+  const {mobileView, tabletView,pcView}  = useMediaView()
   // const [dWidth, setDWidth] = useState(0);
 
   // useEffect(() => {
   //   const deviceWidth = window.outerWidth;
   //   setDWidth(deviceWidth);
   // }, []);
-console.log('mobileView, tableView,pcView',mobileView, tableView,pcView);
+console.log('mobileView, tableView,pcView',mobileView, tabletView,pcView);
 
   return (
     <html lang="en">

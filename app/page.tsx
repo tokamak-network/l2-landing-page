@@ -17,6 +17,8 @@ export default function Home() {
       <News />
       <GetFunded />
       <DeveloperResources/> */}
+      <Intro />
+      <News />
     </Flex>
   );
 }

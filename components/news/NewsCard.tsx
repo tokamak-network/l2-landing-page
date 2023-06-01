@@ -1,5 +1,9 @@
-import { Flex, Text, Link } from "@chakra-ui/react";
+import { Flex, Text, Link,useTheme } from "@chakra-ui/react";
 import Image from "next/image";
+import dayjs from 'dayjs'
+import 'dayjs/locale/en'; 
+import customFormat from 'dayjs/plugin/customParseFormat';
+dayjs.extend(customFormat);
 
 type NewsProps = {
   thumb: string;
@@ -11,15 +15,16 @@ type NewsProps = {
 
 function NewsCard(props: NewsProps) {
   const { thumb, link, title, content, pubDate } = props;
+  const theme = useTheme();
   const myLoader = ({ src }: any) => {
     return `${src}`;
   };
 
   return (
     <Flex
-      w="356px"
+      w="380px"
       h="309px"
-      border={"1px solid red"}
+      fontFamily={theme.fonts.openSans}
       mr="100px"
       mb="20px"
       flexDir={"column"}
@@ -27,15 +32,23 @@ function NewsCard(props: NewsProps) {
       href={link}
       target="blank"
     >
+      <Flex borderRadius={'16px'}
+        width={380}
+        height={213}
+        >
       <Image
         loader={myLoader}
         src={thumb}
         alt="thumb"
-        width={356}
-        height={140}
+        style={{objectFit: "contain", borderRadius:'16px'}}
+        width={380}
+        height={213}
      
       />
-      <Text>{title}</Text>
+      </Flex>
+     <Text color={'#7a7e87'} fontSize={'12px'} mt='21px'>{ dayjs(pubDate, 'YYYY-MM-DD HH:mm:ss').locale('en').format('MMMM DD, YYYY')}</Text>
+      <Text mt='9px' color={'#464d59'} fontSize={'16px'} fontWeight={800}>{title}</Text>
+   <Text>{content}</Text>
     </Flex>
   );
 }

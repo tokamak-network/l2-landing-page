@@ -9,15 +9,11 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
   MenuGroup,
-  MenuOptionGroup,
   MenuDivider,
-  Box,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import useMediaView from "@/app/hooks/useMediaView";
-import icon_arrow from "../app/assets/icon_nav arrow down_.png";
 import L2BL from "../app/assets/L2-BI.svg";
 import arrow from "../app/assets/caret-up.png";
 import github from "../app/assets/navi_icon_github.svg";
@@ -49,7 +45,7 @@ import { useState } from "react";
 function Header() {
   const theme = useTheme();
   const [menuStates, setMenuStates] = useState([false, false, false]);
-  const { tableView,pcView}  = useMediaView()
+  const { tabletView,pcView}  = useMediaView()
 
   const handleMenuToggle = (index: number) => {
     const updatedMenuStates = [...menuStates];
@@ -78,8 +74,8 @@ function Header() {
     );
   };
   return (
-    <Flex justifyContent={"space-between"} h="78px" alignItems={"center"}>
-      <Flex height={"40px"} ml={tableView? '30px':"40px"} width={"126px"}>
+    <Flex justifyContent={"space-between"} bg='#fafbfc' h="78px" alignItems={"center"}>
+      <Flex height={"40px"} ml={tabletView? '30px':"40px"} width={"126px"}>
         <Image src={L2BL} alt="tokamak_symbol" height={40} width={126}></Image>
       </Flex>
 
@@ -282,7 +278,7 @@ function Header() {
           </MenuList>
         </Menu>
       </Flex>
-      {!tableView &&  <Flex></Flex>}
+      {pcView &&  <Flex></Flex>}
      
     </Flex>
   );

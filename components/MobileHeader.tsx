@@ -2,18 +2,7 @@
 
 import {
   Flex,
-  Link,
-  Text,
   useTheme,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-  Box,
   Drawer,
   DrawerBody,
   DrawerFooter,
@@ -35,7 +24,7 @@ function MobileHeader() {
 
 
     return (
-        <Flex h='78px' alignItems={"center"} justifyContent={"space-between"}>
+        <Flex bg='#fafbfc' h='78px' alignItems={"center"} justifyContent={"space-between"}>
   <Flex height={"40px"} ml={"20px"} width={"126px"}>
         <Image src={L2BL} alt="tokamak_symbol" height={40} width={126}></Image>
       </Flex>

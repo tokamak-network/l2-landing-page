@@ -25,68 +25,19 @@ function News() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalCards = postList.length;
 
-  const NextButton = (props: any) => (
-    <Button
-    {...props}
-      className="slick-arrow"
-      position="absolute"
-      top="-10%"
-      right="-30px"
-      zIndex="1"
-      transform="translateY(-50%)"
+const parsing = (content:string) => {
+  const start = content.indexOf("<p>");
+      const end = content.indexOf("</p>");
+      const parsed = content.slice(start + 3, end);
 
-    >
-      Next
-    </Button>
-  );
-  
-  const PrevButton = (props: any) => {
+      if (parsed.length > 300) {
+        return parsed.slice(0, 300).replace(/(<([^>]+)>)/gi, "");
+      }
 
-    return (
-      <Button
-    {...props}
-      className="slick-arrow"
-      position="absolute"
-      top="50%"
-      left="-30px"
-      zIndex="1"
-      transform="translateY(-50%)"
-      
-    >
-      Previous
-    </Button>
-    )
-    
-    
-  };
+      return parsed.replace(/(<([^>]+)>)/gi, "");
+}
 
-
-  const settings = {
-    accessibility: true,   
-    speed: 500,
-    variableWidth: true,
-    swipeToSlide: false,
-    centerMode: false,
-    centerPadding: "160px",
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    beforeChange: (next: any) => setCurrentIndex(next),
-    afterChange: (current: any) => setCurrentIndex(current),
-    nextArrow: (<NextButton/>),
-    prevArrow:( <PrevButton />),
-  };
-
-  const slickerStyles = `
-
-  .slick-slider{
-    width: 1300px;
-    display: flex !important;
-    align-items: center;
-
-  }
-  
-  `
+console.log('postList',postList);
 
   return (
     <Flex
@@ -94,7 +45,7 @@ function News() {
       justifyContent={"center"}
       alignItems={"center"}
       flexDir={"column"}
-      mx="150px"
+    
     >
       <Text fontSize={"40px"} fontWeight={"bold"}>
         News
@@ -118,23 +69,22 @@ function News() {
         />
       </Flex> */}
 
-     <Flex  alignItems="center" mx={'15px'}>
-     <style>{slickerStyles}</style>
-     <Slider {...settings}>
-      {postList.map((post: any, index: number) => (
+     <Flex flexDir={'row'} flexWrap={'wrap'}>
+    
+      {postList.slice(0,3).map((post: any, index: number) => (
        
               <NewsCard
               key={index}
                 thumb={post.thumbnail}
                 link={post.link}
                 title={post.title}
-                content={post.content}
+                content={ parsing(post.content)}
                 pubDate={post.pubDate}
               />
            
           ))}
         
-      </Slider>
+    
      </Flex>
      
      
