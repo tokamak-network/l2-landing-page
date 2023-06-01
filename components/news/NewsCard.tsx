@@ -25,7 +25,7 @@ function NewsCard(props: NewsProps) {
       w="380px"
       h="309px"
       fontFamily={theme.fonts.openSans}
-      mr="100px"
+      mr="30px"
       mb="20px"
       flexDir={"column"}
       as={"a"}
@@ -43,12 +43,14 @@ function NewsCard(props: NewsProps) {
         style={{objectFit: "contain", borderRadius:'16px'}}
         width={380}
         height={213}
+        unoptimized={true}
+        priority
      
       />
       </Flex>
      <Text color={'#7a7e87'} fontSize={'12px'} mt='21px'>{ dayjs(pubDate, 'YYYY-MM-DD HH:mm:ss').locale('en').format('MMMM DD, YYYY')}</Text>
       <Text mt='9px' color={'#464d59'} fontSize={'16px'} fontWeight={800}>{title}</Text>
-   <Text>{content}</Text>
+   <Text fontSize={'13px'} mt='15px' color={'#7a7e87'}>{`${content} ...`}</Text>
     </Flex>
   );
 }
