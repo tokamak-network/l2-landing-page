@@ -5,70 +5,354 @@ import {
   useTheme,
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   useDisclosure,
-  Button
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  Link,
+  Text
 } from "@chakra-ui/react";
 import Image from "next/image";
 import L2BL from "../app/assets/L2-BI.svg";
-import icon_burger from '../app/assets/icon_buger.svg'
+import icon_burger from "../app/assets/icon_buger.svg";
 import { useRef } from "react";
+import icon_close from "../app/assets/icon_close.svg";
+import arrow from "../app/assets/mobile-caret-up.svg";
+import { useState } from "react";
+import github from "../app/assets/navi_icon_github_mobile.svg";
+import explorer from "../app/assets/navi_icon_block-explorer_mobile.svg";
+import guide from "../app/assets/navi_icon_guide_mobile.svg";
+import grant from "../app/assets/navi_icon_granton_mobile.svg";
+import bug from "../app/assets/navi_icon_bug-bounty_mobile.svg";
+import discord from "../app/assets/navi_icon_discord_mobile.svg";
+import kakao from "../app/assets/navi_icon_kakao_mobile.svg";
+import telegram from "../app/assets/navi_icon_telegram_mobile.svg";
+import twitter from "../app/assets/navi_icon_Twitter_mobile.svg";
+import medium from "../app/assets/navi_icon_medium_mobile.svg";
+import team from "../app/assets/navi_icon_team_mobile.svg";
+import career from "../app/assets/navi_icon_career_mobile.svg";
+
 function MobileHeader() {
-    const theme = useTheme();
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = useRef()
+  const theme = useTheme();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
+  const [menuStates, setMenuStates] = useState([false, false, false]);
 
+  const handleMenuToggle = (index: number) => {
+    const updatedMenuStates = [...menuStates];
+    updatedMenuStates[index] = !updatedMenuStates[index];
+    setMenuStates(updatedMenuStates);
+  };
 
+  const CustomLink = (props: any) => {
+const {link, image, title} = props
     return (
-        <Flex bg='#fafbfc' h='78px' alignItems={"center"} justifyContent={"space-between"}>
-  <Flex height={"40px"} ml={"20px"} width={"126px"}>
+      <Link
+      // border={'1px solid red'}
+     display={'flex'}
+      href={link}
+      isExternal
+      height='50px' 
+      alignItems={'center'}
+      style={{ textDecoration: "none"}}
+    >
+      <Flex ml='30px'>
+        <Flex mr="12px">
+          <Image src={image} alt="icon" />
+        </Flex>
+        <Text fontFamily={theme.fonts.openSans} fontSize={'16px'} color={'#1c1c1c'}>
+        {title}
+        </Text>
+       
+      </Flex>
+    </Link>
+    )
+  }
+
+  return (
+    <Flex
+      bg="#fafbfc"
+      h="78px"
+      alignItems={"center"}
+      justifyContent={"space-between"}
+    >
+      <Flex height={"40px"} ml={"20px"} width={"126px"}>
         <Image src={L2BL} alt="tokamak_symbol" height={40} width={126}></Image>
       </Flex>
       <Flex>
-      {/* <Button   px={0}
-        mx={0}
-        w={'30px'}
-        h={'30px'}
-        onClick={onOpen}
-        bg={'transparent'}
-        _focus={{
-          bg: 'transparent',
-        }}
-        _active={{
-          bg: 'transparent',
-        }}>
-        Open
-      </Button> */}
-      <Flex  onClick={onOpen} h='48px' w='48px' borderRadius={'8px'} mr='20px' border='1px solid #e8edf2' justifyContent={'center'} alignItems={'center'}>
-        <Image src={icon_burger} alt="icon_burger"/>
-      </Flex>
-      <Drawer
-        isOpen={isOpen}
-        placement='right'
-        onClose={onClose}
-        size={'xs'}
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader></DrawerHeader>
-
-          <DrawerBody>
-          
-          </DrawerBody>
-
-          <DrawerFooter>
-         
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
-      </Flex>
+        <Flex
+          onClick={onOpen}
+          h="48px"
+          w="48px"
+          borderRadius={"8px"}
+          mr="20px"
+          border="1px solid #e8edf2"
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Image src={icon_burger} alt="icon_burger" />
         </Flex>
-    )
+        <Drawer isOpen={isOpen} placement="right" onClose={onClose} size={"xl"}>
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader
+              h={"78px"}
+              alignItems={"center"}
+              pr={"10px"}
+              pl={"20px"}
+              py="19px"
+              display={"flex"}
+              flexDir={"row"}
+              justifyContent={"space-between"}
+            >
+              <Flex height={"40px"} width={"133px"}>
+                <Image
+                  src={L2BL}
+                  alt="tokamak_symbol"
+                  height={40}
+                  width={126}
+                ></Image>
+              </Flex>
+              {/* <DrawerCloseButton /> */}
+              <Flex
+                border={"1px solid #e8edf2"}
+                height={"48px"}
+                width={"48px"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                borderRadius={"8px"}
+                mr="20px"
+                onClick={onClose}
+              >
+                <Image
+                  src={icon_close}
+                  alt="icon_close"
+                  height={32}
+                  width={32}
+                ></Image>
+              </Flex>
+            </DrawerHeader>
+
+            <DrawerBody fontFamily={theme.fonts.openSans} px="30px">
+              <Flex
+                h="65px"
+                fontSize={"20px"}
+                fontWeight={600}
+                color={"#1c1c1c"}
+                alignItems={"center"}
+              >
+                Ecosystem
+              </Flex>
+              <Accordion allowToggle>
+                <AccordionItem border={"none"}>
+                  {({ isExpanded }) => (
+                    <>
+                      <h2>
+                        <AccordionButton
+                          // border={'1px solid red'}
+                          p="0px"
+                          bg="transparent"
+                          _hover={{ bg: "transparent" }}
+                          _focus={{ bg: "transparent" }}
+                          _active={{ bg: "transparent" }}
+                        >
+                          <Flex
+                            h="65px"
+                            fontSize={"20px"}
+                            fontWeight={600}
+                            color={"#1c1c1c"}
+                            alignItems={"center"}
+                            onClick={() => handleMenuToggle(0)}
+                            w="100%"
+                            justifyContent={"space-between"}
+                          >
+                            Developers
+                          </Flex>
+                          {isExpanded ? (
+                            <Flex
+                              height={"24px"}
+                              width={"24px"}
+                              transition={"transform 0.2s"}
+                            >
+                              <Image src={arrow} alt="icon_arrow" />
+                            </Flex>
+                          ) : (
+                            <Flex
+                              height={"24px"}
+                              width={"24px"}
+                              transform={"rotate(180deg)"}
+                              transition={"transform 0.2s"}
+                            >
+                              <Image src={arrow} alt="icon_arrow" />
+                            </Flex>
+                          )}
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4} flexDir={"column"} p="0px">
+                        <Flex
+                          h={"50px"}
+                          fontFamily={theme.fonts.openSans}
+                          fontSize={"16px"}
+                          fontWeight={600}
+                          alignItems={"center"}
+                        >
+                          MAINNET
+                        </Flex>
+                        <CustomLink image={github} link={''} title={'Github'}/>
+                        <CustomLink image={guide} link={''} title={'Guide'}/>
+                        <CustomLink image={explorer} link={''} title={'Block Explorer'}/>
+                        <Flex
+                          h={"50px"}
+                          fontFamily={theme.fonts.openSans}
+                          fontSize={"16px"}
+                          fontWeight={600}
+                          alignItems={"center"}
+                        >
+                          TESTNET
+                        </Flex>
+                        <CustomLink image={guide} link={''} title={'Guide'}/>
+                        <CustomLink image={explorer} link={''} title={'Block Explorer'}/>
+                        
+                      </AccordionPanel>
+                    </>
+                  )}
+                </AccordionItem>
+                <AccordionItem border={"none"}>
+                  {({ isExpanded }) => (
+                    <>
+                      <h2>
+                        <AccordionButton
+                          p="0px"
+                          bg="transparent"
+                          _hover={{ bg: "transparent" }}
+                          _focus={{ bg: "transparent" }}
+                          _active={{ bg: "transparent" }}
+                        >
+                          <Flex
+                            h="65px"
+                            fontSize={"20px"}
+                            fontWeight={600}
+                            color={"#1c1c1c"}
+                            alignItems={"center"}
+                            onClick={() => handleMenuToggle(0)}
+                            w="100%"
+                            justifyContent={"space-between"}
+                          >
+                            Grant
+                          </Flex>
+                          {isExpanded ? (
+                            <Flex
+                              height={"24px"}
+                              width={"24px"}
+                              transition={"transform 0.2s"}
+                            >
+                              <Image src={arrow} alt="icon_arrow" />
+                            </Flex>
+                          ) : (
+                            <Flex
+                              height={"24px"}
+                              width={"24px"}
+                              transform={"rotate(180deg)"}
+                              transition={"transform 0.2s"}
+                            >
+                              <Image src={arrow} alt="icon_arrow" />
+                            </Flex>
+                          )}
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4} flexDir={"column"} p="0px">
+                      
+                        <CustomLink image={grant} link={''} title={'GranTON Application'}/>
+                        <CustomLink image={bug} link={''} title={'Bug Bounty'}/>
+                      
+                      </AccordionPanel>
+                    </>
+                  )}
+                </AccordionItem>
+                <AccordionItem border={"none"}>
+                  {({ isExpanded }) => (
+                    <>
+                      <h2>
+                        <AccordionButton
+                          p="0px"
+                          bg="transparent"
+                          _hover={{ bg: "transparent" }}
+                          _focus={{ bg: "transparent" }}
+                          _active={{ bg: "transparent" }}
+                        >
+                          <Flex
+                            h="65px"
+                            fontSize={"20px"}
+                            fontWeight={600}
+                            color={"#1c1c1c"}
+                            alignItems={"center"}
+                            onClick={() => handleMenuToggle(0)}
+                            w="100%"
+                            justifyContent={"space-between"}
+                          >
+                            More
+                          </Flex>
+                          {isExpanded ? (
+                            <Flex
+                              height={"24px"}
+                              width={"24px"}
+                              transition={"transform 0.2s"}
+                            >
+                              <Image src={arrow} alt="icon_arrow" />
+                            </Flex>
+                          ) : (
+                            <Flex
+                              height={"24px"}
+                              width={"24px"}
+                              transform={"rotate(180deg)"}
+                              transition={"transform 0.2s"}
+                            >
+                              <Image src={arrow} alt="icon_arrow" />
+                            </Flex>
+                          )}
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4} flexDir={"column"} p="0px">
+                        <Flex
+                          h={"50px"}
+                          fontFamily={theme.fonts.openSans}
+                          fontSize={"16px"}
+                          fontWeight={600}
+                          alignItems={"center"}
+                        >
+                          ABOUT
+                        </Flex>
+                        <CustomLink image={team} link={''} title={'Team'}/>
+                        <CustomLink image={career} link={''} title={'Career'}/>
+                        <Flex
+                          h={"50px"}
+                          fontFamily={theme.fonts.openSans}
+                          fontSize={"16px"}
+                          fontWeight={600}
+                          alignItems={"center"}
+                        >
+                          COMMUNITY
+                        </Flex>
+                        <CustomLink image={discord} link={''} title={'Discord'}/>
+                        <CustomLink image={kakao} link={''} title={'Kakao (KR)'}/>
+                        <CustomLink image={telegram} link={''} title={'Telegram (EN)'}/>
+                        <CustomLink image={twitter} link={''} title={'Twitter'}/>
+                        <CustomLink image={medium} link={''} title={'Medium'}/>                        
+                      </AccordionPanel>
+                    </>
+                  )}
+                </AccordionItem>
+              </Accordion>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Flex>
+    </Flex>
+  );
 }
 
-export default MobileHeader
+export default MobileHeader;

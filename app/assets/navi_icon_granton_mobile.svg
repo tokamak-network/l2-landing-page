@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #1c1c1c;
+      }
+    </style>
+  </defs>
+  <g id="navi_icon_granton" transform="translate(-10 -10.5)">
+    <rect id="Base" class="cls-1" width="20" height="20" transform="translate(10 10.5)"/>
+    <path id="패스_264" data-name="패스 264" class="cls-2" d="M41.833,20.5l-7.859-4.3h0a1.418,1.418,0,0,0-1.372,0l-7.859,4.3A1.429,1.429,0,0,0,24,21.749V30.29a1.429,1.429,0,0,0,.743,1.25l7.859,4.3a1.418,1.418,0,0,0,1.372,0l7.859-4.3a1.429,1.429,0,0,0,.743-1.25V21.749A1.429,1.429,0,0,0,41.833,20.5Zm-8.545-3.05h0l7.175,3.93-7.175,3.93-7.175-3.93Zm-7.859,5.18,7.145,3.91V34.2l-7.145-3.907ZM34,34.2V26.54l7.145-3.914v7.661Z" transform="translate(-13.286 -5.52)"/>
+  </g>
+</svg>
