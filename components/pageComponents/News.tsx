@@ -14,26 +14,23 @@ import NewsCard from "../news/NewsCard";
 import usePosts from "@/app/hooks/usePosts";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import Slider from "react-slick";
-import { motion,useMotionValue, useTransform  } from 'framer-motion';
-
+import useMediaView from "@/app/hooks/useMediaView";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function News() {
   const postList: any = usePosts();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndexTab, setCurrentIndexTab] = useState(0);
+
   const totalCards = postList.length;
   const theme = useTheme();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const slideWidth = 102.5;
-  const slideContainerRef = useMotionValue(0);
-  const slideContainerTransform = useTransform(
-    slideContainerRef,
-    [0, slideWidth * (postList.length - 1)],
-    ['0%', `-${slideWidth * (postList.length - 1)}%`]
-  );
-  
+  const { mobileView, tabletView, pcView } = useMediaView();
+  const [pageIndex, setPageIndex] = useState<number>(1);
+  const [pageLimit, setPageLimit] = useState<number>(2);
+
   const parsing = (content: string) => {
     const start = content.indexOf("<p>");
     const end = content.indexOf("</p>") + 4;
@@ -50,110 +47,143 @@ function News() {
       return parsed.slice(0, 300).replace(/(<([^>]+)>)/gi, "");
     }
   };
-  const handleDrag = ( offset:any) => {
-    const distance = offset.x / slideWidth;
-    const currentIndex = activeIndex - Math.round(distance);
 
-    slideContainerRef.set(-currentIndex * slideWidth);
-  };
-  const handleDragEnd = (offset:any, velocity:any ) => {
-    const distance = offset.x / slideWidth;
-
-    if (Math.abs(distance) > 0.5 || Math.abs(velocity.x) > 200) {
-      const currentIndex = activeIndex - Math.round(distance);
-
-      setActiveIndex((prevIndex) => {
-        if (currentIndex < 0) {
-          return postList.length - 1;
-        } else if (currentIndex >= postList.length) {
-          return 0;
-        } else {
-          return currentIndex;
-        }
-      });
-    }
-
-    slideContainerRef.set(-activeIndex * slideWidth);
+  const tabSettings = {
+    accessibility: true,
+    speed: 500,
+    variableWidth: false,
+    swipeToSlide: false,
+    centerMode: false,
+    centerPadding: "30px",
+    infinite: false,
+    dots: true,
+    className: "center",
+    slidesToShow: 2,
+    initialSlide: 0,
+    slidesToScroll: 2,
+    arrows: false,
+    rows: 2,
+    // infinite: true,
+    beforeChange: (next: any) => setCurrentIndexTab(next),
+    afterChange: (current: any) => setCurrentIndexTab(current),
   };
 
+  const settings = {
+    accessibility: true,
+    speed: 500,
+    variableWidth: false,
+    swipeToSlide: false,
 
+    centerMode: false,
+    className: "center",
+    centerPadding: "30px",
+    infinite: false,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    rows: 1,
 
+    beforeChange: (next: any) => setCurrentIndex(next),
+    afterChange: (current: any) => setCurrentIndex(current),
+  };
 
-  const styleOn = `
-  .carousel {
-    position: relative;
-    width: 1200px;
-    overflow: hidden;
+  const getPaginatedData = () => {
+    const startIndex = 0;
+    const endIndex = startIndex + pageLimit * pageIndex;
+    return postList.slice(startIndex, endIndex);
+  };
+
+  const slickerStyles = tabletView
+    ? `
+  .slick-slider{
+    width:  800px;
   }
-
-  .slides-container {
-    display: flex;
-    width: 1200px; /* Adjust as needed based on slide width */
-    transition: transform 0.5s;
-    height: 460px
+  .slick-list {
+    margin-left: 30px
   }
-
-  .slides {
-    display: flex;
-    width: 100%;
+  .slick-slide{
+    height: 890px;
+    margin-bottom: 60px
   }
-
-  .slide {
-    flex: 0 0 33.33%; /* Adjust as needed to show three slides */
-    /* Add your styles for the slide here */
+  .slick-dots{
+    margin-top:60px !important
   }
-
-  .dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  .slick-dots li {
+    // height: 9px;
+    width: 9px
   }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
+  .slick-dots li button {
+    width: 9px;
+    height: 9px;
+    padding: 0px
   }
-
-  .dot.active {
-    background-color: #333;
+  .slick-dots li button:before {
+    color: #dfe4ee;
+    opacity: 1;
+    width: 9px;
+    height: 9px;
+    padding: 0px
   }
-
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  .slick-dots li.slick-active button:before{
+    color: #2a72e5;
+    opacity: 1;
+    width: 9px;
+    height: 9px;
+    padding: 0px
   }
-
-  .prev {
-    left: 10px;
+  `
+    : `.slick-slider{
+    width:  1220px;
   }
-
-  .next {
-    right: 10px;
+  .slick-list {
+    margin-left: 20px
   }
-`
+  .slick-slide{
+    height: 420px;
+    margin-bottom: 60px
+  }
+  .slick-dots{
+    margin-top:60px !important
+  }
+  .slick-dots li {
+    // height: 9px;
+    width: 9px
+  }
+  .slick-dots li button {
+    width: 9px;
+    height: 9px;
+    padding: 0px
+  }
+  .slick-dots li button:before {
+    color: #dfe4ee;
+    opacity: 1;
+    width: 9px;
+    height: 9px;
+    padding: 0px
+  }
+  .slick-dots li.slick-active button:before{
+    color: #2a72e5;
+    opacity: 1;
+    width: 9px;
+    height: 9px;
+    padding: 0px
+  }
+  `;
+
   return (
     <Flex
-      h="945px"
       justifyContent={"center"}
       alignItems={"center"}
       flexDir={"column"}
+      height={"100%"}
+      pb='60px'
     >
       <Text
-        fontSize={"36px"}
+        fontSize={mobileView ? "32px" : "36px"}
         fontFamily={theme.fonts.openSans}
         fontWeight={"bold"}
-        w="104px"
+        // w="104px"
         letterSpacing={"wider"}
         mb="20px"
         color={"#1c1c1c"}
@@ -165,76 +195,74 @@ function News() {
         fontFamily={theme.fonts.openSans}
         fontWeight={"normal"}
         color={"#7a7e87"}
-        mb="60px"
+        mb={mobileView ? "50px" : "60px"}
       >
         Check our latest News to stay up to date{" "}
       </Text>
-
-      {/* <Flex mt="50px">
-        <IconButton
-          aria-label="Previous Slide"
-          icon={<ChevronLeftIcon />}
-          onClick={handleClickPrev}
-          transform="translateY(-50%)"
-          zIndex="1"
-        />
-        <IconButton
-          aria-label="Next Slide"
-          icon={<ChevronRightIcon />}
-          onClick={handleClickNext}
-          transform="translateY(-50%)"
-          zIndex="1"
-        />
-      </Flex> */}
-
-      {/* <Flex flexDir={"row"} flexWrap={"wrap"}>
-        {postList.slice(0, 3).map((post: any, index: number) => (
-          <NewsCard
-            key={index}
-            thumb={post.thumbnail}
-            link={post.link}
-            title={post.title}
-            content={parsing(post.content)}
-            pubDate={post.pubDate}
-          />
-        ))}
-      </Flex> */}
-        <style>{styleOn}</style>
-       <div className="carousel">
-      <div className="slides-container">
-        <motion.div
-          className="slides"
-          style={{ transform: `translateX(-${activeIndex * 102.5}%)` }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+      {mobileView ? (
+        <Flex
+          flexDir={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
         >
-          {postList.map((post:any, index:number) => (
-            <div key={index} className="slide">
-             <NewsCard
-          
-            thumb={post.thumbnail}
-            link={post.link}
-            title={post.title}
-            content={parsing(post.content)}
-            pubDate={post.pubDate}
-          />
-            </div>
+          {getPaginatedData().map((post: any, index: number) => (
+            <NewsCard
+              key={index}
+              thumb={post.thumbnail}
+              link={post.link}
+              title={post.title}
+              content={parsing(post.content)}
+              pubDate={post.pubDate}
+            />
           ))}
-        </motion.div>
-      </div>
-
-      <div className="dots">
-        {[...Array(parseInt((postList.length/3).toString()))].map((slide:any, index:number) => (
-          <button
-            key={index}
-            className={`dot ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => setActiveIndex(index)}
-          />
-        ))}
-      </div>
-    </div>
-
+          <Button
+            bg="transparent"
+            border={"1px solid #dfe4ee"}
+            _focus={{ bg: "transparent" }}
+            _active={{ bg: "transparent" }}
+            height={"29px"}
+            width={"96px"}
+            borderRadius={"24px"}
+            onClick={() => setPageIndex(pageIndex + 1)}
+          >
+            More
+          </Button>
+        </Flex>
+      ) : tabletView ? (
+        <Flex alignItems="center">
+          <style>{slickerStyles}</style>
+          {postList.length > 0 && (
+            <Slider {...tabSettings}>
+              {postList.slice(0, 8).map((post: any, index: number) => (
+                <NewsCard
+                  key={index}
+                  thumb={post.thumbnail}
+                  link={post.link}
+                  title={post.title}
+                  content={parsing(post.content)}
+                  pubDate={post.pubDate}
+                />
+              ))}
+            </Slider>
+          )}
+        </Flex>
+      ) : (
+        <Flex alignItems="center">
+          <style>{slickerStyles}</style>
+          <Slider {...settings}>
+            {postList.slice(0, 8).map((post: any, index: number) => (
+              <NewsCard
+                key={index}
+                thumb={post.thumbnail}
+                link={post.link}
+                title={post.title}
+                content={parsing(post.content)}
+                pubDate={post.pubDate}
+              />
+            ))}
+          </Slider>
+        </Flex>
+      )}
     </Flex>
   );
 }

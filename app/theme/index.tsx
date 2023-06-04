@@ -79,16 +79,16 @@ const fonts = {
       100: '#ff3b3b',
     },
   };
-  const breakpoints = {
-    sm: '43.75em', //700px
-    md: '64em', //1024px
-    lg: '80em', //1280px
-    xl: '120em', //1920px
-  }
+
 
   const theme = extendTheme ({
     colors,
     fonts,
+    breakpoints: {
+      sm: "799px",
+      md: "1199px",
+      lg: "1900px",
+    },
   })
 
   export default theme;

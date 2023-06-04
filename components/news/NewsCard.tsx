@@ -4,6 +4,7 @@ import dayjs from 'dayjs'
 import 'dayjs/locale/en'; 
 import customFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customFormat);
+import useMediaView from "@/app/hooks/useMediaView";
 
 type NewsProps = {
   thumb: string;
@@ -16,33 +17,35 @@ type NewsProps = {
 function NewsCard(props: NewsProps) {
   const { thumb, link, title, content, pubDate } = props;
   const theme = useTheme();
+  const { mobileView, tabletView, pcView } = useMediaView();
+
   const myLoader = ({ src }: any) => {
     return `${src}`;
   };
 
   return (
     <Flex
-      w="380px"
-      h="309px"
+      w={mobileView? '320px':tabletView? '355px':"380px"}
+      h={tabletView?'421px':"100%"}
       fontFamily={theme.fonts.openSans}
-      mr="30px"
-      mb="20px"
+      mr={mobileView? '0px':"0px"}
+      mb={mobileView? '36px':tabletView? '45px':"20px"}
       flexDir={"column"}
       as={"a"}
       href={link}
       target="blank"
     >
       <Flex borderRadius={'16px'}
-        width={380}
-        height={213}
+        width={mobileView? 320:tabletView?  355:380}
+        height={mobileView?179:tabletView? 199:213}
         >
       <Image
         loader={myLoader}
         src={thumb}
         alt="thumb"
         style={{objectFit: "contain", borderRadius:'16px'}}
-        width={380}
-        height={213}
+        width={mobileView? 320:tabletView? 355: 380}
+        height={mobileView?179:tabletView?199:213}
         unoptimized={true}
         priority
      

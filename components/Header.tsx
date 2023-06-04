@@ -11,6 +11,7 @@ import {
   MenuItem,
   MenuGroup,
   MenuDivider,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import Image from "next/image";
 import useMediaView from "@/app/hooks/useMediaView";
@@ -53,6 +54,7 @@ function Header() {
     setMenuStates(updatedMenuStates);
   };
 
+
   const CustomMenuItem = (props: any) => {
     const { link, title, icon, iconHover } = props;
     const [hover, setHover] = useState(false);
@@ -75,7 +77,7 @@ function Header() {
   };
   return (
     <Flex justifyContent={"space-between"} bg='#fafbfc' h="78px" alignItems={"center"}>
-      <Flex height={"40px"} ml={tabletView? '30px':"40px"} width={"126px"}>
+      <Flex height={"40px"} ml={['0px','0px','30px','30px','40px','40px']} width={"126px"}>
         <Image src={L2BL} alt="tokamak_symbol" height={40} width={126}></Image>
       </Flex>
 

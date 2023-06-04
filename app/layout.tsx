@@ -24,6 +24,9 @@ console.log('mobileView, tableView,pcView',mobileView, tabletView,pcView);
 
   return (
     <html lang="en">
+      <head>
+      <title>Titan - Tokamak</title>
+      </head>
       <body>
       <Providers>
     

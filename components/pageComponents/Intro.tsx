@@ -10,18 +10,18 @@ function Intro() {
 
   return (
     <Flex
-      h={pcView ? "672px" : tabletView ? "722px" : "690px"}
+      h={["672px", "672px", "722px", "722px", "690px", "690px"]}
       alignItems={"center"}
       flexDir={"column"}
       bg="#fafbfc"
     >
       <Text
-        fontSize={mobileView ? "40px" : "80px"}
-        mt={mobileView? '119px':tabletView? '126px':"155px"}
+        fontSize={["40px", "40px", "80px", "80px", "80px", "80px"]}
+        mt={["119px", "119px", "126px", "126px", "155px", "155px"]}
         fontWeight={"bold"}
         w={pcView ? "1068px" : tabletView ? "740px" : "320px"}
         color={"#1c1c1c"}
-        lineHeight={mobileView? 1.15:1}
+        lineHeight={mobileView ? 1.15 : 1}
         textAlign={"center"}
         letterSpacing={"wider"}
         fontStyle={"normal"}
@@ -36,7 +36,7 @@ function Intro() {
         fontSize={mobileView ? "16px" : "18px"}
         color={"#7a7e87"}
         textAlign={"center"}
-        mt='15px'
+        mt="15px"
       >
         Introducing Darius, the cutting-edge solution that combines speed,
         affordability, developer-friendliness, and the security of Ethereum. It
