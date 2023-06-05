@@ -71,19 +71,14 @@ function News() {
   const settings = {
     accessibility: true,
     speed: 500,
-    variableWidth: false,
+    variableWidth: true,
     swipeToSlide: false,
-
-    centerMode: false,
-    className: "center",
-    centerPadding: "30px",
     infinite: false,
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: false,
-    rows: 1,
-
+   
     beforeChange: (next: any) => setCurrentIndex(next),
     afterChange: (current: any) => setCurrentIndex(current),
   };
@@ -134,16 +129,20 @@ function News() {
   }
   `
     : `.slick-slider{
-    width:  1220px;
+    width:  1200px;
   }
   .slick-list {
-    margin-left: 20px
+    //  margin-left: 20px
   }
   .slick-slide{
     height: 420px;
-    margin-bottom: 60px
+    margin-bottom: 60px;
+  }
+  .slick-slide slick-active{
+    width: 380px !important
   }
   .slick-dots{
+    display:flex;
     margin-top:60px !important
   }
   .slick-dots li {
@@ -170,6 +169,8 @@ function News() {
     padding: 0px
   }
   `;
+console.log(postList.slice(0, 9));
+
 
   return (
     <Flex
@@ -207,7 +208,8 @@ function News() {
         >
           {getPaginatedData().map((post: any, index: number) => (
             <NewsCard
-              key={index}
+            key={post.title}
+            num={index}
               thumb={post.thumbnail}
               link={post.link}
               title={post.title}
@@ -235,7 +237,8 @@ function News() {
             <Slider {...tabSettings}>
               {postList.slice(0, 8).map((post: any, index: number) => (
                 <NewsCard
-                  key={index}
+                  key={post.title}
+                  num={index}
                   thumb={post.thumbnail}
                   link={post.link}
                   title={post.title}
@@ -250,9 +253,10 @@ function News() {
         <Flex alignItems="center">
           <style>{slickerStyles}</style>
           <Slider {...settings}>
-            {postList.slice(0, 8).map((post: any, index: number) => (
+            {postList.slice(0, 9).map((post: any, index: number) => (
               <NewsCard
-                key={index}
+              key={post.title}
+              num={index}
                 thumb={post.thumbnail}
                 link={post.link}
                 title={post.title}

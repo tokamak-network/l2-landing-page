@@ -4,6 +4,8 @@ import {createBreakpoints, mode} from '@chakra-ui/theme-tools';
 import '@fontsource/titillium-web/700.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/rajdhani/600.css';
+import '@fontsource/open-sans';
+
 import '@fontsource/open-sans/600.css';
 import '@fontsource/poppins';
 

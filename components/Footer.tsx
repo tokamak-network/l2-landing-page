@@ -200,7 +200,7 @@ function Footer() {
                       fontFamily={"Open Sans, sans-serif"}
                       key={index}
                       color={"#4c4c4c"}
-                      fontWeight={"semi-bold"}
+                      fontWeight={600}
                       fontSize={"14px"}
                     >
                       {sub.text}

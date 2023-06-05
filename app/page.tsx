@@ -11,13 +11,14 @@ export default function Home() {
   return (
     <Flex flexDir={"column"}>
       {/* <Intro />
-      <Mission />
+      
       <Roadmap />
       <Eccosystem />
       <News />
       <GetFunded />
       <DeveloperResources/> */}
       <Intro />
+      <Mission />
       <News />
     </Flex>
   );

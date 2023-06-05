@@ -1,26 +1,35 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text,useTheme } from "@chakra-ui/react";
 import Image from "next/image";
 
-function MissionCard() {
+type MissionProps = {
+  image: any;
+  title: string;
+  content: string;
+ 
+};
+
+function MissionCard(props: MissionProps) {
+  const { image, title, content } = props;
+  const theme = useTheme();
+
   return (
     <Flex
-      border={"1px solid red"}
-      w="299px"
-      h="450px"
-      mr="20px"
+      // border={"1px solid red"}
+      w="33%"
+      h="306px"
+      mb='90px'
+     
+      mr={title === 'Powered by OPTIMISM'? '0px':"30px"}
       flexDir={"column"}
-      p="20px"
+      alignItems={'center'}
+      // p="20px"
     >
-      <Flex alignItems={"center"}>
-        <Flex h="80px" w="80px" border={"1px solid purple"} mr="10px"></Flex>
-        <Text fontSize={"25px"}>Rollup Security</Text>
+      <Flex w="140px" h="140px"  mb="30px">
+        {/* image goes here */}
+        <Image src={image} alt='image'/>
       </Flex>
-      <Text mt='20px'>
-        Darius is built with the security and scalability you need to power your
-        dapps. It leverages the underlying security of Ethereum and lets you
-        confidently onramp into Base from Coinbase, Ethereum L1, and other
-        interoperable chains.
-      </Text>
+      <Text mb='14px' fontWeight={600} fontSize={'20px'} color='#1c1c1c' fontFamily={theme.fonts.openSans}>{title}</Text>
+      <Text w='380px' fontSize={'14px'} color='#7a7e87' fontFamily={theme.fonts.openSans}>{content}</Text>
     </Flex>
   );
 }

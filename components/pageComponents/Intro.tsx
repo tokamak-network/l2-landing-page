@@ -19,7 +19,7 @@ function Intro() {
         fontSize={["40px", "40px", "80px", "80px", "80px", "80px"]}
         mt={["119px", "119px", "126px", "126px", "155px", "155px"]}
         fontWeight={"bold"}
-        w={pcView ? "1068px" : tabletView ? "740px" : "320px"}
+        w={["320px", "320px", "740px", "740px", "1068px", "1068px"]}
         color={"#1c1c1c"}
         lineHeight={mobileView ? 1.15 : 1}
         textAlign={"center"}
@@ -30,13 +30,14 @@ function Intro() {
         Make Ethereum Boundless
       </Text>
       <Text
-        w={pcView ? "920px" : tabletView ? "740px" : "320px"}
+        w={["320px", "320px", "740px", "740px", "920px", "920px"]}
         letterSpacing={"wide"}
         lineHeight={1.56}
         fontSize={mobileView ? "16px" : "18px"}
         color={"#7a7e87"}
         textAlign={"center"}
         mt="15px"
+        fontWeight={"normal"}
       >
         Introducing Darius, the cutting-edge solution that combines speed,
         affordability, developer-friendliness, and the security of Ethereum. It

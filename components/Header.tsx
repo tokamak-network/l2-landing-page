@@ -11,7 +11,8 @@ import {
   MenuItem,
   MenuGroup,
   MenuDivider,
-  useBreakpointValue
+  useBreakpointValue, 
+  useMediaQuery
 } from "@chakra-ui/react";
 import Image from "next/image";
 import useMediaView from "@/app/hooks/useMediaView";
@@ -41,12 +42,12 @@ import team from "../app/assets/navi_icon_team.svg";
 import team_hover from "../app/assets/navi_icon_team_hover.svg";
 import career from "../app/assets/navi_icon_career.svg";
 import career_hover from "../app/assets/navi_icon_career_hover.svg";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 function Header() {
   const theme = useTheme();
   const [menuStates, setMenuStates] = useState([false, false, false]);
-  const { tabletView,pcView}  = useMediaView()
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
 
   const handleMenuToggle = (index: number) => {
     const updatedMenuStates = [...menuStates];
@@ -54,6 +55,18 @@ function Header() {
     setMenuStates(updatedMenuStates);
   };
 
+  useEffect(() => {
+    function handleResize() {
+      setIsLargeScreen(window.innerWidth > 1199);
+    }
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const CustomMenuItem = (props: any) => {
     const { link, title, icon, iconHover } = props;
@@ -280,7 +293,7 @@ function Header() {
           </MenuList>
         </Menu>
       </Flex>
-      {pcView &&  <Flex></Flex>}
+      {isLargeScreen &&  <Flex></Flex>}
      
     </Flex>
   );
