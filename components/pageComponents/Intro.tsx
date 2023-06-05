@@ -23,7 +23,6 @@ function Intro() {
         color={"#1c1c1c"}
         lineHeight={mobileView ? 1.15 : 1}
         textAlign={"center"}
-        letterSpacing={"wider"}
         fontStyle={"normal"}
         fontFamily={theme.fonts.openSans}
       >
@@ -45,7 +44,7 @@ function Intro() {
         transactions, including the upcoming native fast-withdrawal
         transactions.
       </Text>
-      <Flex mt="36px" flexDir={mobileView ? "column" : "row"}>
+      <Flex mt="36px" flexDir={[ "column",'column' ,'row','row','row', "row"]}>
         <Link
           mr="15px"
           h="45px"

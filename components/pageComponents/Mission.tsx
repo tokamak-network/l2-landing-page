@@ -19,7 +19,7 @@ function Mission() {
     >
       <Text
         mt={["90px", "90px", "120px", "120px", "120px", "120px"]}
-        fontSize={mobileView ? "32px" : "36px"}
+        fontSize={ ["32px",'32px','36px','36px','36px', "36px"]}
         fontFamily={theme.fonts.openSans}
         fontWeight={"bold"}
         // w="104px"
@@ -33,13 +33,14 @@ function Mission() {
         fontSize={"16px"}
         fontFamily={theme.fonts.openSans}
         color={"#7a7e87"}
-        mb={mobileView ? "50px" : "60px"}
+        w={['320px', '320px','100%','100%','100%','100%']}
+        mb={ "60px"}
+        textAlign={'center'}
       >
-        DARIUS is an optimistic rollup L2 forked from Optimism focused on
-        connecting
+       Darius is committed to delivering a seamless L2 experience for all users and dapps
       </Text>
 
-      <Flex mt="30px" justifyContent={"space-between"}>
+      <Flex mt="30px" justifyContent={mobileView? 'center':"space-between"} alignItems={'center'} flexDir={['column', 'column','row','row','row','row']}>
         <MissionCard
           image={rollup}
           title={"Rollup Security"}

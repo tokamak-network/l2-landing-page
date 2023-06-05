@@ -15,11 +15,11 @@ function MissionCard(props: MissionProps) {
   return (
     <Flex
       // border={"1px solid red"}
-      w="33%"
+      w="100%"
       h="306px"
       mb='90px'
      
-      mr={title === 'Powered by OPTIMISM'? '0px':"30px"}
+      mr={title === 'Powered by OPTIMISM'? '0px':['0px','0px',"30px",'30px','30px','30px']}
       flexDir={"column"}
       alignItems={'center'}
       // p="20px"
@@ -29,7 +29,7 @@ function MissionCard(props: MissionProps) {
         <Image src={image} alt='image'/>
       </Flex>
       <Text mb='14px' fontWeight={600} fontSize={'20px'} color='#1c1c1c' fontFamily={theme.fonts.openSans}>{title}</Text>
-      <Text w='380px' fontSize={'14px'} color='#7a7e87' fontFamily={theme.fonts.openSans}>{content}</Text>
+      <Text w={['320px','320px','226px','226px', '380px','380px']} fontSize={'14px'} color='#7a7e87' fontFamily={theme.fonts.openSans}>{content}</Text>
     </Flex>
   );
 }
