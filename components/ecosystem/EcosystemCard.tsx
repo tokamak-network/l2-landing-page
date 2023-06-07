@@ -33,7 +33,7 @@ function EcosystemCard(props: EcoProps) {
         <Flex
           h="64px"
           w="64px"
-          border={"1px solid #f5f5f5"}
+          // border={"1px solid #f5f5f5"}
           mr="20px"
           borderRadius={"16px"}
         >
@@ -47,7 +47,7 @@ function EcosystemCard(props: EcoProps) {
             fontSize={"16px"}
             color={"#464d59"}
           >
-            {title} {num+1} { ((num+1) % 6 === 0 ||(num+2) % 6 === 0 ).toString()}
+            {title}
           </Text>
           <Text
             lineHeight={1.67}

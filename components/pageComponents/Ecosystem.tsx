@@ -7,7 +7,11 @@ import Slider from "react-slick";
 import useMediaView from "@/app/hooks/useMediaView";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import LYDA from '../../app/assets/LYDA_symbol.svg'
+import DEX from '../../app/assets/tonDEX_symbol.svg'
+import DOM from '../../app/assets/DOM_symbol.png'
+import Native from '../../app/assets/staking_symbol.svg'
+import TONStarter from '../../app/assets/TON_symbol.svg'
 function Eccosystem() {
   const theme = useTheme();
   const [selected, setSelected] = useState("All");
@@ -158,7 +162,7 @@ function Eccosystem() {
   const cards = [
     {
       title: "TONStarter",
-      image: "",
+      image: TONStarter,
       url: "tonstarter.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
@@ -166,7 +170,7 @@ function Eccosystem() {
     },
     {
       title: "Native FW",
-      image: "",
+      image: Native,
       url: "simple.staking.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
@@ -174,7 +178,7 @@ function Eccosystem() {
     },
     {
       title: "Bridge & Swap",
-      image: "",
+      image:  TONStarter,
       url: "dao.tokamak.network",
       content:
         "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
@@ -182,7 +186,7 @@ function Eccosystem() {
     },
     {
       title: "TONDEX",
-      image: "",
+      image: DEX,
       url: "tonstarter.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
@@ -190,7 +194,7 @@ function Eccosystem() {
     },
     {
       title: "Dragons of Midgard",
-      image: "",
+      image: DOM,
       url: "dragonsofmidgard.com",
       content:
         "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. 5555 Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
@@ -198,7 +202,7 @@ function Eccosystem() {
     },
     {
       title: "LYDA",
-      image: "",
+      image: LYDA,
       url: "lyda.so",
       content:
         "LYDA is a platform to launch social tokens to transform social capitals in fandoms into economic benefits for creators and fans. LYDA eliminated the early stage investment for fan token IDO’s on the technical side, …",
@@ -206,7 +210,7 @@ function Eccosystem() {
     },
     {
       title: "TONStarter",
-      image: "",
+      image:  TONStarter,
       url: "tonstarter.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
@@ -214,7 +218,7 @@ function Eccosystem() {
     },
     {
       title: "Native FW",
-      image: "",
+      image:Native,
       url: "simple.staking.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
@@ -222,7 +226,7 @@ function Eccosystem() {
     },
     {
       title: "Bridge & Swap",
-      image: "",
+      image: TONStarter,
       url: "dao.tokamak.network",
       content:
         "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
@@ -230,7 +234,7 @@ function Eccosystem() {
     },
     {
       title: "TONDEX",
-      image: "",
+      image: DEX,
       url: "tonstarter.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
