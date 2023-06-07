@@ -51,13 +51,10 @@ function News() {
   const tabSettings = {
     accessibility: true,
     speed: 500,
-    variableWidth: false,
+    variableWidth: true,
     swipeToSlide: false,
-    centerMode: false,
-    centerPadding: "30px",
     infinite: false,
     dots: true,
-    className: "center",
     slidesToShow: 2,
     initialSlide: 0,
     slidesToScroll: 2,
@@ -91,18 +88,25 @@ function News() {
 
   const slickerStyles = tabletView
     ? `
+  
   .slick-slider{
-    width:  800px;
+    width:  800px !important;
   }
   .slick-list {
     margin-left: 30px
   }
   .slick-slide{
     height: 890px;
-    margin-bottom: 60px
+    margin-bottom: 60px;
+    width: 385px
+  }
+  .slick-slide slick-active{
+    width: 355px !important
   }
   .slick-dots{
-    margin-top:60px !important
+    position: relative;
+    display: flex !important;
+    justify-content: center
   }
   .slick-dots li {
     // height: 9px;
@@ -128,48 +132,52 @@ function News() {
     padding: 0px
   }
   `
-    : `.slick-slider{
-    width:  1200px;
-  }
-  .slick-list {
-    //  margin-left: 20px
-  }
-  .slick-slide{
-    height: 420px;
-    margin-bottom: 60px;
-  }
-  .slick-slide slick-active{
-    width: 380px !important
-  }
-  .slick-dots{
-    display:flex;
-    margin-top:60px !important
-  }
-  .slick-dots li {
-    // height: 9px;
-    width: 9px
-  }
-  .slick-dots li button {
-    width: 9px;
-    height: 9px;
-    padding: 0px
-  }
-  .slick-dots li button:before {
-    color: #dfe4ee;
-    opacity: 1;
-    width: 9px;
-    height: 9px;
-    padding: 0px
-  }
-  .slick-dots li.slick-active button:before{
-    color: #2a72e5;
-    opacity: 1;
-    width: 9px;
-    height: 9px;
-    padding: 0px
-  }
+    : `
+    .slider2 {
+      width:  1200px;
+      .slick-slider{
+        width:  1200px;
+      }
+      .slick-list {
+        //  margin-left: 20px
+      }
+      .slick-slide{
+        height: 420px;
+        margin-bottom: 60px;
+      }
+      .slick-slide slick-active{
+        width: 380px !important
+      }
+      .slick-dots{
+        display:flex;
+        margin-top:60px !important;
+      }
+      .slick-dots li {
+        // height: 9px;
+        width: 9px
+      }
+      .slick-dots li button {
+        width: 9px;
+        height: 9px;
+        padding: 0px
+      }
+      .slick-dots li button:before {
+        color: #dfe4ee;
+        opacity: 1;
+        width: 9px;
+        height: 9px;
+        padding: 0px
+      }
+      .slick-dots li.slick-active button:before{
+        color: #2a72e5;
+        opacity: 1;
+        width: 9px;
+        height: 9px;
+        padding: 0px
+      }
+    }
+   
   `;
-console.log(postList.slice(0, 9));
 
 
   return (
@@ -179,6 +187,7 @@ console.log(postList.slice(0, 9));
       flexDir={"column"}
       height={"100%"}
       pb='60px'
+      mt={['120px','120px','150px','150px','180px','180px' ]}
     >
       <Text
         fontSize={mobileView ? "32px" : "36px"}
@@ -234,7 +243,7 @@ console.log(postList.slice(0, 9));
         <Flex alignItems="center">
           <style>{slickerStyles}</style>
           {postList.length > 0 && (
-            <Slider {...tabSettings}>
+            <Slider {...tabSettings} >
               {postList.slice(0, 8).map((post: any, index: number) => (
                 <NewsCard
                   key={post.title}
@@ -252,7 +261,7 @@ console.log(postList.slice(0, 9));
       ) : (
         <Flex alignItems="center">
           <style>{slickerStyles}</style>
-          <Slider {...settings}>
+          <Slider {...settings} className="slider2">
             {postList.slice(0, 9).map((post: any, index: number) => (
               <NewsCard
               key={post.title}

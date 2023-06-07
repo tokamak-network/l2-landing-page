@@ -24,11 +24,11 @@ function NewsCard(props: NewsProps) {
     return `${src}`;
   };
 
-  console.log(num);
   
   return (
     <Flex
-      w={mobileView ? "320px" : tabletView ? "355px" : "380px"}
+  
+      w={['320px','320px','355px','355px','380px','380px']}
       h={tabletView ? "421px" : "100%"}
       fontFamily={theme.fonts.openSans}
       mr={mobileView ? "0px" : (num+1) % 3 === 0? '0px':"30px"}
