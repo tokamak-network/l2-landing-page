@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="402" height="405.468" viewBox="0 0 402 405.468">
+    <g transform="translate(-1099 -4150.266)">
+        <g data-name="타원 6" transform="rotate(30 -7165.575 4616.388)" style="stroke-dasharray:4 4;stroke:#7a7e87;fill:none">
+            <ellipse cx="35" cy="155" rx="35" ry="155" style="stroke:none"/>
+            <ellipse cx="35" cy="155" rx="34.5" ry="154.5" style="fill:none"/>
+        </g>
+        <g data-name="타원 9" transform="rotate(30 -7146.075 4543.613)" style="stroke-dasharray:4 4;stroke:#7a7e87;fill:none">
+            <ellipse cx="74" cy="155" rx="74" ry="155" style="stroke:none"/>
+            <ellipse cx="74" cy="155" rx="73.5" ry="154.5" style="fill:none"/>
+        </g>
+        <g data-name="타원 10" transform="rotate(30 -7129.075 4480.168)" style="stroke-dasharray:4 4;stroke:#7a7e87;fill:none">
+            <ellipse cx="108" cy="155" rx="108" ry="155" style="stroke:none"/>
+            <ellipse cx="108" cy="155" rx="107.5" ry="154.5" style="fill:none"/>
+        </g>
+        <g data-name="타원 11" transform="rotate(30 -7114.575 4426.053)" style="stroke-dasharray:4 4;stroke:#7a7e87;fill:none">
+            <ellipse cx="137" cy="155" rx="137" ry="155" style="stroke:none"/>
+            <ellipse cx="137" cy="155" rx="136.5" ry="154.5" style="fill:none"/>
+        </g>
+        <g data-name="타원 4" transform="translate(1146 4198)" style="stroke:#7a7e87;fill:none">
+            <circle cx="155" cy="155" r="155" style="stroke:none"/>
+            <circle cx="155" cy="155" r="154.5" style="fill:none"/>
+        </g>
+        <path data-name="사각형 6" transform="translate(1101 4353)" style="fill:#7a7e87" d="M0 0h400v1H0z"/>
+        <path data-name="사각형 7" transform="rotate(90 -1426 2727)" style="fill:#7a7e87" d="M0 0h400v1H0z"/>
+        <circle data-name="타원 7" cx="2.5" cy="2.5" r="2.5" transform="translate(1298 4152)" style="fill:#2a72e5"/>
+        <circle data-name="타원 8" cx="2.5" cy="2.5" r="2.5" transform="translate(1099 4351)" style="fill:#2a72e5"/>
+        <path data-name="사각형 8" transform="rotate(-45 6039.483 933.273)" style="fill:#7a7e87" d="M0 0h530v1H0z"/>
+        <circle data-name="타원 12" cx="3.5" cy="3.5" r="3.5" transform="translate(1107 4540)" style="fill:#2a72e5"/>
+    </g>
+</svg>

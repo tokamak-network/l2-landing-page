@@ -1,26 +1,21 @@
 "use client";
 
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
-import FundCard from "../getFunded/FundCard";
+import Fund from "../getFunded/Fund";
+import Darius from "../getFunded/Darius";
 function GetFunded () {
 
     return (
         <Flex
-        h="945px"
+
         justifyContent={"center"}
         alignItems={"center"}
         flexDir={"column"}
-        mx="150px"
+        mt={['60px','60px','145px','145px','150px','150px']}
+        mb={['90px','90px','180px','180px','180px','180px']}
       >
-        <Text fontSize={"40px"} fontWeight={"bold"}>
-          Get Funded
-        </Text>
-        <Text>GranTON & TONStarter programs allocate substantial resources to projects that promote ecosystem expansion and critical services. </Text>
-  
-        <Flex mt="30px">
-        <FundCard/>
-        <FundCard/>
-        </Flex>
+       <Fund/>
+       <Darius/>
       </Flex>
     )
 }

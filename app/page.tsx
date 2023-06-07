@@ -18,8 +18,12 @@ export default function Home() {
       <GetFunded />
       <DeveloperResources/> */}
       <Intro />
+     
       <Mission />
+      {/* <Roadmap /> */}
+      <Eccosystem />
       <News />
+      <GetFunded />
     </Flex>
   );
 }
