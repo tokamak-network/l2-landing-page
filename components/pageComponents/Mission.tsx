@@ -14,6 +14,7 @@ function Mission() {
     <Flex
       justifyContent={"center"}
       alignItems={"center"}
+      // border={'1px solid blue'}
       flexDir={"column"}
       // mx="150px"
     >
@@ -40,7 +41,7 @@ function Mission() {
        Darius is committed to delivering a seamless L2 experience for all users and dapps
       </Text>
 
-      <Flex mt="30px" justifyContent={mobileView? 'center':"space-between"} alignItems={'center'} flexDir={['column', 'column','row','row','row','row']}>
+      <Flex mt="30px" justifyContent={mobileView? 'center':"space-between"} alignItems={['center','center','flex-start','flex-start','flex-start','flex-start']} flexDir={['column', 'column','row','row','row','row']}>
         <MissionCard
           image={rollup}
           title={"Rollup Security"}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="5" viewBox="0 0 985 5">
+    <defs>
+        <linearGradient id="r4rz11zf4a" y1="1" x2="1" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#3e7fe7"/>
+        </linearGradient>
+        <linearGradient id="erx49a5mjb" x1="1" y1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#e2e6ef"/>
+            <stop offset="1" stop-color="#fff"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-483 -2017)">
+        <path transform="translate(483 2019)" style="fill:url(#r4rz11zf4a)" d="M0 0h218v1H0z"/>
+        <circle data-name="타원 1" cx="2.5" cy="2.5" r="2.5" transform="translate(699 2017)" style="fill:#3e7fe7"/>
+        <g data-name="그룹 28" transform="translate(875 2017)">
+            <path data-name="line" transform="translate(0 2)" style="fill:url(#erx49a5mjb)" d="M0 0h591v1H0z"/>
+            <circle data-name="타원 2" cx="2.5" cy="2.5" r="2.5" transform="translate(588)" style="fill:#e2e6ef"/>
+        </g>
+    </g>
+</svg>

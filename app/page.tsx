@@ -6,22 +6,14 @@ import Roadmap from "@/components/pageComponents/Roadmap";
 import Eccosystem from "@/components/pageComponents/Ecosystem";
 import News from "@/components/pageComponents/News";
 import GetFunded from "@/components/pageComponents/GetFunded";
-import DeveloperResources from "@/components/pageComponents/DeveloperResources";
 export default function Home() {
   return (
     <Flex flexDir={"column"}>
-      {/* <Intro />
-      
+      <Intro />
+      <Mission />
       <Roadmap />
       <Eccosystem />
-      <News />
-      <GetFunded />
-      <DeveloperResources/> */}
-      <Intro />
-     
-      <Mission />
-      {/* <Roadmap /> */}
-      <Eccosystem />
+    
       <News />
       <GetFunded />
     </Flex>

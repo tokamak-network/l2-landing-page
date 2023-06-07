@@ -16,8 +16,8 @@ function MissionCard(props: MissionProps) {
     <Flex
       // border={"1px solid red"}
       w="100%"
-      h="306px"
-      mb='90px'
+      h="100%"
+      mb='60px'
      
       mr={title === 'Powered by OPTIMISM'? '0px':['0px','0px',"30px",'30px','30px','30px']}
       flexDir={"column"}
