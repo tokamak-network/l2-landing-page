@@ -3,7 +3,6 @@
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
 import RoadmapCard from "../roadmap/RoadmapCard";
 import Image from "next/image";
-import Comb from "../roadmap/Comb";
 import useMediaView from "@/app/hooks/useMediaView";
 import roadmapLine from "../../app/assets/roadmapLine.png";
 import TitanLogo from "../../app/assets/Titan_symbol.svg";
