@@ -12,7 +12,7 @@ function Roadmap() {
   const { mobileView, tabletView, pcView } = useMediaView();
 
   return (
-    <Flex justifyContent={"center"} alignItems={"center"} flexDir={"column"}>
+    <Flex justifyContent={"center"} alignItems={"center"} flexDir={"column"} >
       <Text
         fontSize={["32px", "32px", "36px", "36px", "36px", "36px"]}
         fontFamily={theme.fonts.openSans}
@@ -29,7 +29,7 @@ function Roadmap() {
         fontFamily={theme.fonts.openSans}
         color={"#7a7e87"}
         w={["320px", "320px", "760px", "760px", "760px", "760px"]}
-        mb={"60px"}
+        mb={"90px"}
         textAlign={"center"}
       >
         The DARIUS roadmap outlines protocol improvements that will be adjusted
@@ -43,6 +43,9 @@ function Roadmap() {
         backgroundRepeat={'no-repeat'}
         backgroundPosition={'center'}
         backgroundSize='985px 5px'
+        position={"relative"}
+          top="-75px"
+        // transform={"rotate(90deg)"}
       >
         <Flex
           h="233px"
