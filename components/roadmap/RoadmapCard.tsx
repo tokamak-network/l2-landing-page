@@ -16,8 +16,8 @@ function RoadmapCard(props: RoadmapProps) {
     <Box
       top={top}
       left={left}
-      w="222px" /* Adjust the width as per your requirement */
-      h="152px" /* Adjust the height as per your requirement */
+      w="222px"
+      h="152px" 
       bg={completed ? "none" : "#dfe4ee"}
       display={"flex"}
       justifyContent={"center"}
@@ -29,8 +29,8 @@ function RoadmapCard(props: RoadmapProps) {
       <Box
         top={"1px"}
         left={"1px"}
-        w="220px" /* Adjust the width as per your requirement */
-        h="150px" /* Adjust the height as per your requirement */
+        w="220px" 
+        h="150px"
         backgroundImage={
           completed ? "linear-gradient(to bottom, #1f8efa, #2a72e5)" : ""
         }

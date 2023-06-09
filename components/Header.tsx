@@ -11,8 +11,8 @@ import {
   MenuItem,
   MenuGroup,
   MenuDivider,
-  useBreakpointValue, 
-  useMediaQuery
+  useBreakpointValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import useMediaView from "@/app/hooks/useMediaView";
@@ -42,7 +42,8 @@ import team from "../app/assets/navi_icon_team.svg";
 import team_hover from "../app/assets/navi_icon_team_hover.svg";
 import career from "../app/assets/navi_icon_career.svg";
 import career_hover from "../app/assets/navi_icon_career_hover.svg";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
+// import { HashLink } from "react-router-hash-link";
 
 function Header() {
   const theme = useTheme();
@@ -89,21 +90,33 @@ function Header() {
     );
   };
   return (
-    <Flex justifyContent={"space-between"} bg='#fafbfc' h="78px" alignItems={"center"}>
-      <Flex height={"40px"} ml={['0px','0px','30px','30px','40px','40px']} width={"126px"}>
+    <Flex
+      justifyContent={"space-between"}
+      bg="#fafbfc"
+      h="78px"
+      alignItems={"center"}
+    >
+      <Flex
+        height={"40px"}
+        ml={["0px", "0px", "30px", "30px", "40px", "40px"]}
+        width={"126px"}
+      >
         <Image src={L2BL} alt="tokamak_symbol" height={40} width={126}></Image>
       </Flex>
 
       <Flex>
-        <Text
-          fontSize="16px"
-          mr="60px"
-          color={"#1c1c1c"}
-          fontFamily={theme.fonts.openSans}
-          fontWeight={600}
-        >
-          Ecosystem
-        </Text>
+        <Link href="#ecosystem" textDecor={'none'}  _hover={{ textDecor: "none" }}>
+          <Text
+            fontSize="16px"
+            mr="60px"
+            color={"#1c1c1c"}
+            fontFamily={theme.fonts.openSans}
+            fontWeight={600}
+            
+          >
+            Ecosystem
+          </Text>
+        </Link>
         <Menu onClose={() => handleMenuToggle(0)}>
           <MenuButton mr="33px" onClick={() => handleMenuToggle(0)}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
@@ -194,23 +207,25 @@ function Header() {
               </Flex>
             </Flex>
           </MenuButton>
-          <MenuList  fontSize={"13px"}
+          <MenuList
+            fontSize={"13px"}
             ml="-15px"
             border={"none"}
             minWidth="187px"
-            boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}>
-          <CustomMenuItem
-                title={"GranTON Application"}
-                icon={grant}
-                iconHover={grant_hover}
-                link={""}
-              />
-              <CustomMenuItem
-                title={"Bug Bounty"}
-                icon={bug}
-                iconHover={bug_hover}
-                link={""}
-              />
+            boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}
+          >
+            <CustomMenuItem
+              title={"GranTON Application"}
+              icon={grant}
+              iconHover={grant_hover}
+              link={""}
+            />
+            <CustomMenuItem
+              title={"Bug Bounty"}
+              icon={bug}
+              iconHover={bug_hover}
+              link={""}
+            />
           </MenuList>
         </Menu>
         <Menu onClose={() => handleMenuToggle(2)}>
@@ -233,22 +248,26 @@ function Header() {
               </Flex>
             </Flex>
           </MenuButton>
-          <MenuList  fontSize={"13px"}
+          <MenuList
+            fontSize={"13px"}
             ml="-15px"
             border={"none"}
             minWidth="187px"
-            boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}>
-            <MenuGroup  title="ABOUT"
+            boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}
+          >
+            <MenuGroup
+              title="ABOUT"
               fontSize={"13px"}
               fontFamily={theme.fonts.openSans}
-              fontWeight={600}>
-               <CustomMenuItem
+              fontWeight={600}
+            >
+              <CustomMenuItem
                 title={"Team"}
                 icon={team}
                 iconHover={team_hover}
                 link={""}
               />
-               <CustomMenuItem
+              <CustomMenuItem
                 title={"Career"}
                 icon={career}
                 iconHover={career_hover}
@@ -256,34 +275,37 @@ function Header() {
               />
             </MenuGroup>
             <MenuDivider borderColor={"#f4f7f8"} mx="10px" />
-            <MenuGroup title="COMMUNITY"  fontSize={"13px"}
+            <MenuGroup
+              title="COMMUNITY"
+              fontSize={"13px"}
               fontFamily={theme.fonts.openSans}
-              fontWeight={600}>
-                <CustomMenuItem
+              fontWeight={600}
+            >
+              <CustomMenuItem
                 title={"Discord"}
                 icon={discord}
                 iconHover={discord_hover}
                 link={""}
               />
-                <CustomMenuItem
+              <CustomMenuItem
                 title={"Kakao (KR)"}
                 icon={kakao}
                 iconHover={kakao_hover}
                 link={""}
               />
-                <CustomMenuItem
+              <CustomMenuItem
                 title={"Telegram (EN)"}
                 icon={telegram}
                 iconHover={telegram_hover}
                 link={""}
               />
-                <CustomMenuItem
+              <CustomMenuItem
                 title={"Twitter"}
                 icon={twitter}
                 iconHover={twitter_hover}
                 link={""}
               />
-                <CustomMenuItem
+              <CustomMenuItem
                 title={"Medium"}
                 icon={medium}
                 iconHover={medium_hover}
@@ -293,8 +315,7 @@ function Header() {
           </MenuList>
         </Menu>
       </Flex>
-      {isLargeScreen &&  <Flex></Flex>}
-     
+      {isLargeScreen && <Flex></Flex>}
     </Flex>
   );
 }

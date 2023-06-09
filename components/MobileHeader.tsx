@@ -104,6 +104,7 @@ const {link, image, title} = props
               alignItems={"center"}
               pr={"10px"}
               pl={"20px"}
+              bg='#fff'
               py="19px"
               display={"flex"}
               flexDir={"row"}
@@ -137,7 +138,8 @@ const {link, image, title} = props
               </Flex>
             </DrawerHeader>
 
-            <DrawerBody fontFamily={theme.fonts.openSans} px="30px">
+            <DrawerBody bg='#fff' fontFamily={theme.fonts.openSans} px="30px">
+              <Link href="#ecosystem" onClick={onClose}>
               <Flex
                 h="65px"
                 fontSize={"20px"}
@@ -147,6 +149,7 @@ const {link, image, title} = props
               >
                 Ecosystem
               </Flex>
+              </Link>
               <Accordion allowToggle>
                 <AccordionItem border={"none"}>
                   {({ isExpanded }) => (

@@ -6,7 +6,8 @@ const useMediaView = (viewPort?: number) => {
   const [pcView] = useMediaQuery("(min-width: 1200px)");
   const [tabletView] = useMediaQuery("(min-width: 800px) and (max-width: 1199px)");
   const [mobileView] = useMediaQuery("(max-width: 799px)");
-
+  console.log(mobileView);
+  
   const [customMaxView] = useMediaQuery(`"(max-width: ${viewPort}px)"`);
 
   return {
