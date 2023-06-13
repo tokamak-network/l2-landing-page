@@ -38,18 +38,15 @@ function BlueAnimations() {
   const { mobileView, tabletView, pcView } = useMediaView();
 
   const imgAnimation = useAnimation();
-
-  const handleMouseMove = (e: any, index:number) => {
+  const handleMouseMove = (e: any) => {
     const { clientX, clientY } = e;
-    const randomNumbers = [
-        27, 39, 42, 30, 31, 37, 40, 44, 36, 41, 46, 45, 35, 49, 50, 25, 34, 33, 32, 29, 48, 26, 28, 38, 47, 43
-      ];
+
     const moveX = clientX - window.innerWidth / 2;
     const moveY = clientY - window.innerHeight / 2;
-    const offsetFactor = 50;
+    const offsetFactor = 10;
     imgAnimation.start({
-      x: -(moveX / randomNumbers[index]),
-      y: -(moveY / randomNumbers[index]),
+      x: -(moveX / offsetFactor),
+      y: -(moveY / offsetFactor),
     });
   };
 
@@ -312,49 +309,6 @@ function BlueAnimations() {
     }
   }, [mobileView, tabletView]);
 
-  interface PolygonProps {
-    src: string;
-    left: string;
-    top: string;
-    index: number
-  }
-  
-  const PolygonComponent: React.FC<PolygonProps> = ({ src, left, top,index }) => {
-    const imgAnimation = useAnimation();
-  
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-      const { clientX, clientY } = e;
-      const randomNumbers: number[] = [
-        27, 39, 42, 30, 31, 37, 40, 44, 36, 41, 46, 45, 35, 49, 50, 25, 34, 33, 32, 29, 48, 26, 28, 38, 47, 43
-      ];
-      const moveX = clientX - window.innerWidth / 2;
-      const moveY = clientY - window.innerHeight / 2;
-      const offsetFactor = 50;
-      imgAnimation.start({
-        x: -(moveX / randomNumbers[index]),
-        y: -(moveY / randomNumbers[index]),
-      });
-    };
-  
-    return (
-      <Flex
-        position="relative"
-        id="polygon"
-        left={left}
-        mt={top}
-      >
-        <motion.div
-          onMouseMove={handleMouseMove}
-          animate={imgAnimation}
-         
-        >
-          <Image src={src} alt="" />
-        </motion.div>
-      </Flex>
-    );
-  };
-
-  
   return (
     <Flex
       h={"750px"}
@@ -366,9 +320,12 @@ function BlueAnimations() {
       overflowX={"hidden"}
     >
       <motion.div
-       onMouseMove={(e)=>handleMouseMove(e, 2)}
-       animate={imgAnimation}
-       transition={{ type: 'spring',bounce: 0.7}}
+        onMouseMove={(e) => handleMouseMove(e)}
+        animate={imgAnimation}
+        transition={{layout: {
+            duration: 1, 
+            type:'spring'
+        }}}
         style={{
           display: "flex",
           flexDirection: "column",
@@ -378,15 +335,21 @@ function BlueAnimations() {
           //   overflowX:'hidden'
         }}
       >
-        {arrayItems.map((img, index) => (
-        <PolygonComponent
-          key={index}
-          src={img.src}
-          left={img.left}
-          top={img.top}
-          index={index}
-        />
-      ))}
+        {arrayItems.map((img: any, index: number) => {
+          return (
+            <Flex
+              key={index}
+              position={"relative"}
+              //   top={img.top}
+              left={img.left}
+              mt={img.top}
+            >
+             <Flex>
+                <Image src={img.src} alt="" />
+                </Flex>
+            </Flex>
+          );
+        })}
       </motion.div>
     </Flex>
   );
