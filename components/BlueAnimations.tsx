@@ -346,6 +346,7 @@ function BlueAnimations() {
         <motion.div
           onMouseMove={handleMouseMove}
           animate={imgAnimation}
+         
         >
           <Image src={src} alt="" />
         </motion.div>
@@ -367,6 +368,7 @@ function BlueAnimations() {
       <motion.div
        onMouseMove={(e)=>handleMouseMove(e, 2)}
        animate={imgAnimation}
+       transition={{ type: 'spring',bounce: 0.7}}
         style={{
           display: "flex",
           flexDirection: "column",
