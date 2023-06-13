@@ -140,7 +140,7 @@ function Footer() {
   const Line = () => {
     return (
       <Flex
-        width={dWidth < 1025 ? "100%" : "95%"}
+      w={['100%','100%','100%','100%', '1200px', '1200px' ]}
         height={"1px"}
         bg="#dfe4ee"
       ></Flex>
@@ -159,19 +159,18 @@ function Footer() {
       <Flex
      
         justifyContent={"space-between"}
-        w={mobileView ? "100%" : "95%"}
+        w={['100%','100%','100%','100%', '1200px', '1200px' ]}
         flexDir={"column"}
         flexWrap={"wrap"}
         alignItems={'center'}
       >
         <Flex
-          w={dWidth < 1281 ? "100%" : "100%"}
+          w={ "100%"}
           flexDir={"row"}
           flexWrap={"wrap"}
           justifyContent={'space-between'}
           mb={mobileView? '':'30px'}
-         pr={mobileView?'20px':''}
-          pl={mobileView?"20px":''}
+        px={['20px','20px','30px','30px','0px','0px']}
         >
           {data.map((info: any, index: number) => {
             return (
@@ -221,9 +220,8 @@ function Footer() {
         justifyContent={"space-between"}
         h={mobileView? '120px':"112px"}
         alignItems={"center"}
-        pr={mobileView?'20px':''}
-        pl={mobileView?"20px":''}
-        w={mobileView?"100%":'95%'}
+        px={['20px','20px','30px','30px','0px','0px']}
+        w={['100%','100%','100%','100%', '1200px', '1200px' ]}
       >
         {mobileView ? (
           <Text color={"#999999"} fontSize={'13px'}>
