@@ -36,23 +36,6 @@ import useMediaView from "@/app/hooks/useMediaView";
 
 function BlueAnimations() {
   const { mobileView, tabletView, pcView } = useMediaView();
-
-  const imgAnimation = useAnimation();
-
-  const handleMouseMove = (e: any, index?: number) => {
-    const { clientX, clientY } = e;
-    const randomNumbers = [
-      27, 39, 42, 30, 31, 37, 40, 44, 36, 41, 46, 45, 35, 49, 50, 25, 34, 33,
-      32, 29, 48, 26, 28, 38, 47, 43,
-    ];
-    const moveX = clientX - window.innerWidth / 2;
-    const moveY = clientY - window.innerHeight / 2;
-    const offsetFactor = 50;
-    imgAnimation.start({
-      x: -(moveX / 20),
-      y: -(moveY / 20),
-    });
-  };
   const items = [
     {
       src: blue0,
@@ -302,6 +285,60 @@ function BlueAnimations() {
     },
   ];
 
+  const imgAnimation = useAnimation();
+
+  const animArray = [
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+  ];
+
+  const handleMouseMove = (e: any, index?: number) => {
+    const { clientX, clientY } = e;
+    const randomNumbers = [
+      27, 39, 42, 30, 31, 37, 40, 44, 36, 41, 46, 45, 35, 49, 50, 25, 34, 33,
+      32, 29, 48, 26, 28, 38, 47, 43,
+    ];
+    const moveX = clientX - window.innerWidth / 2;
+    const moveY = clientY - window.innerHeight / 2;
+    const offsetFactor = 50;
+    imgAnimation.start({
+      x: -(moveX / 20),
+      y: -(moveY / 20),
+    });
+    animArray.forEach((anime: any, index: number) => {
+      anime.start({
+        x: -(moveX / randomNumbers[index]),
+        y: -(moveY / randomNumbers[index]),
+      });
+    });
+  };
+
   const arrayItems = useMemo(() => {
     if (mobileView) {
       return mobileItems;
@@ -327,7 +364,7 @@ function BlueAnimations() {
   }) => {
     const imgAnimation = useAnimation();
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleMouseMove = (e: any) => {
       const { clientX, clientY } = e;
       const randomNumbers: number[] = [
         27, 39, 42, 30, 31, 37, 40, 44, 36, 41, 46, 45, 35, 49, 50, 25, 34, 33,
@@ -337,14 +374,24 @@ function BlueAnimations() {
       const moveY = clientY - window.innerHeight / 2;
       const offsetFactor = 50;
       imgAnimation.start({
-        x: -(moveX / randomNumbers[index]),
-        y: -(moveY / randomNumbers[index]),
+        x: -(moveX / 50),
+        y: -(moveY / 50),
       });
     };
 
     return (
       <Flex position="relative" id="polygon" left={left} mt={top}>
-        <motion.div onMouseMove={handleMouseMove} animate={imgAnimation}>
+        <motion.div
+          animate={animArray[index]}
+          transition={{
+            layout: {
+              duration: 5,
+              type: "spring",
+            },
+            ease: "easeOut",
+            duration: 0.5,
+          }}
+        >
           <Image src={src} alt="" />
         </motion.div>
       </Flex>
@@ -369,8 +416,8 @@ function BlueAnimations() {
             duration: 5,
             type: "spring",
           },
-            ease: "easeOut",
-            duration:0.5
+          ease: "easeOut",
+          duration: 0.5,
         }}
         style={{
           display: "flex",
