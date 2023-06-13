@@ -108,7 +108,7 @@ function Header() {
       </Flex>
 
       <Flex>
-        <Link href="#ecosystem" textDecor={'none'}  _hover={{ textDecor: "none" }}>
+        <Link href="#ecosystem" textDecor={'none'} zIndex={1000}  _hover={{ textDecor: "none" }}>
           <Text
             fontSize="16px"
             mr="60px"
@@ -120,8 +120,8 @@ function Header() {
             Ecosystem
           </Text>
         </Link>
-        <Menu onClose={() => handleMenuToggle(0)}>
-          <MenuButton mr="33px" onClick={() => handleMenuToggle(0)}>
+        <Menu onClose={() => handleMenuToggle(0)} >
+          <MenuButton zIndex={1001} mr="33px" onClick={() => handleMenuToggle(0)}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
               <Text
@@ -141,6 +141,7 @@ function Header() {
             </Flex>
           </MenuButton>
           <MenuList
+           zIndex={1001}
             fontSize={"13px"}
             ml="-15px"
             border={"none"}
@@ -191,7 +192,7 @@ function Header() {
           </MenuList>
         </Menu>
         <Menu onClose={() => handleMenuToggle(1)}>
-          <MenuButton mr="33px" w="80px" onClick={() => handleMenuToggle(1)}>
+          <MenuButton zIndex={1001} mr="33px" w="80px" onClick={() => handleMenuToggle(1)}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
               <Text
@@ -211,6 +212,7 @@ function Header() {
             </Flex>
           </MenuButton>
           <MenuList
+          zIndex={1001}
             fontSize={"13px"}
             ml="-15px"
             border={"none"}
@@ -232,7 +234,7 @@ function Header() {
           </MenuList>
         </Menu>
         <Menu onClose={() => handleMenuToggle(2)}>
-          <MenuButton mr="30px" w="80px" onClick={() => handleMenuToggle(2)}>
+          <MenuButton zIndex={1001} mr="30px" w="80px" onClick={() => handleMenuToggle(2)}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
               <Text
@@ -252,6 +254,7 @@ function Header() {
             </Flex>
           </MenuButton>
           <MenuList
+          zIndex={1001}
             fontSize={"13px"}
             ml="-15px"
             border={"none"}

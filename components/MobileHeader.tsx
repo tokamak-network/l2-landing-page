@@ -80,15 +80,16 @@ const {link, image, title} = props
       alignItems={"center"}
       justifyContent={"space-between"}
     >
-      <Flex height={"40px"} ml={"20px"} width={"126px"}>
+      <Flex   _hover={{cursor:'pointer'}} height={"40px"} ml={"20px"} width={"126px"} zIndex={1001}>
         <Image src={L2BL} alt="tokamak_symbol" height={40} width={126}></Image>
       </Flex>
-      <Flex>
+      <Flex zIndex={1001}>
         <Flex
           onClick={onOpen}
           h="48px"
           w="48px"
           borderRadius={"8px"}
+          _hover={{cursor:'pointer'}}
           mr="20px"
           border="1px solid #e8edf2"
           justifyContent={"center"}
@@ -110,7 +111,7 @@ const {link, image, title} = props
               flexDir={"row"}
               justifyContent={"space-between"}
             >
-              <Flex height={"40px"} width={"133px"}>
+              <Flex height={"40px"} width={"133px"}  _hover={{cursor:'pointer'}}>
                 <Image
                   src={L2BL}
                   alt="tokamak_symbol"
@@ -127,6 +128,7 @@ const {link, image, title} = props
                 alignItems={"center"}
                 borderRadius={"8px"}
                 mr="20px"
+                _hover={{cursor:'pointer'}}
                 onClick={onClose}
               >
                 <Image

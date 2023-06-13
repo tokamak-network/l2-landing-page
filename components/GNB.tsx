@@ -35,7 +35,7 @@ function GNB() {
   return (
     <Flex
       w={"100%"}
-      minW={"100vh"}
+      minW={"100%"}
       h={"45px"}
       bg={"#2775ff"}
       color={"#ffffff"}

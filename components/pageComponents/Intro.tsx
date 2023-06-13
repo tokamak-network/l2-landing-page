@@ -26,7 +26,7 @@ function Intro() {
 
   return (
     <Flex
-      h={["672px", "672px", "722px", "722px", "672px", "672px"]}
+      h={'672px'}
       // alignItems={"center"}
       flexDir={"column"}
       bg="#fafbfc"

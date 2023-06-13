@@ -175,7 +175,7 @@ function Footer() {
           {data.map((info: any, index: number) => {
             return (
               <Flex
-                //   border={'1px solid red'}
+              
                 key={index}
                 flexDir={"column"}
                 width={mobileView? "40%" : ""}
