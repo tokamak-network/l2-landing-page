@@ -94,7 +94,10 @@ function Header() {
       justifyContent={"space-between"}
       bg="#fafbfc"
       h="78px"
+    
       alignItems={"center"}
+      // zIndex={10000}
+      position={'relative'}
     >
       <Flex
         height={"40px"}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68.136" height="73.125" viewBox="0 0 68.136 73.125">
+    <defs>
+        <linearGradient id="0wyxyjzsaa" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#1f8efa"/>
+            <stop offset="1" stop-color="#2a72e5"/>
+        </linearGradient>
+    </defs>
+    <g data-name="그룹 6602">
+        <path d="M47.695-16.965 59.627 8.5 44.574 37 7.914 54.16-4.509 32.566 17.25 0z" transform="translate(6.509 18.965)" style="opacity:.55;fill:#609"/>
+        <path d="M47.695-16.965 59.627 8.5 44.574 37 7.914 54.16-4.509 32.566 17.25 0z" transform="translate(7.509 18.965)" style="fill:#660200;opacity:.55"/>
+        <path d="M47.695-16.965 59.627 8.5 44.574 37 7.914 54.16-4.509 32.566 17.25 0z" transform="translate(8.509 18.965)" style="fill:#e4e433;opacity:.55"/>
+        <path d="M47.695-16.965 59.627 8.5 44.574 37 7.914 54.16-4.509 32.566 17.25 0z" transform="translate(7.509 16.965)" style="fill:#06e400;opacity:.55"/>
+        <path d="M47.695-16.965 59.627 8.5 44.574 37 7.914 54.16-4.509 32.566 17.25 0z" transform="translate(4.509 17.965)" style="fill:#33e4e4;opacity:.55"/>
+        <path d="M47.695-16.965 59.627 8.5 44.574 37 7.914 54.16-4.509 32.566 17.25 0z" transform="translate(6.509 17.965)" style="fill:url(#0wyxyjzsaa)"/>
+    </g>
+</svg>

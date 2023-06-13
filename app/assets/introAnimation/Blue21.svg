@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82.528" height="61.777" viewBox="0 0 82.528 61.777">
+    <defs>
+        <linearGradient id="psu2kh329a" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#1f8efa"/>
+            <stop offset="1" stop-color="#2a72e5"/>
+        </linearGradient>
+    </defs>
+    <g data-name="그룹 6613">
+        <path d="m46.107-19.322 30.746-11.906L61.087-5.323 27.421 20.116l-31.1 8.434L6.811 8.142z" transform="translate(3.674 33.228)" style="opacity:.55;fill:#609"/>
+        <path d="m46.107-19.322 30.746-11.906L61.087-5.323 27.421 20.116l-31.1 8.434L6.811 8.142z" transform="translate(5.674 33.228)" style="fill:#660200;opacity:.55"/>
+        <path d="m46.107-19.322 30.746-11.906L61.087-5.323 27.421 20.116l-31.1 8.434L6.811 8.142z" transform="translate(5.674 32.228)" style="fill:#e4e433;opacity:.55"/>
+        <path d="m46.107-19.322 30.746-11.906L61.087-5.323 27.421 20.116l-31.1 8.434L6.811 8.142z" transform="translate(4.674 31.228)" style="fill:#06e400;opacity:.55"/>
+        <path d="m46.107-19.322 30.746-11.906L61.087-5.323 27.421 20.116l-31.1 8.434L6.811 8.142z" transform="translate(3.674 32.228)" style="fill:#33e4e4;opacity:.55"/>
+        <path d="m46.107-19.322 30.746-11.906L61.087-5.323 27.421 20.116l-31.1 8.434L6.811 8.142z" transform="translate(4.674 32.228)" style="fill:url(#psu2kh329a)"/>
+    </g>
+</svg>

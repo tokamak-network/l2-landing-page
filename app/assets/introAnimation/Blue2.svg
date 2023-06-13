@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.143" height="21.56" viewBox="0 0 44.143 21.56">
+    <defs>
+        <linearGradient id="t874af8mqa" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#1f8efa"/>
+            <stop offset="1" stop-color="#2a72e5"/>
+        </linearGradient>
+    </defs>
+    <g data-name="그룹 6621">
+        <path d="m31.284 20.74 8.738 12.231-7.2 6.1L5.693 40.3l-7.813-9.684 14.783-8.932z" transform="translate(2.12 -18.74)" style="opacity:.55;fill:#609"/>
+        <path d="m31.284 20.74 8.738 12.231-7.2 6.1L5.693 40.3l-7.813-9.684 14.783-8.932z" transform="translate(2.12 -19.74)" style="fill:#660200;opacity:.55"/>
+        <path d="m31.284 20.74 8.738 12.231-7.2 6.1L5.693 40.3l-7.813-9.684 14.783-8.932z" transform="translate(3.12 -18.74)" style="fill:#e4e433;opacity:.55"/>
+        <path d="m31.284 20.74 8.738 12.231-7.2 6.1L5.693 40.3l-7.813-9.684 14.783-8.932z" transform="translate(4.12 -19.74)" style="fill:#06e400;opacity:.55"/>
+        <path d="m31.284 20.74 8.738 12.231-7.2 6.1L5.693 40.3l-7.813-9.684 14.783-8.932z" transform="translate(2.12 -20.74)" style="fill:#33e4e4;opacity:.55"/>
+        <path d="m31.284 20.74 8.738 12.231-7.2 6.1L5.693 40.3l-7.813-9.684 14.783-8.932z" transform="translate(3.12 -19.74)" style="fill:url(#t874af8mqa)"/>
+    </g>
+</svg>

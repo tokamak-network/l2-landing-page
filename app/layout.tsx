@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import useMediaView from "./hooks/useMediaView";
 import Header from "@/components/Header";
 import MobileHeader from "@/components/MobileHeader";
+import BlueAnimations from "@/components/BlueAnimations";
 export default function RootLayout({
   children,
 }: {
@@ -31,6 +32,7 @@ console.log('mobileView, tableView,pcView',mobileView, tabletView,pcView);
       <Providers>
     
          {mobileView? <MobileGNB/>:<GNB />} 
+         <BlueAnimations/>
          {mobileView? <MobileHeader/>:<Header/>} 
          
           {children}
