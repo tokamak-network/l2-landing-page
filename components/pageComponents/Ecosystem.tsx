@@ -278,7 +278,7 @@ function Eccosystem() {
     );
   };
   return (
-    <Flex justifyContent={"center"} alignItems={"center"} flexDir={"column"} id="ecosystem">
+    <Flex zIndex={1} justifyContent={"center"} alignItems={"center"} flexDir={"column"} id="ecosystem">
       <Text
         fontSize={["32px", "32px", "36px", "36px", "36px", "36px"]}
         fontFamily={theme.fonts.openSans}

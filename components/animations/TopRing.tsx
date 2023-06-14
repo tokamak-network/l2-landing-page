@@ -6,7 +6,7 @@ function TopRing() {
   const transition = { duration: 10, repeat: Infinity, ease: "easeInOut" ,repeatType: 'reverse'};
 
   return (
-    <Flex className="top-container" top={'1400.5px'} left={'-30%'}>
+    <Flex className="top-container" top={'992px'} left={'-28%'}>
     <svg xmlns="http://www.w3.org/2000/svg" width="1339.38" height="1130.426">
       <motion.path
         d="M 319 0 A 319 534.5 0 1 0 319 1069 A 318.5 534.5 0 1 0 319 0"

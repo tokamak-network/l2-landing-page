@@ -27,6 +27,7 @@ function EcosystemCard(props: EcoProps) {
       _hover={{ boxShadow: "0 3px 8px 0 rgba(49, 127, 203, 0.25)" }}
       mr={mobileView ? "0px" : (num+1) % 6 === 0 ||(num+2) % 6 === 0 ? '0px':"30px"}
       mb="30px"
+      bg='#fff'
       flexDir={"column"}
     >
       <Flex mb="21px">

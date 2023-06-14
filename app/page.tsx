@@ -7,20 +7,19 @@ import Eccosystem from "@/components/pageComponents/Ecosystem";
 import News from "@/components/pageComponents/News";
 import GetFunded from "@/components/pageComponents/GetFunded";
 import TopRing from "@/components/animations/TopRing";
-
+import MiddleRing from "@/components/animations/MiddleRing";
 export default function Home() {
   return (
-    <Flex flexDir={"column"}>
-       <TopRing/>
+    <Flex flexDir={"column"} maxW={'100vw'} overflowY={"hidden"}>
+      <TopRing />
       <Intro />
       <Mission />
       <Roadmap />
       <Eccosystem />
-    
+
       <News />
       <GetFunded />
-
-     
+      <MiddleRing />
     </Flex>
   );
 }
