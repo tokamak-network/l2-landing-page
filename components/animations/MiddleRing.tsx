@@ -21,10 +21,7 @@ function MiddleRing() {
     >
       <Flex
         className="middle-container"
-      
-      
-        justifyContent={"center"}
-        alignItems={"center"}
+       
         left={"32%"}
         zIndex={0}
       >

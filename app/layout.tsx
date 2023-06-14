@@ -7,6 +7,8 @@ import useMediaView from "./hooks/useMediaView";
 import Header from "@/components/Header";
 import MobileHeader from "@/components/MobileHeader";
 import BlueAnimations from "@/components/BlueAnimations";
+import BottomRing from "@/components/animations/BottomRing";
+
 export default function RootLayout({
   children,
 }: {
@@ -36,6 +38,7 @@ console.log('mobileView, tableView,pcView',mobileView, tabletView,pcView);
          {mobileView? <MobileHeader/>:<Header/>} 
          
           {children}
+          {/* <BottomRing/> */}
           <Footer />
         </Providers>
        

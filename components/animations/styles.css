@@ -41,7 +41,33 @@
     top: 0;
     left: 0;
     opacity: 1;
+    
     offset-path: path(
       "M461.07 2.056c206.53-36.11 338.678 407.689 295.151 991.252S509.977 2079.216 303.443 2115.326s-338.678-407.688-295.15-991.252S254.536 38.167 461.07 2.056z"
+    );
+  }
+
+  .bottom-container {
+   
+    transform: rotate(-66deg);
+    width: 650px;
+  height: 1104px;
+  position: relative
+ 
+  }
+  
+  .bottom-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: white;
+    border: 1px solid #e2e2e2;
+    top: 0;
+    left: 0;
+    transform: scale(-1);
+    opacity: 1;
+    offset-path: path(
+      "M 319 0 A 319 534.5 0 1 0 319 1069 A 318.5 534.5 0 1 0 319 0"
     );
   }

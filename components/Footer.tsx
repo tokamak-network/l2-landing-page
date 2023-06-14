@@ -7,14 +7,14 @@ import "@fontsource/open-sans/700.css";
 import { useState, useEffect } from "react";
 import dayjs from "dayjs";
 import topArrow from "../app/assets/top_arrow_icon.png";
-import  useMediaView  from "@/app/hooks/useMediaView";
+import useMediaView from "@/app/hooks/useMediaView";
 
 function Footer() {
   const theme = useTheme();
   const [dWidth, setDWidth] = useState(0);
 
-  const {mobileView} = useMediaView()
-  
+  const { mobileView } = useMediaView();
+
   useEffect(() => {
     const deviceWidth = window.outerWidth;
     setDWidth(deviceWidth);
@@ -140,7 +140,7 @@ function Footer() {
   const Line = () => {
     return (
       <Flex
-      w={['100%','100%','100%','100%', '1200px', '1200px' ]}
+        w={["100%", "100%", "100%", "100%", "1200px", "1200px"]}
         height={"1px"}
         bg="#dfe4ee"
       ></Flex>
@@ -157,33 +157,31 @@ function Footer() {
   const FooterContainer = () => {
     return (
       <Flex
-     
+        zIndex={100}
         justifyContent={"space-between"}
-        w={['100%','100%','100%','100%', '1200px', '1200px' ]}
+        w={["100%", "100%", "100%", "100%", "1200px", "1200px"]}
         flexDir={"column"}
         flexWrap={"wrap"}
-        alignItems={'center'}
+        alignItems={"center"}
       >
         <Flex
-          w={ "100%"}
+          w={"100%"}
           flexDir={"row"}
           flexWrap={"wrap"}
-          justifyContent={'space-between'}
-          mb={mobileView? '':'30px'}
-        px={['20px','20px','30px','30px','0px','0px']}
+          justifyContent={"space-between"}
+          height={"179px"}
+          mb="60px"
+          px={["20px", "20px", "30px", "30px", "0px", "0px"]}
         >
           {data.map((info: any, index: number) => {
             return (
               <Flex
-              
                 key={index}
                 flexDir={"column"}
-                width={mobileView? "40%" : ""}
-                minW={mobileView? "150px" : ""}
-                mb="30px"
+                width={mobileView ? "40%" : ""}
+                minW={mobileView ? "150px" : ""}
+                height={"179px"}
                 // mr={width < 701 ? index%2 === 0? "20px" : "":''}
-               
-            
               >
                 <Flex
                   fontWeight={"bold"}
@@ -191,7 +189,7 @@ function Footer() {
                   color={"#1c1c1c"}
                   fontSize={"20px"}
                 >
-                  {info.title} 
+                  {info.title}
                 </Flex>
                 {info.subTitles.map((sub: any, index: number) => {
                   return (
@@ -201,6 +199,7 @@ function Footer() {
                       color={"#4c4c4c"}
                       fontWeight={600}
                       fontSize={"14px"}
+                      mb="4px"
                     >
                       {sub.text}
                     </Flex>
@@ -218,13 +217,13 @@ function Footer() {
     return (
       <Flex
         justifyContent={"space-between"}
-        h={mobileView? '120px':"112px"}
+        h={mobileView ? "120px" : "112px"}
         alignItems={"center"}
-        px={['20px','20px','30px','30px','0px','0px']}
-        w={['100%','100%','100%','100%', '1200px', '1200px' ]}
+        px={["20px", "20px", "30px", "30px", "0px", "0px"]}
+        w={["100%", "100%", "100%", "100%", "1200px", "1200px"]}
       >
         {mobileView ? (
-          <Text color={"#999999"} fontSize={'13px'}>
+          <Text color={"#999999"} fontSize={"13px"}>
             Copyright © {dayjs().year()}{" "}
             <span style={{ color: "#1c1c1c" }}>Tokamak Network</span>
           </Text>
@@ -246,12 +245,12 @@ function Footer() {
   };
   return (
     <Flex
-    bottom={0}
+      bottom={0}
       w="100%"
-
       flexDir={"column"}
       justifyContent={"center"}
       alignItems={"center"}
+      zIndex={10}
     >
       <FooterContainer />
 

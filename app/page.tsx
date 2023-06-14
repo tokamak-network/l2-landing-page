@@ -8,6 +8,8 @@ import News from "@/components/pageComponents/News";
 import GetFunded from "@/components/pageComponents/GetFunded";
 import TopRing from "@/components/animations/TopRing";
 import MiddleRing from "@/components/animations/MiddleRing";
+import BottomRing from "@/components/animations/BottomRing";
+
 export default function Home() {
   return (
     <Flex flexDir={"column"} maxW={'100vw'} overflowY={"hidden"}>
@@ -20,6 +22,7 @@ export default function Home() {
       <News />
       <GetFunded />
       <MiddleRing />
+      <BottomRing/>
     </Flex>
   );
 }
