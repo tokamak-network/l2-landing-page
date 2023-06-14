@@ -328,13 +328,13 @@ function BlueAnimations() {
     const moveY = clientY - window.innerHeight / 2;
     const offsetFactor = 50;
     imgAnimation.start({
-      x: -(moveX / 50),
-      y: -(moveY / 50),
+      x: -(moveX / 149),
+      y: -(moveY / 149),
     });
     animArray.forEach((anime: any, index: number) => {
       anime.start({
-        x: -(moveX / 83),
-        y: -(moveY / 83),
+        x: -(moveX / 149),
+        y: -(moveY / 149),
       });
     });
   };
@@ -392,7 +392,7 @@ function BlueAnimations() {
       bg="transparent"
       w={"100%"}
       position={"absolute"}
-      overflowY={"visible"}
+      overflowY={"hidden"}
       overflowX={"hidden"}
     >
       <motion.div
