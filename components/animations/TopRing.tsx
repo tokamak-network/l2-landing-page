@@ -22,9 +22,14 @@ function TopRing() {
     </svg>
     <motion.div
       className="top-box"
-     
-      initial={{ offsetDistance: "0%", scale: 1 }}
-      animate={{ offsetDistance: "100%", scale: 1 }}
+      initial={{ offsetDistance: "50%", scale: 1 }}
+      animate={{ offsetDistance: "-50%", scale: 1 }}
+      transition={{duration: 10, repeat: Infinity,repeatType: "loop", ease: 'linear'}}
+    />
+     <motion.div
+      className="top-box"
+      initial={{ offsetDistance: "100%", scale: 1 }}
+      animate={{ offsetDistance: "0%", scale: 1 }}
       transition={{duration: 10, repeat: Infinity,repeatType: "loop", ease: 'linear'}}
     />
   </Flex>
