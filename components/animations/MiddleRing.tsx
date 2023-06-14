@@ -12,19 +12,13 @@ function MiddleRing() {
 
   return (
     <Flex
-    
       position={"absolute"}
       maxW={"100vw"}
       minW={"100vw"}
       overflowX={"hidden"}
       top="1818px"
     >
-      <Flex
-        className="middle-container"
-       
-        left={"28%"}
-        zIndex={0}
-      >
+      <Flex className="middle-container" left={"28%"} zIndex={0}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="2247.78"
@@ -44,21 +38,21 @@ function MiddleRing() {
         </svg>
         <motion.div
           className="middle-box"
-          initial={{  offsetDistance: "50%", scale: 1 }}
+          initial={{ offsetDistance: "50%", scale: 1 }}
           animate={{ offsetDistance: "-50%", scale: 1 }}
           transition={{
-            duration: 10,
+            duration: 15,
             repeat: Infinity,
-            repeatType: 'loop',
+            repeatType: "loop",
             ease: "linear",
           }}
         />
-         <motion.div
+        <motion.div
           className="middle-box"
           initial={{ offsetDistance: "100%", scale: 1 }}
           animate={{ offsetDistance: "0%", scale: 1 }}
           transition={{
-            duration: 10,
+            duration: 15,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
