@@ -372,7 +372,7 @@ function Roadmap() {
     );
   };
   return (
-    <Flex justifyContent={"center"} alignItems={"center"} flexDir={"column"}>
+    <Flex justifyContent={"center"} mt={[0,0,0,0,'110px','110px']} alignItems={"center"} flexDir={"column"}>
       <Text
         fontSize={["32px", "32px", "36px", "36px", "36px", "36px"]}
         fontFamily={theme.fonts.openSans}

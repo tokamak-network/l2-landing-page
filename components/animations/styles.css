@@ -1,0 +1,24 @@
+
+  
+  .top-container {
+    position:absolute;
+    transform: rotate(70deg);
+    width: 1031px;
+  height: 1240.4px;
+  }
+  
+  .top-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: white;
+    border: 1px solid #e2e2e2;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    offset-path: path(
+      "M 319 0 A 318.5 534.5 0 1 0 319 1069 A 318.5 534.5 0 1 0 319 0"
+    );
+    
+  }

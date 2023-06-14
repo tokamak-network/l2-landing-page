@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1239.38" height="1030.426" viewBox="0 0 1239.38 1030.426">
+    <g data-name="그룹 6538" style="opacity:.15">
+        <g data-name="타원 13" transform="rotate(-115 463.042 429.326)" style="stroke:#707070;fill:none">
+            <ellipse cx="319" cy="535" rx="319" ry="535" style="stroke:none"/>
+            <ellipse cx="319" cy="535" rx="318.5" ry="534.5" style="fill:none"/>
+        </g>
+        <g data-name="타원 14" transform="translate(857.207 141.523)" style="fill:#fff;stroke:#707070">
+            <circle cx="10.5" cy="10.5" r="10.5" style="stroke:none"/>
+            <circle cx="10.5" cy="10.5" r="10" style="fill:none"/>
+        </g>
+        <g data-name="타원 15" transform="translate(430.207 869.523)" style="fill:#fff;stroke:#707070">
+            <circle cx="10.5" cy="10.5" r="10.5" style="stroke:none"/>
+            <circle cx="10.5" cy="10.5" r="10" style="fill:none"/>
+        </g>
+    </g>
+</svg>

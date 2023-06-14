@@ -14,7 +14,6 @@ function Mission() {
     <Flex
       justifyContent={"center"}
       alignItems={"center"}
-      // border={'1px solid blue'}
       flexDir={"column"}
       // mx="150px"
     >

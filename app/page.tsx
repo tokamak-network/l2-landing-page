@@ -6,9 +6,12 @@ import Roadmap from "@/components/pageComponents/Roadmap";
 import Eccosystem from "@/components/pageComponents/Ecosystem";
 import News from "@/components/pageComponents/News";
 import GetFunded from "@/components/pageComponents/GetFunded";
+import TopRing from "@/components/animations/TopRing";
+
 export default function Home() {
   return (
     <Flex flexDir={"column"}>
+       <TopRing/>
       <Intro />
       <Mission />
       <Roadmap />
@@ -16,6 +19,8 @@ export default function Home() {
     
       <News />
       <GetFunded />
+
+     
     </Flex>
   );
 }
