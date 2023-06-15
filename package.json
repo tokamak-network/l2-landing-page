@@ -19,6 +19,7 @@
     "@fontsource/rajdhani": "^4.5.10",
     "@fontsource/roboto": "^4.5.8",
     "@fontsource/titillium-web": "^4.5.9",
+    "@react-three/fiber": "^8.13.3",
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -32,6 +33,7 @@
     "react-native-web": "^0.19.4",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "three": "^0.153.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {

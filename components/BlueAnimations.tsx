@@ -328,8 +328,8 @@ function BlueAnimations() {
     const moveY = clientY - window.innerHeight / 2;
     const offsetFactor = 50;
     imgAnimation.start({
-      x: -(moveX / 49),
-      y: -(moveY / 49),
+      x: -(moveX / 19),
+      y: -(moveY / 19),
     });
     animArray.forEach((anime: any, index: number) => {
       anime.start({

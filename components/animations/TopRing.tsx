@@ -6,7 +6,15 @@ function TopRing() {
   const transition = { duration: 10, repeat: Infinity, ease: "easeInOut" ,repeatType: 'reverse'};
 
   return (
-    <Flex className="top-container" top={'992px'} left={'-28%'}>
+    <Flex
+    position={"absolute"}
+    maxW={"100vw"}
+    minW={"100vw"}
+    overflowX={"hidden"}
+    top={['','','','1079px','1079px','992px','992px']}
+    // border={'1px solid red'}
+  >
+    <Flex className="top-container" height={['','','1600px','1600px','1240.4px','1240.4px']}  left={['','','6%','6%','-28%','-28%']}>
     <svg xmlns="http://www.w3.org/2000/svg" width="1339.38" height="1130.426">
       <motion.path
         d="M 319 0 A 319 534.5 0 1 0 319 1069 A 318.5 534.5 0 1 0 319 0"
@@ -32,6 +40,7 @@ function TopRing() {
       animate={{ offsetDistance: "0%", scale: 1 }}
       transition={{duration: 10, repeat: Infinity,repeatType: "loop", ease: 'linear'}}
     />
+  </Flex>
   </Flex>
   );
 }

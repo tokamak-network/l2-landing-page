@@ -71,6 +71,7 @@ function Eccosystem() {
   const slickStyle = tabletView
     ? `.slider1 {
       width:  800px;
+
     .slick-slider{
       width:  800px;
     }
@@ -78,7 +79,7 @@ function Eccosystem() {
       margin-left: 30px
     }
     .slick-slide{
-      height: 696px;
+      height: 650px !important;
       margin-bottom: 60px
     }
     .slick-dots{
@@ -87,7 +88,6 @@ function Eccosystem() {
       justify-content: center
     }
     .slick-dots li {
-      // height: 9px;
       width: 9px
     }
     .slick-dots li button {
