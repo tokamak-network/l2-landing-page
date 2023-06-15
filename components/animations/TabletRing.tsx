@@ -16,7 +16,7 @@ function TabletRing() {
       maxW={"100vw"}
       minW={"100vw"}
       overflowX={"hidden"}
-      top="2482px"
+      top="2572px"
     >
       <Flex className="tablet-container" left={'35%'}  zIndex={0}>
         <svg

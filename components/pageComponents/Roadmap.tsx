@@ -291,11 +291,11 @@ function Roadmap() {
           w="1px"
           position={"relative"}
           left={"88px"}
-          top={'-8px'}
+          top={"-8px"}
           backgroundImage={"linear-gradient(to bottom, #fff, #3e7fe7)"}
           // border={"1px solid red"}
         ></Flex>
-        <Flex flexDir={"column"} position={"relative"} >
+        <Flex flexDir={"column"} position={"relative"}>
           {mobileRoadmapItems.map((item: any, index: number) => {
             return (
               <Flex
@@ -306,9 +306,8 @@ function Roadmap() {
                 key={index}
                 left={index % 2 === 0 ? "-71px" : "81px"}
                 position={"relative"}
-                alignItems={'flex-end'}
+                alignItems={"flex-end"}
                 flexDirection={index % 2 === 0 ? "row-reverse" : "row"}
-               
               >
                 <Flex
                   position={"relative"}
@@ -325,7 +324,7 @@ function Roadmap() {
                 ></Flex>
                 <Flex
                   flexDir={index % 2 === 0 ? "row-reverse" : "row"}
-                  alignItems={'flex-end'}
+                  alignItems={"flex-end"}
                   left={
                     index > 2
                       ? index % 2 === 0
@@ -338,23 +337,34 @@ function Roadmap() {
                   position={"relative"}
                 >
                   <MobileRoadmapHex completed={item.completed} />
-                  <Flex position={'relative'} flexDir={"column"} alignItems={"center"} top={item.top}>
+                  <Flex
+                    position={"relative"}
+                    flexDir={"column"}
+                    alignItems={"center"}
+                    top={item.top}
+                  >
                     {item.completed && (
-                      <Flex mb='3px'>
+                      <Flex mb="3px">
                         <Image src={check} alt="check" />
                       </Flex>
                     )}
                     <Text
                       // border={"1px solid red"}
-                     
-                    
+
                       w="140px"
                       fontSize={"14px"}
                       textAlign={"center"}
                     >
                       {item.title}
                     </Text>
-                    <Text mt='9px' color={item.completed ? "#2a72e5" : "#46bb75"} fontWeight={'bold'} fontSize={'12px'}>{item.subtitle}</Text>
+                    <Text
+                      mt="9px"
+                      color={item.completed ? "#2a72e5" : "#46bb75"}
+                      fontWeight={"bold"}
+                      fontSize={"12px"}
+                    >
+                      {item.subtitle}
+                    </Text>
                   </Flex>
                 </Flex>
               </Flex>
@@ -372,7 +382,13 @@ function Roadmap() {
     );
   };
   return (
-    <Flex justifyContent={"center"} mt={[0,0,0,0,'110px','110px']} alignItems={"center"} flexDir={"column"}>
+    <Flex
+      justifyContent={"center"}
+      mt={[0, 0, "90px", "90px", "120px", "120px"]}
+      // border={"1px solid red"}
+      alignItems={"center"}
+      flexDir={"column"}
+    >
       <Text
         fontSize={["32px", "32px", "36px", "36px", "36px", "36px"]}
         fontFamily={theme.fonts.openSans}

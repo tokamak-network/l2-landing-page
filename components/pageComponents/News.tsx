@@ -87,9 +87,9 @@ function News() {
   };
 
   const slickerStyles = tabletView
-    ? `
-  
-  .slick-slider{
+    ?
+     `
+   .slick-slider{
     width:  800px !important;
   }
   .slick-list {

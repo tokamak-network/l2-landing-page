@@ -252,25 +252,30 @@ function Eccosystem() {
     const { title, num } = props;
     return (
       <Button
-        w={["96px", "96px", "", "", "", ""]}
+        // w={["96px", "96px", "", "", "", ""]}
         fontFamily={theme.fonts.openSans}
+       
         bg="transparent"
         backgroundImage={
           selected === title
             ? "linear-gradient(to bottom, #1f8efa, #2a72e5)"
             : "none"
         }
+        boxShadow={selected===title? "0 3px 8px 0 rgba(49, 127, 203, 0.25)":''}
         fontSize={"14px"}
         color={selected === title ? "#fff" : "#7a7e87"}
         _hover={{
-          backgroundImage: "linear-gradient(to bottom, #1f8efa, #2a72e5)",
+          backgroundImage: "linear-gradient(to bottom, #2a72e5, #1f8efa)",
+          boxShadow:'0 0 0 0 rgba(49, 127, 203, 0.25)',
           color: "#fff",
+          paddingLeft:'12px',
+          paddingRight:'12px'
         }}
         mb="15px"
         h="29px"
-        mr={(num + 1) % 3 === 0 ? "0px" : "16px"}
+        mx={'6px'}
         borderRadius={"24px"}
-        px="24px"
+        px={ "12px"}
         onClick={() => setSelected(title)}
       >
         {title}
@@ -278,7 +283,7 @@ function Eccosystem() {
     );
   };
   return (
-    <Flex zIndex={1} justifyContent={"center"} alignItems={"center"} flexDir={"column"} id="ecosystem">
+    <Flex zIndex={1} justifyContent={"center"} alignItems={"center"} flexDir={"column"} id="ecosystem" mt={['','','','','','']}>
       <Text
         fontSize={["32px", "32px", "36px", "36px", "36px", "36px"]}
         fontFamily={theme.fonts.openSans}
@@ -296,17 +301,22 @@ function Eccosystem() {
       >
         Check out different dapps on DARIUS{" "}
       </Text>
+      <Flex w={['','','740px','740px','1200px','1200px']} h='44px' alignItems={'flex-start'}>
+      
       <Flex
         flexWrap={"wrap"}
         flexDir={"row"}
         mb="15px"
-        justifyContent={mobileView ? "" : "center"}
+        justifyContent={['','',"flex-start","flex-start",'center','center']}
         w={["320px", "320px", "100%", "100%", "100%", "100%"]}
       >
         {types.map((type: string, index: number) => {
           return <CustomButton num={index} title={type} key={index} />;
         })}
       </Flex>
+      <Link target="blank" href="https://j8vmrrhl32u.typeform.com/to/PVC3jyum" width={'120px'} fontSize={'14px'} fontWeight={600} color='#2a72e5'>Add your Dapp</Link>
+      </Flex>
+     
       {mobileView ? (
         <Flex
           flexDir={"column"}
