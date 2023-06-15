@@ -12,12 +12,12 @@ import BottomRing from "@/components/animations/BottomRing";
 import useMediaView from "./hooks/useMediaView";
 import TabletRing from "@/components/animations/TabletRing";
 export default function Home() {
-  const { pcView } = useMediaView();
+  const { mobileView, tabletView, pcView } = useMediaView();
 
   return (
-    <Flex flexDir={"column"} maxW={'100vw'} overflowY={"hidden"}>
-      <TopRing />
-      {!pcView && <TabletRing/>}
+    <Flex flexDir={"column"} maxW={"100vw"} overflowY={"hidden"}>
+      {!mobileView && <TopRing />}
+      {tabletView && <TabletRing />}
       <Intro />
       <Mission />
       <Roadmap />
@@ -26,8 +26,8 @@ export default function Home() {
       <News />
       <GetFunded />
 
-   {pcView &&   <MiddleRing />}
-    {pcView &&  <BottomRing/>}
+      {pcView && <MiddleRing />}
+      {pcView && <BottomRing />}
     </Flex>
   );
 }

@@ -163,14 +163,15 @@ function Footer() {
         flexDir={"column"}
         flexWrap={"wrap"}
         alignItems={"center"}
+        mt={['20px','20px','0px','0px','0px','0px']}
       >
         <Flex
           w={"100%"}
           flexDir={"row"}
           flexWrap={"wrap"}
           justifyContent={"space-between"}
-          height={"179px"}
-          mb="60px"
+          height={['540px','540px',"179px","179px","179px","179px"]}
+          mb={['30px','30px',"60px","60px","60px","60px"]}
           px={["20px", "20px", "30px", "30px", "0px", "0px"]}
         >
           {data.map((info: any, index: number) => {
@@ -252,6 +253,7 @@ function Footer() {
       alignItems={"center"}
       zIndex={10}
     >
+      {mobileView && <Line />}
       <FooterContainer />
 
       <Line />

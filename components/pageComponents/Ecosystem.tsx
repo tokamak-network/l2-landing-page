@@ -7,11 +7,11 @@ import Slider from "react-slick";
 import useMediaView from "@/app/hooks/useMediaView";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import LYDA from '../../app/assets/LYDA_symbol.svg'
-import DEX from '../../app/assets/tonDEX_symbol.svg'
-import DOM from '../../app/assets/DOM_symbol.png'
-import Native from '../../app/assets/staking_symbol.svg'
-import TONStarter from '../../app/assets/TON_symbol.svg'
+import LYDA from "../../app/assets/LYDA_symbol.svg";
+import DEX from "../../app/assets/tonDEX_symbol.svg";
+import DOM from "../../app/assets/DOM_symbol.png";
+import Native from "../../app/assets/staking_symbol.svg";
+import TONStarter from "../../app/assets/TON_symbol.svg";
 function Eccosystem() {
   const theme = useTheme();
   const [selected, setSelected] = useState("All");
@@ -21,14 +21,14 @@ function Eccosystem() {
   const [pageLimit, setPageLimit] = useState<number>(2);
 
   const types = [
-    "All",
-    "Bridge",
-    "DAO",
-    "DEX",
-    "Game",
-    "LaunchPad",
-    "Social",
-    "NFT",
+    {title: 'All', width: '48px'},
+    {title: 'Bridge', width: '68px'},
+    {title: 'DAO', width: '54px'},
+    {title: 'DEX', width: '50px'},
+    {title: 'Game', width: '64px'},
+    {title: 'LaunchPad', width: '98px'},
+    {title: 'Social', width: '64px'},
+    {title: 'NFT', width: '50px'}
   ];
 
   const tabSettings = {
@@ -178,7 +178,7 @@ function Eccosystem() {
     },
     {
       title: "Bridge & Swap",
-      image:  TONStarter,
+      image: TONStarter,
       url: "dao.tokamak.network",
       content:
         "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
@@ -210,7 +210,7 @@ function Eccosystem() {
     },
     {
       title: "TONStarter",
-      image:  TONStarter,
+      image: TONStarter,
       url: "tonstarter.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
@@ -218,7 +218,7 @@ function Eccosystem() {
     },
     {
       title: "Native FW",
-      image:Native,
+      image: Native,
       url: "simple.staking.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
@@ -248,34 +248,37 @@ function Eccosystem() {
     return cards.slice(startIndex, endIndex);
   };
 
-  const CustomButton = (props: { title: string; num: number }) => {
-    const { title, num } = props;
+  const CustomButton = (props: { title: string; num: number , width: string}) => {
+    const { title, num, width } = props;
     return (
       <Button
         // w={["96px", "96px", "", "", "", ""]}
         fontFamily={theme.fonts.openSans}
-       
         bg="transparent"
         backgroundImage={
           selected === title
             ? "linear-gradient(to bottom, #1f8efa, #2a72e5)"
             : "none"
         }
-        boxShadow={selected===title? "0 3px 8px 0 rgba(49, 127, 203, 0.25)":''}
+        boxShadow={
+          selected === title ? "0 3px 8px 0 rgba(49, 127, 203, 0.25)" : ""
+        }
         fontSize={"14px"}
         color={selected === title ? "#fff" : "#7a7e87"}
         _hover={{
           backgroundImage: "linear-gradient(to bottom, #2a72e5, #1f8efa)",
-          boxShadow:'0 0 0 0 rgba(49, 127, 203, 0.25)',
+          boxShadow: "0 0 0 0 rgba(49, 127, 203, 0.25)",
           color: "#fff",
-          paddingLeft:'12px',
-          paddingRight:'12px'
+          paddingLeft: ['0','0',"12px","12px","12px","12px"],
+          paddingRight: ['0','0',"12px","12px","12px","12px"],
         }}
+        w={['96px','96px',width,width,width,width]}
+     
         mb="15px"
         h="29px"
-        mx={'6px'}
+        mr={[(num+1)%3 === 0? '0px':'16px',(num+1)%3 === 0? '0px':"16px","12px","12px","12px","12px"]}
         borderRadius={"24px"}
-        px={ "12px"}
+        px={"12px"}
         onClick={() => setSelected(title)}
       >
         {title}
@@ -283,7 +286,15 @@ function Eccosystem() {
     );
   };
   return (
-    <Flex zIndex={1} justifyContent={"center"} alignItems={"center"} flexDir={"column"} id="ecosystem" mt={['','','','','','']}>
+    <Flex
+      zIndex={1}
+      justifyContent={"center"}
+      alignItems={"center"}
+      flexDir={"column"}
+      id="ecosystem"
+      mt={["120px", "120px", "", "", "", ""]}
+   
+    >
       <Text
         fontSize={["32px", "32px", "36px", "36px", "36px", "36px"]}
         fontFamily={theme.fonts.openSans}
@@ -295,28 +306,48 @@ function Eccosystem() {
         fontSize={"16px"}
         fontFamily={theme.fonts.openSans}
         color={"#7a7e87"}
-        // w={["320px", "320px", "100%", "100%", "100%", "100%"]}
-        mb={"60px"}
+        mb={['15px','15px',"60px","60px","60px","60px"]}
         textAlign={"center"}
       >
         Check out different dapps on DARIUS{" "}
       </Text>
-      <Flex w={['','','740px','740px','1200px','1200px']} h='44px' alignItems={'flex-start'}>
-      
       <Flex
-        flexWrap={"wrap"}
-        flexDir={"row"}
-        mb="15px"
-        justifyContent={['','',"flex-start","flex-start",'center','center']}
-        w={["320px", "320px", "100%", "100%", "100%", "100%"]}
+        w={["", "", "740px", "740px", "1200px", "1200px"]}
+        h={['100%' , '100%', "44px", "44px", "44px", "44px"]}
+        alignItems={['center','center',"flex-start","flex-start","flex-start","flex-start"]}
+        flexDir={['column-reverse', 'column-reverse','row','row','row','row']}
       >
-        {types.map((type: string, index: number) => {
-          return <CustomButton num={index} title={type} key={index} />;
-        })}
+        <Flex
+          flexWrap={"wrap"}
+          flexDir={"row"}
+          mb="15px"
+          justifyContent={[
+            "",
+            "",
+            "flex-start",
+            "flex-start",
+            "center",
+            "center",
+          ]}
+          w={["320px", "320px", "100%", "100%", "100%", "100%"]}
+        >
+          {types.map((type: any, index: number) => {
+            return <CustomButton num={index} title={type.title} key={index} width={type.width} />;
+          })}
+        </Flex>
+        <Link
+          target="blank"
+          href="https://j8vmrrhl32u.typeform.com/to/PVC3jyum"
+          width={"120px"}
+          fontSize={"14px"}
+          fontWeight={600}
+          color="#2a72e5"
+          mb={['40px','40px','','','','']}
+        >
+          Add your Dapp
+        </Link>
       </Flex>
-      <Link target="blank" href="https://j8vmrrhl32u.typeform.com/to/PVC3jyum" width={'120px'} fontSize={'14px'} fontWeight={600} color='#2a72e5'>Add your Dapp</Link>
-      </Flex>
-     
+
       {mobileView ? (
         <Flex
           flexDir={"column"}
