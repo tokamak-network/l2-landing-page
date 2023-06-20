@@ -20,15 +20,24 @@ function Eccosystem() {
   const [pageIndex, setPageIndex] = useState<number>(1);
   const [pageLimit, setPageLimit] = useState<number>(2);
 
+  interface ICard {
+    title: string;
+    image: any;
+    url: string;
+    content: string;
+    status: string;
+    type: string;
+  }
+
   const types = [
-    {title: 'All', width: '48px'},
-    {title: 'Bridge', width: '68px'},
-    {title: 'DAO', width: '54px'},
-    {title: 'DEX', width: '50px'},
-    {title: 'Game', width: '64px'},
-    {title: 'LaunchPad', width: '98px'},
-    {title: 'Social', width: '64px'},
-    {title: 'NFT', width: '50px'}
+    { title: "All", width: "48px" },
+    { title: "Bridge", width: "68px" },
+    { title: "DAO", width: "54px" },
+    { title: "DEX", width: "50px" },
+    { title: "Game", width: "64px" },
+    { title: "LaunchPad", width: "98px" },
+    { title: "Social", width: "64px" },
+    { title: "NFT", width: "50px" },
   ];
 
   const tabSettings = {
@@ -159,7 +168,7 @@ function Eccosystem() {
     }
   }
   `;
-  const cards = [
+  const cards: ICard[] = [
     {
       title: "TONStarter",
       image: TONStarter,
@@ -167,6 +176,7 @@ function Eccosystem() {
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
       status: "COMING SOON",
+      type: "Bridge",
     },
     {
       title: "Native FW",
@@ -175,6 +185,7 @@ function Eccosystem() {
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
       status: "COMING SOON",
+      type: "DAO",
     },
     {
       title: "Bridge & Swap",
@@ -183,6 +194,7 @@ function Eccosystem() {
       content:
         "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
       status: "",
+      type: "DEX",
     },
     {
       title: "TONDEX",
@@ -191,6 +203,7 @@ function Eccosystem() {
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
       status: "COMING SOON",
+      type: "DAO",
     },
     {
       title: "Dragons of Midgard",
@@ -199,6 +212,7 @@ function Eccosystem() {
       content:
         "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. 5555 Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
       status: "COMING SOON",
+      type: "Game",
     },
     {
       title: "LYDA",
@@ -207,6 +221,7 @@ function Eccosystem() {
       content:
         "LYDA is a platform to launch social tokens to transform social capitals in fandoms into economic benefits for creators and fans. LYDA eliminated the early stage investment for fan token IDO’s on the technical side, …",
       status: "COMING SOON",
+      type: "LaunchPad",
     },
     {
       title: "TONStarter",
@@ -215,6 +230,7 @@ function Eccosystem() {
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
       status: "COMING SOON",
+      type: "DAO",
     },
     {
       title: "Native FW",
@@ -223,6 +239,7 @@ function Eccosystem() {
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
       status: "COMING SOON",
+      type: "Social",
     },
     {
       title: "Bridge & Swap",
@@ -231,6 +248,7 @@ function Eccosystem() {
       content:
         "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
       status: "",
+      type: "Bridge",
     },
     {
       title: "TONDEX",
@@ -238,17 +256,31 @@ function Eccosystem() {
       url: "tonstarter.tokamak.network",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
-      status: "COMING SOON",
+      status: "",
+      type: "NFT",
     },
   ];
+
+  const [filteredCards, setFilteredCards] = useState<ICard[]>(cards);
 
   const getPaginatedData = () => {
     const startIndex = 0;
     const endIndex = startIndex + pageLimit * pageIndex;
-    return cards.slice(startIndex, endIndex);
+    return filteredCards.slice(startIndex, endIndex);
   };
 
-  const CustomButton = (props: { title: string; num: number , width: string}) => {
+  const filterCards = (type: string) => {
+    setSelected(type);
+    type === "All"
+      ? setFilteredCards(cards)
+      : setFilteredCards(cards.filter((card) => card.type === type));
+  };
+
+  const CustomButton = (props: {
+    title: string;
+    num: number;
+    width: string;
+  }) => {
     const { title, num, width } = props;
     return (
       <Button
@@ -269,17 +301,23 @@ function Eccosystem() {
           backgroundImage: "linear-gradient(to bottom, #2a72e5, #1f8efa)",
           boxShadow: "0 0 0 0 rgba(49, 127, 203, 0.25)",
           color: "#fff",
-          paddingLeft: ['0','0',"12px","12px","12px","12px"],
-          paddingRight: ['0','0',"12px","12px","12px","12px"],
+          paddingLeft: ["0", "0", "12px", "12px", "12px", "12px"],
+          paddingRight: ["0", "0", "12px", "12px", "12px", "12px"],
         }}
-        w={['96px','96px',width,width,width,width]}
-     
+        w={["96px", "96px", width, width, width, width]}
         mb="15px"
         h="29px"
-        mr={[(num+1)%3 === 0? '0px':'16px',(num+1)%3 === 0? '0px':"16px","12px","12px","12px","12px"]}
+        mr={[
+          (num + 1) % 3 === 0 ? "0px" : "16px",
+          (num + 1) % 3 === 0 ? "0px" : "16px",
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+        ]}
         borderRadius={"24px"}
         px={"12px"}
-        onClick={() => setSelected(title)}
+        onClick={() => filterCards(title)}
       >
         {title}
       </Button>
@@ -292,9 +330,7 @@ function Eccosystem() {
       alignItems={"center"}
       flexDir={"column"}
       id="ecosystem"
-      
       mt={["120px", "120px", "", "", "", ""]}
-   
     >
       <Text
         fontSize={["32px", "32px", "36px", "36px", "36px", "36px"]}
@@ -307,16 +343,30 @@ function Eccosystem() {
         fontSize={"16px"}
         fontFamily={theme.fonts.openSans}
         color={"#7a7e87"}
-        mb={['15px','15px',"60px","60px","60px","60px"]}
+        mb={["15px", "15px", "60px", "60px", "60px", "60px"]}
         textAlign={"center"}
       >
         Check out different dapps on DARIUS{" "}
       </Text>
       <Flex
         w={["", "", "740px", "740px", "1200px", "1200px"]}
-        h={['100%' , '100%', "44px", "44px", "44px", "44px"]}
-        alignItems={['center','center',"flex-start","flex-start","flex-start","flex-start"]}
-        flexDir={['column-reverse', 'column-reverse','row','row','row','row']}
+        h={["100%", "100%", "44px", "44px", "44px", "44px"]}
+        alignItems={[
+          "center",
+          "center",
+          "flex-start",
+          "flex-start",
+          "flex-start",
+          "flex-start",
+        ]}
+        flexDir={[
+          "column-reverse",
+          "column-reverse",
+          "row",
+          "row",
+          "row",
+          "row",
+        ]}
       >
         <Flex
           flexWrap={"wrap"}
@@ -333,7 +383,14 @@ function Eccosystem() {
           w={["320px", "320px", "100%", "100%", "100%", "100%"]}
         >
           {types.map((type: any, index: number) => {
-            return <CustomButton num={index} title={type.title} key={index} width={type.width} />;
+            return (
+              <CustomButton
+                num={index}
+                title={type.title}
+                key={index}
+                width={type.width}
+              />
+            );
           })}
         </Flex>
         <Link
@@ -343,7 +400,7 @@ function Eccosystem() {
           fontSize={"14px"}
           fontWeight={600}
           color="#2a72e5"
-          mb={['40px','40px','','','','']}
+          mb={["40px", "40px", "", "", "", ""]}
         >
           Add your Dapp
         </Link>
@@ -384,7 +441,7 @@ function Eccosystem() {
           <style>{slickStyle}</style>
 
           <Slider {...tabSettings} className="slider1">
-            {cards.map((card: any, index: number) => (
+            {filteredCards.map((card: any, index: number) => (
               <EcosystemCard
                 key={index}
                 num={index}
@@ -402,7 +459,7 @@ function Eccosystem() {
           <style>{slickStyle}</style>
 
           <Slider {...settings} className="slider1">
-            {cards.map((card: any, index: number) => (
+            {filteredCards.map((card: any, index: number) => (
               <EcosystemCard
                 key={index}
                 num={index}
