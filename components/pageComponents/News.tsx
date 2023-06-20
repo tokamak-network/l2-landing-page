@@ -187,6 +187,7 @@ function News() {
       flexDir={"column"}
       height={"100%"}
       pb='60px'
+      zIndex={10}
       mt={['120px','120px','150px','150px','180px','180px' ]}
     >
       <Text

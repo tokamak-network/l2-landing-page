@@ -15,6 +15,7 @@ function Mission() {
       justifyContent={"center"}
       alignItems={"center"}
       flexDir={"column"}
+      zIndex={10}
       // mx="150px"
     >
       <Text

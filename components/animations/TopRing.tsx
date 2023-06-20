@@ -13,9 +13,10 @@ function TopRing() {
   return (
     <Flex
       position={"absolute"}
-      maxW={"100vw"}
-      minW={"100vw"}
-      overflowX={"hidden"}
+      zIndex={0}
+      // maxW={"100vw"}
+      // minW={"100vw"}
+      // overflowX={"hidden"}
       top={["", "", "1169px", "1169px", "704px", "704px"]}
       // border={'1px solid red'}
     >

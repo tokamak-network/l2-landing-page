@@ -1,6 +1,6 @@
 import { Flex, Text,useTheme } from "@chakra-ui/react";
 import Image from "next/image";
-
+import RollupAnime from "../animations/RollupAnime";
 type MissionProps = {
   image: any;
   title: string;
@@ -24,10 +24,11 @@ function MissionCard(props: MissionProps) {
       alignItems={'center'}
       // p="20px"
     >
-      <Flex w="140px" h="140px"  mb="30px">
-        {/* image goes here */}
+      {/* <Flex w="140px" h="140px"  mb="30px">
+       
         <Image src={image} alt='image'/>
-      </Flex>
+      </Flex> */}
+      <RollupAnime/>
       <Text mb='14px' fontWeight={600} fontSize={'20px'} color='#1c1c1c' fontFamily={theme.fonts.openSans}>{title}</Text>
       <Text w={['320px','320px','226px','226px', '380px','380px']} fontSize={'14px'} color='#7a7e87' fontFamily={theme.fonts.openSans}>{content}</Text>
     </Flex>

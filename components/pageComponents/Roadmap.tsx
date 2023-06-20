@@ -388,6 +388,7 @@ function Roadmap() {
       // border={"1px solid red"}
       alignItems={"center"}
       flexDir={"column"}
+      zIndex={10}
     >
       <Text
         fontSize={["32px", "32px", "36px", "36px", "36px", "36px"]}

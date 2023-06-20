@@ -287,11 +287,12 @@ function Eccosystem() {
   };
   return (
     <Flex
-      zIndex={1}
+      zIndex={10}
       justifyContent={"center"}
       alignItems={"center"}
       flexDir={"column"}
       id="ecosystem"
+      
       mt={["120px", "120px", "", "", "", ""]}
    
     >
