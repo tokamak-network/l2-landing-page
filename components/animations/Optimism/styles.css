@@ -60,9 +60,10 @@
   }
 
 .container .line {
-    width: 107.1px;
+    width: 83px;
     align-items: center;
     height: 1px;
+    top: 31px;
     background-color: #000;
 }
 

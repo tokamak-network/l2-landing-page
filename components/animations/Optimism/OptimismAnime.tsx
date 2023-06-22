@@ -7,6 +7,7 @@ export default function OptimismAnime() {
       <Box className="container dotted-circle" />
       <Box className="container circle" />
       <Box className="container top-left-quarter-circle" />
+      <Box className="container line" />
     </Box>
   );
 }
