@@ -63,7 +63,36 @@
     width: 83px;
     align-items: center;
     height: 1px;
-    top: 31px;
+    bottom: 249px;
     background-color: #000;
 }
 
+.container .four-point-star::after,
+.container .four-point-star::before {
+    position: absolute;
+    content: "\2726";
+    font-size: 1.2rem;
+    margin-left: 74px;
+    top: -43px;
+}
+
+.container .four-point-star::after { /* The foreground star */
+    background: #1c1c1c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container .four-point-star-small::after,
+.container .four-point-star-small::before {
+    position: absolute;
+    content: "\2726";
+    font-size: 0.6rem;
+    margin-left: 85px;
+    top: -167px;
+}
+
+.container .four-point-star-small::after { /* The foreground star */
+    background: #1c1c1c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
