@@ -26,11 +26,11 @@ function Footer() {
       subTitles: [
         {
           text: "Team",
-          Link: "",
+          Link: "https://tokamak.network/#/about",
         },
         {
           text: "Careers",
-          Link: "",
+          Link: "https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824",
         },
         {
           text: "Partners",
@@ -42,8 +42,8 @@ function Footer() {
       title: "Mainnet",
       subTitles: [
         {
-          text: "Darius",
-          Link: "",
+          text: "Titan",
+          Link: "titan.tokamak.network",
         },
       ],
     },
@@ -64,24 +64,28 @@ function Footer() {
       title: "Ecosystem",
       subTitles: [
         {
-          text: "Swap",
-          Link: "",
-        },
-        {
-          text: "Bridge",
+          text: "Bridge & Swap",
           Link: "",
         },
         {
           text: "Staking",
-          Link: "",
+          Link: "https://simple.staking.tokamak.network/staking",
         },
         {
           text: "DAO",
-          Link: "",
+          Link: "https://dao.tokamak.network/#/",
         },
         {
           text: "Launchpad",
+          Link: "https://tonstarter.tokamak.network/",
+        },
+        {
+          text: "Price Dashboard",
           Link: "",
+        },
+        {
+          text: "Block Explorer",
+          Link: "https://explorer.titan.tokamak.network",
         },
       ],
     },
@@ -90,19 +94,15 @@ function Footer() {
       subTitles: [
         {
           text: "Grant",
-          Link: "",
-        },
-        {
-          text: "Bug Bounty",
-          Link: "",
+          Link: "https://tokamak.notion.site/Tokamak-Network-Grant-Program-f2384b458ea341a0987c7e73a909aa21",
         },
         {
           text: "Github",
-          Link: "",
+          Link: "https://github.com/tokamak-network",
         },
         {
           text: "Documentation",
-          Link: "",
+          Link: "https://tokamaknetwork.gitbook.io/",
         },
       ],
     },
@@ -111,27 +111,27 @@ function Footer() {
       subTitles: [
         {
           text: "Medium",
-          Link: "",
+          Link: "https://medium.com/onther-tech",
         },
         {
           text: "Twitter",
-          Link: "",
+          Link: "https://twitter.com/tokamak_network",
         },
         {
-          text: "Kakakotalk",
-          Link: "",
+          text: "Kakaotalk (KR)",
+          Link: "https://open.kakao.com/o/g2zlglHd",
         },
         {
-          text: "Discord",
-          Link: "",
+          text: "Discord (EN)",
+          Link: "https://discord.com/invite/J4chV2zuAK",
         },
         {
           text: "Telegram",
-          Link: "",
+          Link: "https://t.me/tokamak_network",
         },
         {
           text: "Linkedin",
-          Link: "",
+          Link: "https://www.linkedin.com/company/tokamaknetwork/",
         },
       ],
     },
@@ -194,7 +194,9 @@ function Footer() {
                 </Flex>
                 {info.subTitles.map((sub: any, index: number) => {
                   return (
-                    <Flex
+                    <Link
+                    href={sub.Link} isExternal
+                     style={{ textDecoration: "none" }}
                       fontFamily={"Open Sans, sans-serif"}
                       key={index}
                       color={"#4c4c4c"}
@@ -203,7 +205,7 @@ function Footer() {
                       mb="4px"
                     >
                       {sub.text}
-                    </Flex>
+                    </Link>
                   );
                 })}
               </Flex>

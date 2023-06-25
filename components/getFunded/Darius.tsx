@@ -85,9 +85,10 @@ const Darius = () => {
             mr="15px"
             h="45px"
             w={["238px", "238px", "164px", "164px", "160px", "160px"]}
-            href=""
+            href="https://discord.com/invite/J4chV2zuAK"
             display={"flex"}
             textDecor={"none"}
+            target="blank"
             justifyContent={"center"}
             alignItems={"center"}
             fontWeight={600}

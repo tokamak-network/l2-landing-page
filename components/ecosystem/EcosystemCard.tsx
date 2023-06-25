@@ -1,6 +1,7 @@
 import { Flex, Text, useTheme } from "@chakra-ui/react";
 import Image from "next/image";
 import useMediaView from "@/app/hooks/useMediaView";
+import { useMemo } from "react";
 
 type EcoProps = {
   image: any;
@@ -10,6 +11,7 @@ type EcoProps = {
   status: string;
   num:number
 };
+
 
 function EcosystemCard(props: EcoProps) {
   const { image, title, content, url, status, num } = props;

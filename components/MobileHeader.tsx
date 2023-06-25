@@ -207,9 +207,9 @@ const {link, image, title} = props
                         >
                           MAINNET
                         </Flex>
-                        <CustomLink image={github} link={''} title={'Github'}/>
+                        <CustomLink image={github} link={'https://github.com/tokamak-network'} title={'Github'}/>
                         <CustomLink image={guide} link={''} title={'Guide'}/>
-                        <CustomLink image={explorer} link={''} title={'Block Explorer'}/>
+                        <CustomLink image={explorer} link={'https://explorer.titan.tokamak.network'} title={'Block Explorer'}/>
                         <Flex
                           h={"50px"}
                           fontFamily={theme.fonts.openSans}
@@ -219,8 +219,8 @@ const {link, image, title} = props
                         >
                           TESTNET
                         </Flex>
-                        <CustomLink image={guide} link={''} title={'Guide'}/>
-                        <CustomLink image={explorer} link={''} title={'Block Explorer'}/>
+                        <CustomLink image={guide} link={'https://onther.notion.site/Darius-L2-Testnet-Dev-Document-5023767f30754d21876b049da68f0128'} title={'Guide'}/>
+                        <CustomLink image={explorer} link={'https://goerli.explorer.tokamak.network/'} title={'Block Explorer'}/>
                         
                       </AccordionPanel>
                     </>
@@ -271,8 +271,8 @@ const {link, image, title} = props
                       </h2>
                       <AccordionPanel pb={4} flexDir={"column"} p="0px">
                       
-                        <CustomLink image={grant} link={''} title={'GranTON Application'}/>
-                        <CustomLink image={bug} link={''} title={'Bug Bounty'}/>
+                        <CustomLink image={grant} link={'https://tokamak.notion.site/Grant-Announcement-EN-503f8396ee604673b0023e0183810e75'} title={'GranTON Application'}/>
+                        {/* <CustomLink image={bug} link={''} title={'Bug Bounty'}/> */}
                       
                       </AccordionPanel>
                     </>
@@ -331,8 +331,8 @@ const {link, image, title} = props
                         >
                           ABOUT
                         </Flex>
-                        <CustomLink image={team} link={''} title={'Team'}/>
-                        <CustomLink image={career} link={''} title={'Career'}/>
+                        <CustomLink image={team} link={'https://tokamak.network/#/about'} title={'Team'}/>
+                        <CustomLink image={career} link={'https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824'} title={'Career'}/>
                         <Flex
                           h={"50px"}
                           fontFamily={theme.fonts.openSans}
@@ -342,11 +342,11 @@ const {link, image, title} = props
                         >
                           COMMUNITY
                         </Flex>
-                        <CustomLink image={discord} link={''} title={'Discord'}/>
-                        <CustomLink image={kakao} link={''} title={'Kakao (KR)'}/>
-                        <CustomLink image={telegram} link={''} title={'Telegram (EN)'}/>
-                        <CustomLink image={twitter} link={''} title={'Twitter'}/>
-                        <CustomLink image={medium} link={''} title={'Medium'}/>                        
+                        <CustomLink image={discord} link={'https://discord.com/invite/J4chV2zuAK'} title={'Discord'}/>
+                        <CustomLink image={kakao} link={'https://open.kakao.com/o/g2zlglHd'} title={'Kakao (KR)'}/>
+                        <CustomLink image={telegram} link={'https://t.me/tokamak_network'} title={'Telegram (EN)'}/>
+                        <CustomLink image={twitter} link={'https://twitter.com/tokamak_network'} title={'Twitter'}/>
+                        <CustomLink image={medium} link={'https://medium.com/onther-tech'} title={'Medium'}/>                        
                       </AccordionPanel>
                     </>
                   )}
