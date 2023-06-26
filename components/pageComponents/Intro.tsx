@@ -26,22 +26,20 @@ function Intro() {
 
   return (
     <Flex
-      h={'672px'}
+      h={"672px"}
       // alignItems={"center"}
       flexDir={"column"}
       bg="#fafbfc"
-     
+
       // position={'absolute'}
     >
-     
-
       <Flex w="100%" flexDir={"column"} alignItems={"center"}>
         <Text
           fontSize={["40px", "40px", "80px", "80px", "80px", "80px"]}
           mt={["119px", "119px", "126px", "126px", "155px", "155px"]}
           fontWeight={"bold"}
           w={["100%", "100%", "100%", "100%", "1068px", "1068px"]}
-          px={['20px','20px','30px','30px','0px','0px']}
+          px={["20px", "20px", "30px", "30px", "0px", "0px"]}
           color={"#1c1c1c"}
           lineHeight={mobileView ? 1.15 : 1}
           textAlign={"center"}
@@ -52,9 +50,9 @@ function Intro() {
           Make Ethereum Boundless
         </Text>
         <Text
-           w={["100%", "100%", "100%", "100%", "1068px", "1068px"]}
+          w={["100%", "100%", "100%", "100%", "1068px", "1068px"]}
           letterSpacing={"wide"}
-          px={['20px','20px','30px','30px','','']}
+          px={["20px", "20px", "30px", "30px", "", ""]}
           lineHeight={1.56}
           fontSize={mobileView ? "16px" : "18px"}
           color={"#7a7e87"}

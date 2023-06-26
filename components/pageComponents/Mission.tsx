@@ -39,8 +39,7 @@ function Mission() {
         px={["20px", "20px", "0px", "0px", "0px", "0px"]}
         textAlign={"center"}
       >
-        Titan is committed to delivering a seamless L2 experience for all users
-        and dapps
+        Titan is committed to delivering a seamless L2 experience for all users and dapps
       </Text>
 
       <Flex
@@ -61,13 +60,13 @@ function Mission() {
           num={0}
           image={rollup}
           title={"Rollup Security"}
-          content="Titan is a secure and scalable blockchain platform designed for decentralized applications. It utilizes Ethereum L1’s proven security measures and rollup technology, which posts all transaction data and every state root to Ethereum L1."
+          content="Titan is a secure and scalable blockchain platform designed for decentralized applications. It utilizes Ethereum L1's proven security measures and rollup technology, which posts all transaction data and every state root to Ethereum L1."
         />
         <MissionCard
           num={1}
           image={fee}
           title={"Improved Fee"}
-          content="In addition to lower transaction fee, Titan also offers flexible transaction scheme that allows users to pay for transaction costs not just in ETH but in ERC20 tokens such as TON."
+          content="Titan automatically relays L2->L1 standard messages without having to pay additional fee on L1 after 7 days wait. It also offers flexible transaction scheme that allows users to pay for transaction costs not just in ETH but in ERC20 tokens such as TON."
         />
         <MissionCard
           num={2}

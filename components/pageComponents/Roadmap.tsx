@@ -15,7 +15,7 @@ function Roadmap() {
 
   const roadmapItems = [
     {
-      title: "DARIUS L2 (Goerli) Testnet Open",
+      title: "Titan Goerli Open",
       subtitle: "TESTNET",
       tabLeft: "",
       desktopLeft: "",
@@ -33,7 +33,7 @@ function Roadmap() {
       completed: false,
     },
     {
-      title: "Holešky (Holešovice) Testnet Open",
+      title: "Titan Holešky Open",
       subtitle: "",
       tabLeft: "",
       desktopLeft: "-80px",
@@ -60,7 +60,7 @@ function Roadmap() {
       completed: false,
     },
     {
-      title: "L2 Mainnet Open",
+      title: "Titan L2 Mainnet Open",
       subtitle: "",
       tabLeft: "",
       desktopLeft: "",
@@ -69,7 +69,7 @@ function Roadmap() {
       completed: true,
     },
     {
-      title: "Unified Bridge & Swap Open",
+      title: "Tokamak Bridge Open",
       subtitle: "",
       tabLeft: "120px",
       desktopLeft: "-40px",
@@ -78,7 +78,7 @@ function Roadmap() {
       completed: true,
     },
     {
-      title: "Native Fast Withdrawal Open",
+      title: "Tokamak Fast Withdrawal Open",
       subtitle: "",
       tabLeft: "",
       desktopLeft: "-80px",
@@ -87,7 +87,7 @@ function Roadmap() {
       completed: false,
     },
     {
-      title: "TONStarter (Launchpad) L2 Service Open",
+      title: "TONStarter L2 Launchpad Open",
       subtitle: "",
       tabLeft: "120px",
       desktopLeft: "-120px",
@@ -96,7 +96,7 @@ function Roadmap() {
       completed: false,
     },
     {
-      title: "On-Demand Service Open",
+      title: "TokamakOP L2 On-Demand Open",
       subtitle: "",
       tabLeft: "",
       desktopLeft: "-160px",
@@ -223,19 +223,19 @@ function Roadmap() {
   const MobileHive = () => {
     const mobileRoadmapItems = [
       {
-        title: "DARIUS L2 (Goerli) Testnet Open",
+        title: "Titan Goerli Open",
         subtitle: "TESTNET",
         completed: true,
         top: "42px",
       },
       {
-        title: "L2 Mainnet Open",
+        title: "Titan L2 Mainnet Open",
         subtitle: "",
         completed: true,
         top: "14px",
       },
       {
-        title: "Unified Bridge & Swap Open",
+        title: "Tokamak Bridge Open",
         subtitle: "",
         completed: true,
         top: "24px",
@@ -247,19 +247,19 @@ function Roadmap() {
         top: "19px",
       },
       {
-        title: "Native Fast Withdrawal Open",
+        title: "Tokamak Fast Withdrawal Open",
         subtitle: "",
         completed: false,
         top: "21px",
       },
       {
-        title: "Holešky (Holešovice) Testnet Open",
+        title: "Titan Holešky Open",
         subtitle: "",
         completed: false,
         top: "20px",
       },
       {
-        title: "TONStarter (Launchpad) L2 Service Open",
+        title: "TONStarter L2 Launchpad Open",
         subtitle: "",
         completed: false,
         top: "34px",
@@ -271,7 +271,7 @@ function Roadmap() {
         top: "21px",
       },
       {
-        title: "On-Demand Service Open",
+        title: "TokamakOP L2 On-Demand Open",
         subtitle: "",
         completed: false,
         top: "21px",
