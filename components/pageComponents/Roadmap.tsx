@@ -399,7 +399,7 @@ function Roadmap() {
         mb="20px"
         color={"#1c1c1c"}
       >
-        DARIUS ROADMAP
+        TITAN ROADMAP
       </Text>
       <Text
         fontSize={"16px"}
@@ -409,7 +409,7 @@ function Roadmap() {
         mb={"50px"}
         textAlign={"center"}
       >
-        The DARIUS roadmap outlines protocol improvements that will be adjusted
+        The Titan roadmap outlines protocol improvements that will be adjusted
         based on market conditions and other factors.{" "}
       </Text>
       {pcView ? <DesktopHive /> : tabletView ? <TabletHive /> : <MobileHive />}

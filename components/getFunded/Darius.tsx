@@ -40,7 +40,7 @@ const Darius = () => {
           textAlign={["center", "center", "center", "center", "right", "right"]}
           mb="20px"
         >
-          GET STARTED WITH DARIUS
+          GET STARTED WITH Titan
         </Text>
         <Text
           w={["", "", "730px", "730px", "580px", "580px"]}
@@ -51,7 +51,7 @@ const Darius = () => {
           textAlign={["center", "center", "center", "center", "right", "right"]}
         >
           Discover the ultimate destination for fulfilling all your development
-          requirements when building on Darius.
+          requirements when building on Titan.
         </Text>
         <Flex
           flexDir={["column", "column", "row", "row", "row", "row"]}

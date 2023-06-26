@@ -57,8 +57,9 @@ case 1:
         {title}
       </Text>
       <Text
-        w={["320px", "320px", "226px", "226px", "380px", "380px"]}
+        w={["100%", "100%", "226px", "226px", "380px", "380px"]}
         fontSize={"14px"}
+        px={['20px','20px','0px','0px','0px','0px']}
         color="#7a7e87"
         fontFamily={theme.fonts.openSans}
       >

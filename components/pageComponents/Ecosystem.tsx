@@ -192,7 +192,7 @@ function Eccosystem() {
       image: TONStarter,
       url: "dao.tokamak.network",
       content:
-        "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
+        "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to Titan Network.",
       status: "",
       type: "DEX",
     },
@@ -246,7 +246,7 @@ function Eccosystem() {
       image: TONStarter,
       url: "dao.tokamak.network",
       content:
-        "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
+        "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to Titan Network.",
       status: "",
       type: "Bridge",
     },
@@ -346,7 +346,7 @@ function Eccosystem() {
         mb={["15px", "15px", "60px", "60px", "60px", "60px"]}
         textAlign={"center"}
       >
-        Check out different dapps on DARIUS{" "}
+        Check out different dapps on Titan{" "}
       </Text>
       <Flex
         w={["", "", "740px", "740px", "1200px", "1200px"]}

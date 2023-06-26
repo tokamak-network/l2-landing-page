@@ -15,12 +15,12 @@ function MobileTokamakGNB() {
     {
       title: "Tokamak Network",
       url: "https://vision.tokamak.network/",
-      isFoucsed: true,
+      isFoucsed: false,
     },
     {
       title: "L2 Mainnet",
       url: "https://tokamak.network/#/",
-      isFoucsed: false,
+      isFoucsed: true,
     },
     {
       title: "Bridge & Swap",
@@ -214,7 +214,9 @@ function MobileTokamakGNB() {
             className="gnb_mobile_menu"
             style={{
               minWidth:
-                menu.title === "Tokamak Network DAO"
+                menu.title === "L2 Mainnet"
+                  ? "130px"
+                  : menu.title === "Tokamak Network DAO"
                   ? "186px"
                   : menu.title === "Tokamak Network"
                   ? "160px"

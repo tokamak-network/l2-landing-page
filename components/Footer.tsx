@@ -34,7 +34,7 @@ function Footer() {
         },
         {
           text: "Partners",
-          Link: "",
+          Link: "https://renewal-homepage.vercel.app/#partners",
         },
       ],
     },
@@ -51,12 +51,12 @@ function Footer() {
       title: "L2 On-Demand",
       subTitles: [
         {
-          text: "Tokamak OPTIMISM",
-          Link: "",
+          text: "TokamakOPTIMISM",
+          Link: "https://renewal-homepage.vercel.app/#layer2",
         },
         {
-          text: "Tokamak zkEVM+",
-          Link: "",
+          text: "TokamakzkEVM",
+          Link: "https://renewal-homepage.vercel.app/#layer2",
         },
       ],
     },
@@ -81,7 +81,7 @@ function Footer() {
         },
         {
           text: "Price Dashboard",
-          Link: "",
+          Link: "https://price.tokamak.network/#/",
         },
         {
           text: "Block Explorer",
@@ -118,7 +118,7 @@ function Footer() {
           Link: "https://twitter.com/tokamak_network",
         },
         {
-          text: "Kakaotalk (KR)",
+          text: "KakaoTalk (KR)",
           Link: "https://open.kakao.com/o/g2zlglHd",
         },
         {
@@ -130,7 +130,7 @@ function Footer() {
           Link: "https://t.me/tokamak_network",
         },
         {
-          text: "Linkedin",
+          text: "LinkedIn",
           Link: "https://www.linkedin.com/company/tokamaknetwork/",
         },
       ],
@@ -163,15 +163,15 @@ function Footer() {
         flexDir={"column"}
         flexWrap={"wrap"}
         alignItems={"center"}
-        mt={['20px','20px','0px','0px','0px','0px']}
+        mt={["20px", "20px", "0px", "0px", "0px", "0px"]}
       >
         <Flex
           w={"100%"}
           flexDir={"row"}
           flexWrap={"wrap"}
           justifyContent={"space-between"}
-          height={['540px','540px',"179px","179px","179px","179px"]}
-          mb={['30px','30px',"60px","60px","60px","60px"]}
+          height={["540px", "540px", "179px", "179px", "179px", "179px"]}
+          mb={["30px", "30px", "60px", "60px", "60px", "60px"]}
           px={["20px", "20px", "30px", "30px", "0px", "0px"]}
         >
           {data.map((info: any, index: number) => {
@@ -195,8 +195,9 @@ function Footer() {
                 {info.subTitles.map((sub: any, index: number) => {
                   return (
                     <Link
-                    href={sub.Link} isExternal
-                     style={{ textDecoration: "none" }}
+                      href={sub.Link}
+                      isExternal
+                      style={{ textDecoration: "none" }}
                       fontFamily={"Open Sans, sans-serif"}
                       key={index}
                       color={"#4c4c4c"}
@@ -204,7 +205,34 @@ function Footer() {
                       fontSize={"14px"}
                       mb="4px"
                     >
-                      {sub.text}
+                      {sub.text === "TokamakOPTIMISM" ? 
+                        <Text>
+                          Tokamak{" "}
+                          <span
+                            style={{
+                              verticalAlign: "super",
+                              fontSize: "12px",
+                              marginLeft: "-2px",
+                            }}
+                          >
+                            Op
+                          </span>
+                        </Text>:
+                        sub.text === "TokamakzkEVM" ? <Text>
+                        Tokamak{" "}
+                        <span
+                          style={{
+                            verticalAlign: "super",
+                            fontSize: "12px",
+                            marginLeft: "-2px",
+                          }}
+                        >
+                          ZK+
+                        </span>
+                      </Text>:
+                       
+                        <Text> {sub.text}</Text>
+                      }
                     </Link>
                   );
                 })}

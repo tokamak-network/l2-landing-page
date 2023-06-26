@@ -45,12 +45,13 @@ function GNB() {
     >
       <Menu
         title={"Tokamak Network"}
-        activetab={"true"}
+       
         w={"158px"}
         url={"https://tokamak.network/#/"}
       ></Menu>
       <Menu
         title={"L2 Mainnet"}
+        activetab={"true"}
         w={"137px"}
         url={"https://simple.staking.tokamak.network/"}
       ></Menu>

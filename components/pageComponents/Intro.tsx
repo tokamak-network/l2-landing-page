@@ -40,7 +40,8 @@ function Intro() {
           fontSize={["40px", "40px", "80px", "80px", "80px", "80px"]}
           mt={["119px", "119px", "126px", "126px", "155px", "155px"]}
           fontWeight={"bold"}
-          w={["320px", "320px", "740px", "740px", "1068px", "1068px"]}
+          w={["100%", "100%", "100%", "100%", "1068px", "1068px"]}
+          px={['20px','20px','30px','30px','0px','0px']}
           color={"#1c1c1c"}
           lineHeight={mobileView ? 1.15 : 1}
           textAlign={"center"}
@@ -51,8 +52,9 @@ function Intro() {
           Make Ethereum Boundless
         </Text>
         <Text
-          w={["320px", "320px", "740px", "740px", "920px", "920px"]}
+           w={["100%", "100%", "100%", "100%", "1068px", "1068px"]}
           letterSpacing={"wide"}
+          px={['20px','20px','30px','30px','','']}
           lineHeight={1.56}
           fontSize={mobileView ? "16px" : "18px"}
           color={"#7a7e87"}
@@ -61,7 +63,7 @@ function Intro() {
           zIndex={1000}
           fontWeight={"normal"}
         >
-          Introducing Darius, the cutting-edge solution that combines speed,
+          Introducing Titan, the cutting-edge solution that combines speed,
           affordability, developer-friendliness, and the security of Ethereum.
           It empowers users to engage in real-time, flexible, cost-effective
           transactions, including the upcoming native fast-withdrawal
@@ -91,14 +93,14 @@ function Intro() {
             fontFamily={theme.fonts.openSans}
             _hover={{ textDecor: "none" }}
           >
-            Bridge to DARIUS
+            Bridge to Titan
           </Link>
           <Link
             mt={mobileView ? "20px" : ""}
             mr="15px"
             h="45px"
             w="160px"
-            href=""
+            href="https://explorer.titan.tokamak.network/"
             display={"flex"}
             textDecor={"none"}
             justifyContent={"center"}
