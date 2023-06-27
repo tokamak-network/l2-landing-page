@@ -3,7 +3,7 @@ import useMediaView from "@/app/hooks/useMediaView";
 import DariusGraphic from "../../app/assets/darius_graphic.svg";
 import Image from "next/image";
 import discord from "../../app/assets/navi_icon_discord_mobile.svg";
-
+import TitanAnime from "../animations/TtianAnime";
 const Darius = () => {
   const theme = useTheme();
 
@@ -15,13 +15,14 @@ const Darius = () => {
       justifyContent={"space-between"}
       alignItems={"center"}
     >
-      <Flex
+      {/* <Flex
         h={["260px", "260px", "310px", "310px", "310px", "310px"]}
         w={["260px", "260px", "310px", "310px", "310px", "310px"]}
         mb={["23.2px", "23.2px", "43.5px", "43.5px", "0px", "0px"]}
       >
         <Image src={DariusGraphic} alt="funded image" />
-      </Flex>
+      </Flex> */}
+      <TitanAnime/>
       <Flex 
         flexDir={"column"}
         alignItems={[
@@ -40,7 +41,7 @@ const Darius = () => {
           textAlign={["center", "center", "center", "center", "right", "right"]}
           mb="20px"
         >
-          GET STARTED WITH DARIUS
+          GET STARTED WITH TITAN
         </Text>
         <Text
           w={["", "", "730px", "730px", "580px", "580px"]}
@@ -51,7 +52,7 @@ const Darius = () => {
           textAlign={["center", "center", "center", "center", "right", "right"]}
         >
           Discover the ultimate destination for fulfilling all your development
-          requirements when building on Darius.
+          requirements when building on Titan.
         </Text>
         <Flex
           flexDir={["column", "column", "row", "row", "row", "row"]}
@@ -85,9 +86,10 @@ const Darius = () => {
             mr="15px"
             h="45px"
             w={["238px", "238px", "164px", "164px", "160px", "160px"]}
-            href=""
+            href="https://discord.com/invite/J4chV2zuAK"
             display={"flex"}
             textDecor={"none"}
+            target="blank"
             justifyContent={"center"}
             alignItems={"center"}
             fontWeight={600}

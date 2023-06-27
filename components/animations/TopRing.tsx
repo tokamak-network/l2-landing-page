@@ -14,9 +14,9 @@ function TopRing() {
     <Flex
       position={"absolute"}
       zIndex={0}
-      // maxW={"100vw"}
-      // minW={"100vw"}
-      // overflowX={"hidden"}
+      maxW={"100vw"}
+      minW={"100vw"}
+      overflowX={"hidden"}
       top={["", "", "1169px", "1169px", "704px", "704px"]}
       // border={'1px solid red'}
     >
@@ -27,7 +27,7 @@ function TopRing() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="1339.38"
+          width="800"
           height="1130.426"
         >
           <motion.path

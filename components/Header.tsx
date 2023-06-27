@@ -158,7 +158,7 @@ function Header() {
                 title={"Github"}
                 icon={github}
                 iconHover={github_hover}
-                link={""}
+                link={"https://github.com/tokamak-network"}
               />
 
               <CustomMenuItem
@@ -171,7 +171,7 @@ function Header() {
                 title={"Block Explorer"}
                 icon={explorer}
                 iconHover={explorer_hover}
-                link={""}
+                link={"https://explorer.titan.tokamak.network"}
               />
             </MenuGroup>
             <MenuDivider borderColor={"#f4f7f8"} mx="10px" />
@@ -180,13 +180,13 @@ function Header() {
                 title={"Guide"}
                 icon={guide}
                 iconHover={guide_hover}
-                link={""}
+                link={"https://onther.notion.site/Darius-L2-Testnet-Dev-Document-5023767f30754d21876b049da68f0128"}
               />
               <CustomMenuItem
                 title={"Block Explorer"}
                 icon={explorer}
                 iconHover={explorer_hover}
-                link={""}
+                link={"https://goerli.explorer.tokamak.network/"}
               />
             </MenuGroup>
           </MenuList>
@@ -223,14 +223,14 @@ function Header() {
               title={"GranTON Application"}
               icon={grant}
               iconHover={grant_hover}
-              link={""}
+              link={"https://tokamak.notion.site/Grant-Announcement-EN-503f8396ee604673b0023e0183810e75"}
             />
-            <CustomMenuItem
+            {/* <CustomMenuItem
               title={"Bug Bounty"}
               icon={bug}
               iconHover={bug_hover}
               link={""}
-            />
+            /> */}
           </MenuList>
         </Menu>
         <Menu onClose={() => handleMenuToggle(2)}>
@@ -271,13 +271,13 @@ function Header() {
                 title={"Team"}
                 icon={team}
                 iconHover={team_hover}
-                link={""}
+                link={"https://tokamak.network/#/about"}
               />
               <CustomMenuItem
                 title={"Career"}
                 icon={career}
                 iconHover={career_hover}
-                link={""}
+                link={"https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824"}
               />
             </MenuGroup>
             <MenuDivider borderColor={"#f4f7f8"} mx="10px" />
@@ -291,31 +291,31 @@ function Header() {
                 title={"Discord"}
                 icon={discord}
                 iconHover={discord_hover}
-                link={""}
+                link={"https://discord.com/invite/J4chV2zuAK"}
               />
               <CustomMenuItem
                 title={"Kakao (KR)"}
                 icon={kakao}
                 iconHover={kakao_hover}
-                link={""}
+                link={"https://open.kakao.com/o/g2zlglHd"}
               />
               <CustomMenuItem
                 title={"Telegram (EN)"}
                 icon={telegram}
                 iconHover={telegram_hover}
-                link={""}
+                link={"https://t.me/tokamak_network"}
               />
               <CustomMenuItem
                 title={"Twitter"}
                 icon={twitter}
                 iconHover={twitter_hover}
-                link={""}
+                link={"https://twitter.com/tokamak_network"}
               />
               <CustomMenuItem
                 title={"Medium"}
                 icon={medium}
                 iconHover={medium_hover}
-                link={""}
+                link={"https://medium.com/onther-tech"}
               />
             </MenuGroup>
           </MenuList>

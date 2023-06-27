@@ -2,17 +2,29 @@ import { Flex, Text, useTheme } from "@chakra-ui/react";
 import Image from "next/image";
 import RollupAnime from "../animations/RollupAnime";
 import OptimismAnime from "../animations/Optimism/OptimismAnime";
-import RollupAnimation from "../animations/Rollup/RollupAnimation";
-import FeeAnimation from "../animations/Fee/FeeAnimation";
+import FeeAnime from "../animations/Fee/FeeAnime";
+import { useMemo } from "react";
+
 type MissionProps = {
-  // image: JSX.Element;
+  image: any;
   title: string;
   content: string;
+  num: number
 };
 
 function MissionCard(props: MissionProps) {
-  const { title, content } = props;
+  const { image, title, content, num } = props;
   const theme = useTheme();
+
+  const animeComp = useMemo(() => {
+    switch (num) {
+case 1: 
+<FeeAnime/>
+      case 2: 
+      return <OptimismAnime />
+
+    }
+  },[num])
 
   return (
     <Flex
@@ -29,17 +41,12 @@ function MissionCard(props: MissionProps) {
       alignItems={"center"}
       // p="20px"
     >
-      {/* <Flex w="140px" h="140px" mb="30px">
-        <Image src={image} alt="image" />
+      {/* <Flex w="140px" h="140px"  mb="30px">
+       
+        <Image src={image} alt='image'/>
       </Flex> */}
-      {/* <RollupAnime /> */}
-      {title === "Powered by OPTIMISM" ? (
-        <OptimismAnime />
-      ) : title === "Rollup Security" ? (
-        <RollupAnimation />
-      ) : (
-        <FeeAnimation />
-      )}
+     {animeComp}
+    
       <Text
         mb="14px"
         fontWeight={600}
@@ -50,8 +57,9 @@ function MissionCard(props: MissionProps) {
         {title}
       </Text>
       <Text
-        w={["320px", "320px", "226px", "226px", "380px", "380px"]}
+        w={["100%", "100%", "226px", "226px", "380px", "380px"]}
         fontSize={"14px"}
+        px={['20px','20px','0px','0px','0px','0px']}
         color="#7a7e87"
         fontFamily={theme.fonts.openSans}
       >

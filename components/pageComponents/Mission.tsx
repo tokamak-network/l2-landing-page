@@ -4,9 +4,8 @@ import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
 import MissionCard from "../mission/MissionCard";
 import useMediaView from "@/app/hooks/useMediaView";
 import rollup from "../../app/assets/Rollup.svg";
-// import optimism from "../../app/assets/Optimism.svg";
+import optimism from "../../app/assets/Optimism.svg";
 import fee from "../../app/assets/Fee.svg";
-import OptimismAnime from "../animations/Optimism/OptimismAnime";
 function Mission() {
   const theme = useTheme();
   const { mobileView, tabletView, pcView } = useMediaView();
@@ -35,12 +34,12 @@ function Mission() {
         fontSize={"16px"}
         fontFamily={theme.fonts.openSans}
         color={"#7a7e87"}
-        w={["320px", "320px", "100%", "100%", "100%", "100%"]}
+        w={["100%", "100%", "100%", "100%", "100%", "100%"]}
         mb={"60px"}
+        px={["20px", "20px", "0px", "0px", "0px", "0px"]}
         textAlign={"center"}
       >
-        Darius is committed to delivering a seamless L2 experience for all users
-        and dapps
+        Titan is committed to delivering a seamless L2 experience for all users and dapps
       </Text>
 
       <Flex
@@ -54,22 +53,26 @@ function Mission() {
           "flex-start",
           "flex-start",
         ]}
+     
         flexDir={["column", "column", "row", "row", "row", "row"]}
       >
         <MissionCard
-          // image={rollup}
+          num={0}
+          image={rollup}
           title={"Rollup Security"}
-          content="Darius is a secure and scalable blockchain platform designed for decentralized applications. It utilizes Ethereum L1’s proven security measures and rollup technology, which posts all transaction data and every state root to Ethereum L1."
+          content="Titan is a secure and scalable blockchain platform designed for decentralized applications. It utilizes Ethereum L1's proven security measures and rollup technology, which posts all transaction data and every state root to Ethereum L1."
         />
         <MissionCard
-          // image={fee}
+          num={1}
+          image={fee}
           title={"Improved Fee"}
-          content="In addition to lower transaction fee, Darius also offers flexible transaction scheme that allows users to pay for transaction costs not just in ETH but in ERC20 tokens such as TON."
+          content="Titan automatically relays L2->L1 standard messages without having to pay additional fee on L1 after 7 days wait. It also offers flexible transaction scheme that allows users to pay for transaction costs not just in ETH but in ERC20 tokens such as TON."
         />
         <MissionCard
-          // image={OptimismAnime()}
+          num={2}
+          image={optimism}
           title={"Powered by OPTIMISM"}
-          content="Darius is a customized fork of the Optimism code base, aimed at building and improving upon an already great software. Our development team is committed to continuously integrating new features and improving existing ones."
+          content="Titan is a customized fork of the Optimism code base, aimed at building and improving upon an already great software. Our development team is committed to continuously integrating new features and improving existing ones."
         />
       </Flex>
     </Flex>

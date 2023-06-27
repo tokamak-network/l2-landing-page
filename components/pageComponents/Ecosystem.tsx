@@ -26,7 +26,7 @@ function Eccosystem() {
     url: string;
     content: string;
     status: string;
-    type: string;
+    type: string[];
   }
 
   const types = [
@@ -172,92 +172,56 @@ function Eccosystem() {
     {
       title: "TONStarter",
       image: TONStarter,
-      url: "tonstarter.tokamak.network",
+      url: "https://tonstarter.tokamak.network/",
       content:
-        "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
+        "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. Integration to Titan is expected to improve the user experience by offering lower fees and more competitive ways to boost your investment.",
       status: "COMING SOON",
-      type: "Bridge",
+      type: ["LaunchPad"],
     },
     {
-      title: "Native FW",
+      title: "Tokamak Fast Withdrawal",
       image: Native,
-      url: "simple.staking.tokamak.network",
+      url: "",
       content:
-        "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
+        "Tokamak Fast Withdrawal is a quick way to move assets from L2 to L1 using assets staked in Staking V2. Users can quickly withdraw assets without delay based on the liquidity provided by Staker, and liquidity providers can receive fees paid by users.",
       status: "COMING SOON",
-      type: "DAO",
+      type: ["Bridge"],
     },
     {
-      title: "Bridge & Swap",
+      title: "Tokamak Bridge",
       image: TONStarter,
-      url: "dao.tokamak.network",
+      url: "",
       content:
-        "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
+        "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to Titan Network.",
       status: "",
-      type: "DEX",
+      type: ['Bridge',"DEX"],
     },
     {
       title: "TONDEX",
       image: DEX,
-      url: "tonstarter.tokamak.network",
+      url: "",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
       status: "COMING SOON",
-      type: "DAO",
+      type: ["DEX"],
     },
     {
       title: "Dragons of Midgard",
       image: DOM,
-      url: "dragonsofmidgard.com",
+      url: "https://dragonsofmidgard.com/",
       content:
         "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. 5555 Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
-      status: "COMING SOON",
-      type: "Game",
+      status: "",
+      type: ["Game", 'NFT'],
     },
     {
       title: "LYDA",
       image: LYDA,
-      url: "lyda.so",
+      url: "https://www.lyda.so/",
       content:
         "LYDA is a platform to launch social tokens to transform social capitals in fandoms into economic benefits for creators and fans. LYDA eliminated the early stage investment for fan token IDO’s on the technical side, …",
-      status: "COMING SOON",
-      type: "LaunchPad",
-    },
-    {
-      title: "TONStarter",
-      image: TONStarter,
-      url: "tonstarter.tokamak.network",
-      content:
-        "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
-      status: "COMING SOON",
-      type: "DAO",
-    },
-    {
-      title: "Native FW",
-      image: Native,
-      url: "simple.staking.tokamak.network",
-      content:
-        "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
-      status: "COMING SOON",
-      type: "Social",
-    },
-    {
-      title: "Bridge & Swap",
-      image: TONStarter,
-      url: "dao.tokamak.network",
-      content:
-        "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to DARIUS Network.",
       status: "",
-      type: "Bridge",
-    },
-    {
-      title: "TONDEX",
-      image: DEX,
-      url: "tonstarter.tokamak.network",
-      content:
-        "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
-      status: "",
-      type: "NFT",
+      type: ["Social",'DAO','NFT'],
     },
   ];
 
@@ -273,7 +237,7 @@ function Eccosystem() {
     setSelected(type);
     type === "All"
       ? setFilteredCards(cards)
-      : setFilteredCards(cards.filter((card) => card.type === type));
+      : setFilteredCards(cards.filter((card) => card.type.includes(type)));
   };
 
   const CustomButton = (props: {
@@ -346,7 +310,7 @@ function Eccosystem() {
         mb={["15px", "15px", "60px", "60px", "60px", "60px"]}
         textAlign={"center"}
       >
-        Check out different dapps on DARIUS{" "}
+        Check out different dapps on Titan{" "}
       </Text>
       <Flex
         w={["", "", "740px", "740px", "1200px", "1200px"]}

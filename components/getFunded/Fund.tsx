@@ -1,6 +1,7 @@
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
 import FundedGraphic from "../../app/assets/funded_graphic.svg";
 import Image from "next/image";
+import FundedAnime from "../animations/FundedAnime";
 const Fund = () => {
   const theme = useTheme();
 
@@ -68,12 +69,13 @@ const Fund = () => {
             justifyContent={"center"}
             alignItems={"center"}
             fontWeight={600}
-            href=""
+            href="https://tokamak.notion.site/Grant-Announcement-EN-503f8396ee604673b0023e0183810e75"
             textDecor={"none"}
             backgroundImage="linear-gradient(to bottom, #1f8efa, #2a72e5)"
             boxShadow={"0 3px 8px 0 rgba(49, 127, 203, 0.25)"}
             borderRadius={"24px"}
             color={"#ffffff"}
+            target="blank"
             // letterSpacing={"wide"}
             fontSize={"14px"}
             fontFamily={theme.fonts.openSans}
@@ -87,13 +89,14 @@ const Fund = () => {
             mr="15px"
             h="45px"
             w="238px"
-            href=""
+            href="https://tonstarter.tokamak.network/"
             display={"flex"}
             textDecor={"none"}
             justifyContent={"center"}
             alignItems={"center"}
             fontWeight={600}
             borderRadius={"24px"}
+            target="blank"
             bg="#ffffff"
             color={"#1c1c1c"}
             border={"1px solid #dfe4ee"}
@@ -105,12 +108,13 @@ const Fund = () => {
           </Link>
         </Flex>
       </Flex>
-      <Flex
+      {/* <Flex
         h={["260px", "260px", "310px", "310px", "310px", "310px"]}
         w={["260px", "260px", "310px", "310px", "310px", "310px"]}
       >
         <Image src={FundedGraphic} alt="funded image" />
-      </Flex>
+      </Flex> */}
+      <FundedAnime/>
     </Flex>
   );
 };

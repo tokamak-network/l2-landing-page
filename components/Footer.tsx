@@ -26,15 +26,15 @@ function Footer() {
       subTitles: [
         {
           text: "Team",
-          Link: "",
+          Link: "https://tokamak.network/#/about",
         },
         {
           text: "Careers",
-          Link: "",
+          Link: "https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824",
         },
         {
           text: "Partners",
-          Link: "",
+          Link: "https://renewal-homepage.vercel.app/#partners",
         },
       ],
     },
@@ -42,8 +42,8 @@ function Footer() {
       title: "Mainnet",
       subTitles: [
         {
-          text: "Darius",
-          Link: "",
+          text: "Titan",
+          Link: "http://titan.tokamak.network/",
         },
       ],
     },
@@ -51,12 +51,12 @@ function Footer() {
       title: "L2 On-Demand",
       subTitles: [
         {
-          text: "Tokamak OPTIMISM",
-          Link: "",
+          text: "TokamakOPTIMISM",
+          Link: "https://renewal-homepage.vercel.app/#layer2",
         },
         {
-          text: "Tokamak zkEVM+",
-          Link: "",
+          text: "TokamakzkEVM",
+          Link: "https://renewal-homepage.vercel.app/#layer2",
         },
       ],
     },
@@ -64,24 +64,28 @@ function Footer() {
       title: "Ecosystem",
       subTitles: [
         {
-          text: "Swap",
-          Link: "",
-        },
-        {
-          text: "Bridge",
-          Link: "",
+          text: "Bridge & Swap",
+          Link: "https://bridge.tokamak.network",
         },
         {
           text: "Staking",
-          Link: "",
+          Link: "https://simple.staking.tokamak.network/staking",
         },
         {
           text: "DAO",
-          Link: "",
+          Link: "https://dao.tokamak.network/#/",
         },
         {
           text: "Launchpad",
-          Link: "",
+          Link: "https://tonstarter.tokamak.network/",
+        },
+        {
+          text: "Price Dashboard",
+          Link: "https://price.tokamak.network/#/",
+        },
+        {
+          text: "Block Explorer",
+          Link: "https://explorer.titan.tokamak.network",
         },
       ],
     },
@@ -90,19 +94,15 @@ function Footer() {
       subTitles: [
         {
           text: "Grant",
-          Link: "",
-        },
-        {
-          text: "Bug Bounty",
-          Link: "",
+          Link: "https://tokamak.notion.site/Tokamak-Network-Grant-Program-f2384b458ea341a0987c7e73a909aa21",
         },
         {
           text: "Github",
-          Link: "",
+          Link: "https://github.com/tokamak-network",
         },
         {
           text: "Documentation",
-          Link: "",
+          Link: "https://tokamaknetwork.gitbook.io/",
         },
       ],
     },
@@ -111,27 +111,27 @@ function Footer() {
       subTitles: [
         {
           text: "Medium",
-          Link: "",
+          Link: "https://medium.com/onther-tech",
         },
         {
           text: "Twitter",
-          Link: "",
+          Link: "https://twitter.com/tokamak_network",
         },
         {
-          text: "Kakakotalk",
-          Link: "",
+          text: "KakaoTalk (KR)",
+          Link: "https://open.kakao.com/o/g2zlglHd",
         },
         {
-          text: "Discord",
-          Link: "",
+          text: "Discord (EN)",
+          Link: "https://discord.com/invite/J4chV2zuAK",
         },
         {
           text: "Telegram",
-          Link: "",
+          Link: "https://t.me/tokamak_network",
         },
         {
-          text: "Linkedin",
-          Link: "",
+          text: "LinkedIn",
+          Link: "https://www.linkedin.com/company/tokamaknetwork/",
         },
       ],
     },
@@ -163,15 +163,15 @@ function Footer() {
         flexDir={"column"}
         flexWrap={"wrap"}
         alignItems={"center"}
-        mt={['20px','20px','0px','0px','0px','0px']}
+        mt={["20px", "20px", "0px", "0px", "0px", "0px"]}
       >
         <Flex
           w={"100%"}
           flexDir={"row"}
           flexWrap={"wrap"}
           justifyContent={"space-between"}
-          height={['540px','540px',"179px","179px","179px","179px"]}
-          mb={['30px','30px',"60px","60px","60px","60px"]}
+          height={["540px", "540px", "179px", "179px", "179px", "179px"]}
+          mb={["30px", "30px", "60px", "60px", "60px", "60px"]}
           px={["20px", "20px", "30px", "30px", "0px", "0px"]}
         >
           {data.map((info: any, index: number) => {
@@ -194,7 +194,10 @@ function Footer() {
                 </Flex>
                 {info.subTitles.map((sub: any, index: number) => {
                   return (
-                    <Flex
+                    <Link
+                      href={sub.Link}
+                      isExternal
+                      style={{ textDecoration: "none" }}
                       fontFamily={"Open Sans, sans-serif"}
                       key={index}
                       color={"#4c4c4c"}
@@ -202,8 +205,35 @@ function Footer() {
                       fontSize={"14px"}
                       mb="4px"
                     >
-                      {sub.text}
-                    </Flex>
+                      {sub.text === "TokamakOPTIMISM" ? 
+                        <Text>
+                          Tokamak{" "}
+                          <span
+                            style={{
+                              verticalAlign: "super",
+                              fontSize: "12px",
+                              marginLeft: "-2px",
+                            }}
+                          >
+                            Op
+                          </span>
+                        </Text>:
+                        sub.text === "TokamakzkEVM" ? <Text>
+                        Tokamak{" "}
+                        <span
+                          style={{
+                            verticalAlign: "super",
+                            fontSize: "12px",
+                            marginLeft: "-2px",
+                          }}
+                        >
+                          ZK+
+                        </span>
+                      </Text>:
+                       
+                        <Text> {sub.text}</Text>
+                      }
+                    </Link>
                   );
                 })}
               </Flex>
