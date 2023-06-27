@@ -181,7 +181,7 @@ function Eccosystem() {
     {
       title: "Tokamak Fast Withdrawal",
       image: Native,
-      url: "simple.staking.tokamak.network",
+      url: "",
       content:
         "Tokamak Fast Withdrawal is a quick way to move assets from L2 to L1 using assets staked in Staking V2. Users can quickly withdraw assets without delay based on the liquidity provided by Staker, and liquidity providers can receive fees paid by users.",
       status: "COMING SOON",
@@ -190,7 +190,7 @@ function Eccosystem() {
     {
       title: "Tokamak Bridge",
       image: TONStarter,
-      url: "dao.tokamak.network",
+      url: "",
       content:
         "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to Titan Network.",
       status: "",
@@ -199,7 +199,7 @@ function Eccosystem() {
     {
       title: "TONDEX",
       image: DEX,
-      url: "tonstarter.tokamak.network",
+      url: "",
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
       status: "COMING SOON",
@@ -208,19 +208,19 @@ function Eccosystem() {
     {
       title: "Dragons of Midgard",
       image: DOM,
-      url: "dragonsofmidgard.com",
+      url: "https://dragonsofmidgard.com/",
       content:
         "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. 5555 Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
-      status: "COMING SOON",
+      status: "",
       type: ["Game", 'NFT'],
     },
     {
       title: "LYDA",
       image: LYDA,
-      url: "lyda.so",
+      url: "https://www.lyda.so/",
       content:
         "LYDA is a platform to launch social tokens to transform social capitals in fandoms into economic benefits for creators and fans. LYDA eliminated the early stage investment for fan token IDO’s on the technical side, …",
-      status: "COMING SOON",
+      status: "",
       type: ["Social",'DAO','NFT'],
     },
   ];

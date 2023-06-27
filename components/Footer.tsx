@@ -43,7 +43,7 @@ function Footer() {
       subTitles: [
         {
           text: "Titan",
-          Link: "titan.tokamak.network",
+          Link: "http://titan.tokamak.network/",
         },
       ],
     },
@@ -65,7 +65,7 @@ function Footer() {
       subTitles: [
         {
           text: "Bridge & Swap",
-          Link: "",
+          Link: "https://bridge.tokamak.network",
         },
         {
           text: "Staking",

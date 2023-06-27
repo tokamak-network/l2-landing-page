@@ -1,4 +1,4 @@
-import { Flex, Text, useTheme } from "@chakra-ui/react";
+import { Flex, Text, useTheme, Link } from "@chakra-ui/react";
 import Image from "next/image";
 import useMediaView from "@/app/hooks/useMediaView";
 import { useMemo } from "react";
@@ -9,9 +9,8 @@ type EcoProps = {
   content: string;
   url: string;
   status: string;
-  num:number
+  num: number;
 };
-
 
 function EcosystemCard(props: EcoProps) {
   const { image, title, content, url, status, num } = props;
@@ -21,15 +20,21 @@ function EcosystemCard(props: EcoProps) {
   return (
     <Flex
       fontFamily={theme.fonts.openSans}
-      w={['320px','320px','355px','355px','380px','380px']}
-      height={['192px','192px', "212px","212px","212px","212px"]}
+      w={["320px", "320px", "355px", "355px", "380px", "380px"]}
+      height={["192px", "192px", "212px", "212px", "212px", "212px"]}
       border="solid 1px #f5f5f5"
       borderRadius={"16px"}
       p="20px"
       _hover={{ boxShadow: "0 3px 8px 0 rgba(49, 127, 203, 0.25)" }}
-      mr={mobileView ? "0px" : (num+1) % 6 === 0 ||(num+2) % 6 === 0 ? '0px':"30px"}
+      mr={
+        mobileView
+          ? "0px"
+          : (num + 1) % 6 === 0 || (num + 2) % 6 === 0
+          ? "0px"
+          : "30px"
+      }
       mb="30px"
-      bg='#fff'
+      bg="#fff"
       flexDir={"column"}
     >
       <Flex mb="21px">
@@ -49,23 +54,29 @@ function EcosystemCard(props: EcoProps) {
             fontWeight={"bold"}
             fontSize={"16px"}
             color={"#464d59"}
+            
           >
             {title}
           </Text>
-          <Text
+          <Link
+            href={url}
             lineHeight={1.67}
             mb="4px"
             fontWeight={600}
             fontSize={"12px"}
+            target="blank"
             color={"#7a7e87"}
+            _hover={{textDecor:'none'}}
           >
             {url}
-          </Text>
+          </Link>
           <Text
-            fontWeight={"normal"}
+            fontWeight={"bold"}
             mb="4px"
             fontSize={"10px"}
             color={"#cccccc"}
+            fontFamily={theme.fonts.openSans}
+            
           >
             {status}
           </Text>

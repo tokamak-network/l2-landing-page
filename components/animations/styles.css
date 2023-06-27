@@ -91,14 +91,77 @@
   padding: 4%;
   stroke-width: 1px;
   border: 1px solid #eaeef5;
-  
 }
- .xx{
+.xx {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   position: absolute;
   background: red;
   border: 1px solid #e2e2e2;
-  offset-path: path("M 10, 15 L 40, 15z"); 
- }
+  offset-path: path("M 10, 15 L 40, 15z");
+}
+
+
+
+.funded-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  transform: translate(1413 4247);
+  offset-path: path(
+    "M310,155A154.5,154.5 0 0,0 0.5,155A154.5,154.5 0 0,0 310,155Z"
+  );
+}
+
+.dotted {
+transform:  translate(100);
+}
+
+.titan-box-vertical {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  offset-path: path(
+    "M200 0v400h1V0z"
+  );
+}
+
+.titan-box-horizontal{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  offset-path: path(
+    "M0 200h400v1H0z"
+  );
+}
+
+.titan {
+  left: -500px;
+  position: relative;
+  transform: rotate(45deg);
+  top: -42px;
+ 
+}
+
+.diagonal {
+  transform: rotate(45deg);
+}
+
+.titan-box-diagonal{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  offset-path: path(
+    "M239 -235v540h0.1V0z"
+  );
+  
+}

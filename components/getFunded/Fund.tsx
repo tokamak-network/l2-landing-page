@@ -1,6 +1,7 @@
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
 import FundedGraphic from "../../app/assets/funded_graphic.svg";
 import Image from "next/image";
+import FundedAnime from "../animations/FundedAnime";
 const Fund = () => {
   const theme = useTheme();
 
@@ -107,12 +108,13 @@ const Fund = () => {
           </Link>
         </Flex>
       </Flex>
-      <Flex
+      {/* <Flex
         h={["260px", "260px", "310px", "310px", "310px", "310px"]}
         w={["260px", "260px", "310px", "310px", "310px", "310px"]}
       >
         <Image src={FundedGraphic} alt="funded image" />
-      </Flex>
+      </Flex> */}
+      <FundedAnime/>
     </Flex>
   );
 };
