@@ -115,6 +115,75 @@ function TitanAnime() {
               delay: 6,
             }}
           />
+            <motion.ellipse
+            cx="200"
+            cy="200"
+            rx="137"
+            ry="155"
+            fill={"transparent"}
+            stroke={"#707070"}
+            strokeDasharray={"4 4"}
+            initial={{ rx: 155, ry: 155, rotate: 45 }}
+            animate={{ rx: 0, ry: 155 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "mirror",
+              delay: 8,
+            }}
+          />
+            <motion.ellipse
+            cx="200"
+            cy="200"
+            rx="137"
+            ry="155"
+            fill={"transparent"}
+            stroke={"#707070"}
+            strokeDasharray={"4 4"}
+            initial={{ rx: 155, ry: 155, rotate: 45 }}
+            animate={{ rx: 0, ry: 155 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "mirror",
+              delay: 10,
+            }}
+          />
+            <motion.ellipse
+            cx="200"
+            cy="200"
+            rx="137"
+            ry="155"
+            fill={"transparent"}
+            stroke={"#707070"}
+            strokeDasharray={"4 4"}
+            initial={{ rx: 155, ry: 155, rotate: 45 }}
+            animate={{ rx: 0, ry: 155 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "mirror",
+              delay: 12,
+            }}
+          />
+            <motion.ellipse
+            cx="200"
+            cy="200"
+            rx="137"
+            ry="155"
+            fill={"transparent"}
+            stroke={"#707070"}
+            strokeDasharray={"4 4"}
+            initial={{ rx: 155, ry: 155, rotate: 45 }}
+            animate={{ rx: 0, ry: 155 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "mirror",
+              delay: 14,
+            }}
+          />
+
 
           {/* 
          
