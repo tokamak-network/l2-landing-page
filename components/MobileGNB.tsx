@@ -14,7 +14,7 @@ function MobileTokamakGNB() {
   const menus = [
     {
       title: "Tokamak Network",
-      url: "https://vision.tokamak.network/",
+      url: "https://tokamak.network/#/",
       isFoucsed: false,
     },
     {
@@ -24,17 +24,17 @@ function MobileTokamakGNB() {
     },
     {
       title: "Bridge & Swap",
-      url: "https://simple.staking.tokamak.network/",
+      url: "https://bridge.tokamak.network/#/",
       isFoucsed: false,
     },
     {
       title: "Staking",
-      url: "https://dao.tokamak.network/#/",
+      url: "https://simple.staking.tokamak.network/#/",
       isFoucsed: false,
     },
     {
       title: "DAO",
-      url: "https://swap.tokamak.network//",
+      url: "https://dao.tokamak.network//",
       isFoucsed: false,
     },
     {

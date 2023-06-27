@@ -80,12 +80,14 @@ function Intro() {
             justifyContent={"center"}
             alignItems={"center"}
             fontWeight={600}
-            href=""
+            href="https://bridge.tokamak.network/#/"
             textDecor={"none"}
+            zIndex={1000}
             backgroundImage="linear-gradient(to bottom, #1f8efa, #2a72e5)"
             boxShadow={"0 3px 8px 0 rgba(49, 127, 203, 0.25)"}
             borderRadius={"24px"}
             color={"#ffffff"}
+            target="blank"
             // letterSpacing={"wide"}
             fontSize={"14px"}
             fontFamily={theme.fonts.openSans}
@@ -105,6 +107,8 @@ function Intro() {
             alignItems={"center"}
             fontWeight={600}
             borderRadius={"24px"}
+            target="blank"
+            zIndex={1000}
             bg="#ffffff"
             color={"#1c1c1c"}
             border={"1px solid #dfe4ee"}

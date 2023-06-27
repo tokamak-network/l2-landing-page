@@ -45,7 +45,6 @@ function GNB() {
     >
       <Menu
         title={"Tokamak Network"}
-       
         w={"158px"}
         url={"https://tokamak.network/#/"}
       ></Menu>
@@ -53,29 +52,29 @@ function GNB() {
         title={"L2 Mainnet"}
         activetab={"true"}
         w={"137px"}
-        url={"https://simple.staking.tokamak.network/"}
+        url={"https://titan.tokamak.network"}
       ></Menu>
       <Menu
         title={"Bridge & Swap"}
         w={"190px"}
-        url={"https://dao.tokamak.network/#/"}
+        url={"https://bridge.tokamak.network/#/"}
       ></Menu>
       <Menu
         title={"Staking"}
         w={"76px"}
-        url={"https://swap.tokamak.network/"}
+        url={"https://simple.staking.tokamak.network/"}
       ></Menu>
       <Menu title={"TONStarter"} w={"114px"} url={"#"}></Menu>
 
       <Menu
         title={"DAO"}
         w={"100px"}
-        url={"https://vision.tokamak.network/"}
+        url={"https://dao.tokamak.network/#/"}
       ></Menu>
       <Menu
         title={"Launchpad"}
         w={"100px"}
-        url={"https://vision.tokamak.network/"}
+        url={"https://tonstarter.tokamak.network/"}
       ></Menu>
     </Flex>
   );
