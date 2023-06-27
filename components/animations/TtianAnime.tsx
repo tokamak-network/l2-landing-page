@@ -55,7 +55,7 @@ function TitanAnime() {
             stroke={"#707070"}
             strokeDasharray={"4 4"}
             initial={{ rx: 155, ry: 155}}
-            animate={{ rx: 35, ry: 155}}
+            animate={{ rx: 0, ry: 155}}
             transition={{ duration: 10, repeat: Infinity, repeatType: "mirror" }}
           />
 
