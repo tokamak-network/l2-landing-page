@@ -76,7 +76,7 @@ function TitanAnime() {
               duration: 10,
               repeat: Infinity,
               repeatType: "mirror",
-              delay: 1,
+              delay: 2,
             }}
           />
 
@@ -94,7 +94,7 @@ function TitanAnime() {
               duration: 10,
               repeat: Infinity,
               repeatType: "mirror",
-              delay: 2,
+              delay: 4,
             }}
           />
 
@@ -112,7 +112,7 @@ function TitanAnime() {
               duration: 10,
               repeat: Infinity,
               repeatType: "mirror",
-              delay: 3,
+              delay: 6,
             }}
           />
 
