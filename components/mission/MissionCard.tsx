@@ -2,14 +2,16 @@ import { Flex, Text, useTheme } from "@chakra-ui/react";
 import Image from "next/image";
 import RollupAnime from "../animations/RollupAnime";
 import OptimismAnime from "../animations/Optimism/OptimismAnime";
+import RollupAnimation from "../animations/Rollup/RollupAnimation";
+import FeeAnimation from "../animations/Fee/FeeAnimation";
 type MissionProps = {
-  image: any;
+  // image: JSX.Element;
   title: string;
   content: string;
 };
 
 function MissionCard(props: MissionProps) {
-  const { image, title, content } = props;
+  const { title, content } = props;
   const theme = useTheme();
 
   return (
@@ -27,12 +29,17 @@ function MissionCard(props: MissionProps) {
       alignItems={"center"}
       // p="20px"
     >
-      {/* <Flex w="140px" h="140px"  mb="30px">
-       
-        <Image src={image} alt='image'/>
+      {/* <Flex w="140px" h="140px" mb="30px">
+        <Image src={image} alt="image" />
       </Flex> */}
       {/* <RollupAnime /> */}
-      <OptimismAnime />
+      {title === "Powered by OPTIMISM" ? (
+        <OptimismAnime />
+      ) : title === "Rollup Security" ? (
+        <RollupAnimation />
+      ) : (
+        <FeeAnimation />
+      )}
       <Text
         mb="14px"
         fontWeight={600}

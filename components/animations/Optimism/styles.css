@@ -19,7 +19,7 @@
     top: -13%;
     left: -13%;
     transform: translate(-50%, -50%);
-    animation: rotateAntiClockwise 5s infinite linear;
+    animation: rotateAntiClockwise 6s infinite linear;
   }
   
   @keyframes rotateAntiClockwise {

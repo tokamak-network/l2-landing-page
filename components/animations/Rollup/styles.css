@@ -1,0 +1,128 @@
+.box {
+    width: 140px;
+    height: 140px;
+    align-items: center;
+    animation: none;
+    display: flex;
+}
+
+.box .ellipse {
+    width: 43px;
+    height: 90px;
+    border: solid 1px #1c1c1c;
+    border-radius: 50%;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-5%);
+    position: relative;
+    animation: moveEllipse 4s infinite alternate;
+}
+
+@keyframes moveEllipse {
+    0% {
+        left: 51%;
+    }
+    100% {
+        left: 47%;
+    }
+}
+
+.box .dotted-ellipse {
+    width: 43px;
+    height: 90px;
+    align-items: center;
+    border-style: solid;
+    border: 1px dashed #1c1c1c;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    animation: moveDotEllipse 4s infinite alternate;
+}
+
+@keyframes moveDotEllipse {
+    0% {
+        left: 51%;
+    }
+    100% {
+        left: 45%;
+    }
+}
+
+.box .line {
+    width: 140px;
+    height: 1px;
+    background-color: #1c1c1c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-90%);
+}
+
+.box .dot {
+    width: 5px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #1c1c1c;
+    position: relative;
+    top: 1%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    animation: moveDot 10s infinite linear;
+}
+
+@keyframes moveDot {
+    0% {
+        left: -50%;
+    }
+    50% {
+        left: 2%;
+    }
+    100% {
+        left: -50%;
+    }
+}
+
+.box .top-circle {
+    width: 9px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1c1c1c;
+    position: relative;
+    top: -56px;
+    left: 26px;
+    animation: scaleTopCircle 2s infinite alternate;
+}
+
+.box .bottom-circle {
+    width: 20px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #1c1c1c;
+    position: relative;
+    bottom: -47px;
+    left: 2px;
+    animation: scaleBottomCircle 2s infinite alternate;
+}
+
+@keyframes scaleTopCircle {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes scaleBottomCircle {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
