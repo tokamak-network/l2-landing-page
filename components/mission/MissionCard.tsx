@@ -2,7 +2,7 @@ import { Flex, Text, useTheme } from "@chakra-ui/react";
 import Image from "next/image";
 import RollupAnime from "../animations/RollupAnime";
 import OptimismAnime from "../animations/Optimism/OptimismAnime";
-import FeeAnime from "../animations/Fee/FeeAnime";
+import FeeAnimation from "../animations/Fee/FeeAnimation";
 import { useMemo } from "react";
 import RollupAnimation from "../animations/Rollup/RollupAnimation";
 type MissionProps = {
@@ -19,9 +19,9 @@ function MissionCard(props: MissionProps) {
   const animeComp = useMemo(() => {
     switch (num) {
       case 0:
-        return   <RollupAnimation />;
+        return <RollupAnimation />;
       case 1:
-        return   <FeeAnime />;
+        return <FeeAnimation />;
       case 2:
         return <OptimismAnime />;
     }
