@@ -43,7 +43,7 @@ function TitanAnime() {
             ry="155"
             fill={"transparent"}
             stroke={"#707070"}
-            initial={{ strokeDashoffset: 0 }}
+            initial={{ strokeDashoffset: 150 }}
             animate={{ strokeDashoffset: 150 }}
           />
           <motion.ellipse
@@ -149,7 +149,7 @@ function TitanAnime() {
               delay: 10,
             }}
           />
-            <motion.ellipse
+            {/* <motion.ellipse
             cx="200"
             cy="200"
             rx="137"
@@ -165,8 +165,8 @@ function TitanAnime() {
               repeatType: "mirror",
               delay: 12,
             }}
-          />
-            <motion.ellipse
+          /> */}
+            {/* <motion.ellipse
             cx="200"
             cy="200"
             rx="137"
@@ -182,7 +182,7 @@ function TitanAnime() {
               repeatType: "mirror",
               delay: 14,
             }}
-          />
+          /> */}
 
 
           {/* 

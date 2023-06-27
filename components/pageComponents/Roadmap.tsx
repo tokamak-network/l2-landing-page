@@ -34,7 +34,7 @@ function Roadmap() {
     },
     {
       title: "Titan Holešky Open",
-      subtitle: "",
+      subtitle: "TESTNET",
       tabLeft: "",
       desktopLeft: "-80px",
       tabTop: "20px",
@@ -60,8 +60,8 @@ function Roadmap() {
       completed: false,
     },
     {
-      title: "Titan L2 Mainnet Open",
-      subtitle: "",
+      title: "Titan L2 Open",
+      subtitle: "MAINNET",
       tabLeft: "",
       desktopLeft: "",
       tabTop: "",
@@ -229,8 +229,8 @@ function Roadmap() {
         top: "42px",
       },
       {
-        title: "Titan L2 Mainnet Open",
-        subtitle: "",
+        title: "Titan L2 Open",
+        subtitle: "MAINNET",
         completed: true,
         top: "14px",
       },
@@ -253,8 +253,8 @@ function Roadmap() {
         top: "21px",
       },
       {
-        title: "Titan Holešky Open",
-        subtitle: "",
+        title: "TitTan Holešky Open",
+        subtitle: "TESTNET",
         completed: false,
         top: "20px",
       },
