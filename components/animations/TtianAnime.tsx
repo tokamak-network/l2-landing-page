@@ -59,7 +59,7 @@ function TitanAnime() {
             transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
           />
 
-          <motion.ellipse
+          {/* <motion.ellipse
             cx="200"
             cy="200"
             rx="74"
@@ -95,7 +95,7 @@ function TitanAnime() {
             initial={{  rx: 155, ry: 155 }}
             animate={{  rx: 137, ry: 155 }}
             transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
-          />
+          /> */}
         </svg>
         <motion.div
           className="titan-box-vertical"

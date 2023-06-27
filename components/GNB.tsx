@@ -1,6 +1,6 @@
 "use client";
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
-import "@fontsource/titillium-web";
+import "@fontsource/titillium-web/600.css";
 
 function GNB() {
   function Menu(props: any) {
@@ -15,7 +15,7 @@ function GNB() {
           bg={props.activetab ? "#FFFFFF" : ""}
           color={props.activetab ? "#353C48" : ""}
           fontFamily={"Titillium Web, sans-serif"}
-          fontWeight="bold"
+          fontWeight={600}
           {...props}
           outline={"none"}
           _hover={{
@@ -40,7 +40,7 @@ function GNB() {
       bg={"#2775ff"}
       color={"#ffffff"}
       fontSize={15}
-      fontWeight={"bold"}
+      // fontWeight={"bold"}
       justifyContent={"center"}
     >
       <Menu

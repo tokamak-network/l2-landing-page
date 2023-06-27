@@ -35,7 +35,7 @@ function Eccosystem() {
     { title: "DAO", width: "54px" },
     { title: "DEX", width: "50px" },
     { title: "Game", width: "64px" },
-    { title: "LaunchPad", width: "98px" },
+    { title: "Launchpad", width: "98px" },
     { title: "Social", width: "64px" },
     { title: "NFT", width: "50px" },
   ];
@@ -176,12 +176,12 @@ function Eccosystem() {
       content:
         "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. Integration to Titan is expected to improve the user experience by offering lower fees and more competitive ways to boost your investment.",
       status: "COMING SOON",
-      type: ["LaunchPad"],
+      type: ["Launchpad"],
     },
     {
       title: "Tokamak Fast Withdrawal",
       image: Native,
-      url: "",
+      url: "https://bridge.tokamak.network/#/",
       content:
         "Tokamak Fast Withdrawal is a quick way to move assets from L2 to L1 using assets staked in Staking V2. Users can quickly withdraw assets without delay based on the liquidity provided by Staker, and liquidity providers can receive fees paid by users.",
       status: "COMING SOON",

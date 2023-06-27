@@ -223,7 +223,7 @@ function Header() {
               title={"GranTON Application"}
               icon={grant}
               iconHover={grant_hover}
-              link={"https://tokamak.notion.site/Grant-Announcement-EN-503f8396ee604673b0023e0183810e75"}
+              link={"https://tokamak.notion.site/Tokamak-Network-Grant-Program-GranTON-f2384b458ea341a0987c7e73a909aa21"}
             />
             {/* <CustomMenuItem
               title={"Bug Bounty"}

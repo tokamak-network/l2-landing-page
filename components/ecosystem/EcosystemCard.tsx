@@ -64,7 +64,7 @@ function EcosystemCard(props: EcoProps) {
             mb="4px"
             fontWeight={600}
             fontSize={"12px"}
-            target="blank"
+            target='_blank'
             color={"#7a7e87"}
             _hover={{textDecor:'none'}}
           >
