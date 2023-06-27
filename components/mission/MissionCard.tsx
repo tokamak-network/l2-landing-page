@@ -4,12 +4,12 @@ import RollupAnime from "../animations/RollupAnime";
 import OptimismAnime from "../animations/Optimism/OptimismAnime";
 import FeeAnime from "../animations/Fee/FeeAnime";
 import { useMemo } from "react";
-
+import RollupAnimation from "../animations/Rollup/RollupAnimation";
 type MissionProps = {
   image: any;
   title: string;
   content: string;
-  num: number
+  num: number;
 };
 
 function MissionCard(props: MissionProps) {
@@ -18,13 +18,14 @@ function MissionCard(props: MissionProps) {
 
   const animeComp = useMemo(() => {
     switch (num) {
-case 1: 
-<FeeAnime/>
-      case 2: 
-      return <OptimismAnime />
-
+      case 0:
+        return   <RollupAnimation />;
+      case 1:
+        return   <FeeAnime />;
+      case 2:
+        return <OptimismAnime />;
     }
-  },[num])
+  }, [num]);
 
   return (
     <Flex
@@ -45,8 +46,8 @@ case 1:
        
         <Image src={image} alt='image'/>
       </Flex> */}
-     {animeComp}
-    
+      {animeComp}
+
       <Text
         mb="14px"
         fontWeight={600}
@@ -59,7 +60,7 @@ case 1:
       <Text
         w={["100%", "100%", "226px", "226px", "380px", "380px"]}
         fontSize={"14px"}
-        px={['20px','20px','0px','0px','0px','0px']}
+        px={["20px", "20px", "0px", "0px", "0px", "0px"]}
         color="#7a7e87"
         fontFamily={theme.fonts.openSans}
       >
