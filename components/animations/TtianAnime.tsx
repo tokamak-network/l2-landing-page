@@ -46,7 +46,7 @@ function TitanAnime() {
             initial={{ strokeDashoffset: 0 }}
             animate={{ strokeDashoffset: 150 }}
           />
-           <motion.ellipse
+          <motion.ellipse
             cx="200"
             cy="200"
             rx="35"
@@ -54,12 +54,15 @@ function TitanAnime() {
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155}}
-            animate={{ rx: 0, ry: 155}}
-            transition={{ duration: 10, repeat: Infinity, repeatType: "mirror" }}
+            initial={{ rx: 155, ry: 155, rotate: 45 }}
+            animate={{ rx: 0, ry: 155 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "mirror",
+            }}
           />
-
-          {/* <motion.ellipse
+          <motion.ellipse
             cx="200"
             cy="200"
             rx="74"
@@ -67,11 +70,16 @@ function TitanAnime() {
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155}}
-            animate={{ rx: 74, ry: 155 }}
-            transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
+            initial={{ rx: 155, ry: 155, rotate: 45 }}
+            animate={{ rx: 0, ry: 155 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "mirror",
+              delay: 1,
+            }}
           />
-         
+
           <motion.ellipse
             cx="200"
             cy="200"
@@ -80,10 +88,16 @@ function TitanAnime() {
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{  rx: 155, ry: 155}}
-            animate={{  rx: 108, ry: 155}}
-            transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
+            initial={{ rx: 155, ry: 155, rotate: 45 }}
+            animate={{ rx: 0, ry: 155 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "mirror",
+              delay: 2,
+            }}
           />
+
           <motion.ellipse
             cx="200"
             cy="200"
@@ -92,10 +106,20 @@ function TitanAnime() {
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{  rx: 155, ry: 155 }}
-            animate={{  rx: 137, ry: 155 }}
-            transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
-          /> */}
+            initial={{ rx: 155, ry: 155, rotate: 45 }}
+            animate={{ rx: 0, ry: 155 }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "mirror",
+              delay: 3,
+            }}
+          />
+
+          {/* 
+         
+        
+          */}
         </svg>
         <motion.div
           className="titan-box-vertical"
