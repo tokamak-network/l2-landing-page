@@ -22,6 +22,7 @@ function Roadmap() {
       tabTop: "",
       desktopTop: "",
       completed: true,
+      test: false,
     },
     {
       title: "Optimism Bedrock Integration",
@@ -31,6 +32,7 @@ function Roadmap() {
       tabTop: "10px",
       desktopTop: "83px",
       completed: false,
+      test: false,
     },
     {
       title: "Titan Holešky Open",
@@ -40,6 +42,7 @@ function Roadmap() {
       tabTop: "20px",
       desktopTop: "",
       completed: false,
+      test: true,
     },
     {
       title: "Improved Fee Structure Integration",
@@ -49,6 +52,7 @@ function Roadmap() {
       tabTop: "30px",
       desktopTop: "83px",
       completed: false,
+      test: false,
     },
     {
       title: "Optimism OP Stack Maintenance",
@@ -58,6 +62,7 @@ function Roadmap() {
       tabTop: "40px",
       desktopTop: "",
       completed: false,
+      test: false,
     },
     {
       title: "Titan L2 Open",
@@ -67,6 +72,7 @@ function Roadmap() {
       tabTop: "",
       desktopTop: "",
       completed: true,
+      test: false,
     },
     {
       title: "Tokamak Bridge Open",
@@ -76,6 +82,7 @@ function Roadmap() {
       tabTop: "10px",
       desktopTop: "-83px",
       completed: true,
+      test: false,
     },
     {
       title: "Tokamak Fast Withdrawal Open",
@@ -85,6 +92,7 @@ function Roadmap() {
       tabTop: "20px",
       desktopTop: "",
       completed: false,
+      test: false,
     },
     {
       title: "TONStarter L2 Launchpad Open",
@@ -94,15 +102,17 @@ function Roadmap() {
       tabTop: "30px",
       desktopTop: "-83px",
       completed: false,
+      test: false,
     },
     {
-      title: "TokamakOP L2 On-Demand Open",
+      title: "TokamakOP \n L2 On-Demand Open",
       subtitle: "",
       tabLeft: "",
       desktopLeft: "-160px",
       tabTop: "40px",
       desktopTop: "",
       completed: false,
+      test: false,
     },
   ];
 
@@ -125,6 +135,7 @@ function Roadmap() {
                 top={item.tabTop}
                 left={item.tabLeft}
                 completed={item.completed}
+                test={item.test}
                 title={item.title}
                 subtitle={item.subtitle}
               />
@@ -146,6 +157,7 @@ function Roadmap() {
                 completed={item.completed}
                 title={item.title}
                 subtitle={item.subtitle}
+                test={item.test}
               />
             );
           })}
@@ -182,6 +194,7 @@ function Roadmap() {
                 completed={item.completed}
                 title={item.title}
                 subtitle={item.subtitle}
+                test={item.test}
               />
             );
           })}
@@ -213,6 +226,7 @@ function Roadmap() {
                 completed={item.completed}
                 title={item.title}
                 subtitle={item.subtitle}
+                test={item.test}
               />
             );
           })}
@@ -227,60 +241,70 @@ function Roadmap() {
         subtitle: "TESTNET",
         completed: true,
         top: "42px",
+        test: "true",
       },
       {
         title: "Titan L2 Open",
         subtitle: "MAINNET",
         completed: true,
         top: "14px",
+        test: "false",
       },
       {
         title: "Tokamak Bridge Open",
         subtitle: "",
         completed: true,
         top: "24px",
+        test: "false",
       },
       {
         title: "Optimism Bedrock Integration",
         subtitle: "",
         completed: false,
         top: "19px",
+        test: "false",
       },
       {
         title: "Tokamak Fast Withdrawal Open",
         subtitle: "",
         completed: false,
         top: "21px",
+        test: "false",
       },
       {
         title: "TitTan Holešky Open",
         subtitle: "TESTNET",
         completed: false,
         top: "20px",
+        test: "true",
       },
       {
         title: "TONStarter L2 Launchpad Open",
         subtitle: "",
         completed: false,
         top: "34px",
+        test: "false",
       },
       {
         title: "Improved Fee Structure Integration",
         subtitle: "",
         completed: false,
         top: "21px",
+        test: "false",
       },
       {
         title: "TokamakOP L2 On-Demand Open",
         subtitle: "",
         completed: false,
         top: "21px",
+        test: "false",
       },
       {
         title: "Optimism OP Stack Maintenance",
         subtitle: "CONTINUOUS",
         completed: false,
         top: "40px",
+        test: "false",
       },
     ];
 
@@ -359,7 +383,13 @@ function Roadmap() {
                     </Text>
                     <Text
                       mt="9px"
-                      color={item.completed ? "#2a72e5" : "#46bb75"}
+                      color={
+                        item.completed
+                          ? "#2a72e5"
+                          : item.test
+                          ? "#7a7e87"
+                          : "#46bb75"
+                      }
                       fontWeight={"bold"}
                       fontSize={"12px"}
                     >

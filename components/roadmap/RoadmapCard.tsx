@@ -1,6 +1,7 @@
 import { Flex, Text, Button, Box, useTheme } from "@chakra-ui/react";
 import Image from "next/image";
 import Check from "../../app/assets/icon-check.svg";
+import React from "react";
 
 type RoadmapProps = {
   top: string;
@@ -8,16 +9,17 @@ type RoadmapProps = {
   completed: boolean;
   title: string;
   subtitle: string;
+  test: boolean;
 };
 function RoadmapCard(props: RoadmapProps) {
-  const { top, left, completed, title, subtitle } = props;
+  const { top, left, completed, title, subtitle, test } = props;
   const theme = useTheme();
   return (
     <Box
       top={top}
       left={left}
       w="222px"
-      h="152px" 
+      h="152px"
       bg={completed ? "none" : "#dfe4ee"}
       display={"flex"}
       justifyContent={"center"}
@@ -29,7 +31,7 @@ function RoadmapCard(props: RoadmapProps) {
       <Box
         top={"1px"}
         left={"1px"}
-        w="220px" 
+        w="220px"
         h="150px"
         backgroundImage={
           completed ? "linear-gradient(to bottom, #1f8efa, #2a72e5)" : ""
@@ -41,11 +43,11 @@ function RoadmapCard(props: RoadmapProps) {
         position="absolute"
         overflow="hidden"
         zIndex={1}
-        flexDir={'column'}
+        flexDir={"column"}
         clipPath="polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
       >
         <Flex>
-          <Image src={Check} alt=""/>
+          <Image src={Check} alt="" />
         </Flex>
         <Text
           fontFamily={theme.fonts.openSans}
@@ -55,13 +57,18 @@ function RoadmapCard(props: RoadmapProps) {
           zIndex={10000}
           // position={"absolute"}
           textAlign={"center"}
-          px={title === 'L2 Mainnet Open'?'65px': "35px"}
+          px={title === "L2 Mainnet Open" ? "65px" : "35px"}
         >
-          {title}
+          {title.split("\n")}
         </Text>
-        <Text mt='25px'  fontSize={"12px"}
+        <Text
+          mt="25px"
+          fontSize={"12px"}
           fontWeight={600}
-          color={completed ? "#ffff07" : "#46bb75"}>{subtitle}</Text>
+          color={completed ? "#ffff07" : test ? "#7a7e87" : "#46bb75"}
+        >
+          {subtitle}
+        </Text>
       </Box>
     </Box>
   );
