@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="322" height="324.778" viewBox="0 0 322 324.778">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-6 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #7a7e87;
+      }
+
+      .cls-1 {
+        stroke-dasharray: 4 4;
+      }
+
+      .cls-3 {
+        fill: #7a7e87;
+      }
+
+      .cls-4 {
+        fill: #2a72e5;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="get-graphic-02" transform="translate(-1099 -4150.266)">
+    <g id="타원_6" data-name="타원 6" class="cls-1" transform="translate(1298.6 4191.118) rotate(30)">
+      <ellipse class="cls-5" cx="28.035" cy="124.154" rx="28.035" ry="124.154"/>
+      <ellipse class="cls-6" cx="28.035" cy="124.154" rx="27.535" ry="123.654"/>
+    </g>
+    <g id="타원_9" data-name="타원 9" class="cls-1" transform="translate(1271.546 4175.497) rotate(30)">
+      <ellipse class="cls-5" cx="59.274" cy="124.154" rx="59.274" ry="124.154"/>
+      <ellipse class="cls-6" cx="59.274" cy="124.154" rx="58.774" ry="123.654"/>
+    </g>
+    <g id="타원_10" data-name="타원 10" class="cls-1" transform="translate(1247.961 4161.879) rotate(30)">
+      <ellipse class="cls-5" cx="86.508" cy="124.154" rx="86.508" ry="124.154"/>
+      <ellipse class="cls-6" cx="86.508" cy="124.154" rx="86.008" ry="123.654"/>
+    </g>
+    <g id="타원_11" data-name="타원 11" class="cls-1" transform="translate(1227.844 4150.266) rotate(30)">
+      <ellipse class="cls-5" cx="109.736" cy="124.154" rx="109.736" ry="124.154"/>
+      <ellipse class="cls-6" cx="109.736" cy="124.154" rx="109.236" ry="123.654"/>
+    </g>
+    <g id="타원_4" data-name="타원 4" class="cls-2" transform="translate(1136.646 4188.5)">
+      <circle class="cls-5" cx="124.154" cy="124.154" r="124.154"/>
+      <circle class="cls-6" cx="124.154" cy="124.154" r="123.654"/>
+    </g>
+    <rect id="사각형_6" data-name="사각형 6" class="cls-3" width="320.398" height="0.801" transform="translate(1100.602 4312.656)"/>
+    <rect id="사각형_7" data-name="사각형 7" class="cls-3" width="320.398" height="0.801" transform="translate(1260.801 4152.457) rotate(90)"/>
+    <circle id="타원_7" data-name="타원 7" class="cls-4" cx="2.002" cy="2.002" r="2.002" transform="translate(1258.398 4151.656)"/>
+    <circle id="타원_8" data-name="타원 8" class="cls-4" cx="2.002" cy="2.002" r="2.002" transform="translate(1099 4311.054)"/>
+    <rect id="사각형_8" data-name="사각형 8" class="cls-3" width="424.528" height="0.801" transform="translate(1107.01 4465.573) rotate(-45)"/>
+    <circle id="타원_12" data-name="타원 12" class="cls-4" cx="2.803" cy="2.803" r="2.803" transform="translate(1105.408 4462.441)"/>
+  </g>
+</svg>

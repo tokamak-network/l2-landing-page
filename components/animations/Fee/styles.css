@@ -1,0 +1,16 @@
+.border-box {
+    height: 7px;
+    width: 7px;
+    border: 1px solid #1c1c1c;
+
+}
+
+.filled-box {
+    height: 7px;
+    width: 7px;
+    background: #1c1c1c;
+}
+
+.first-ellipse {
+    transform: translate(20 78.318);
+}

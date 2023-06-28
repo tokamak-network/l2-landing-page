@@ -2,8 +2,12 @@ import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
 import FundedGraphic from "../../app/assets/funded_graphic.svg";
 import Image from "next/image";
 import FundedAnime from "../animations/FundedAnime";
+import FundedAnimeMobile from "../animations/FundedAnimeMobile";
+import useMediaView from "../../app/hooks/useMediaView";
+
 const Fund = () => {
   const theme = useTheme();
+  const {mobileView, tabletView,pcView}  = useMediaView()
 
   return (
     <Flex
@@ -114,7 +118,7 @@ const Fund = () => {
       >
         <Image src={FundedGraphic} alt="funded image" />
       </Flex> */}
-      <FundedAnime/>
+     {mobileView? <FundedAnimeMobile/>:<FundedAnime/>}
     </Flex>
   );
 };
