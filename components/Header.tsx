@@ -52,7 +52,7 @@ function Header() {
 
   const handleMenuToggle = (index: number) => {
     const updatedMenuStates = [...menuStates];
-    updatedMenuStates[index] = !updatedMenuStates[index];
+    updatedMenuStates[index] = !updatedMenuStates[index];    
     setMenuStates(updatedMenuStates);
   };
 
@@ -120,8 +120,8 @@ function Header() {
             Ecosystem
           </Text>
         </Link>
-        <Menu onClose={() => handleMenuToggle(0)} >
-          <MenuButton zIndex={1001} mr="33px" onClick={() => handleMenuToggle(0)}>
+        <Menu onClose={() => handleMenuToggle(0)}  isOpen={menuStates[0]}>
+          <MenuButton zIndex={1001} mr="33px" onClick={() => handleMenuToggle(0)} onMouseEnter={() => handleMenuToggle(0)}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
               <Text
