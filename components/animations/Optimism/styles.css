@@ -74,12 +74,14 @@
     font-size: 1.2rem;
     margin-left: 74px;
     top: -43px;
+      animation: scaleUp 2s infinite;
 }
 
 .container .four-point-star::after { /* The foreground star */
     background: #1c1c1c;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+      animation: scaleUp 2s infinite;
 }
 
 .container .four-point-star-small::after,
@@ -89,10 +91,36 @@
     font-size: 0.6rem;
     margin-left: 85px;
     top: -167px;
+    animation: scaleDown 2s infinite;
 }
 
 .container .four-point-star-small::after { /* The foreground star */
     background: #1c1c1c;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: scaleDown 2s infinite;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.67);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
