@@ -94,10 +94,9 @@ function Header() {
       justifyContent={"space-between"}
       bg="#fafbfc"
       h="78px"
-    
       alignItems={"center"}
       // zIndex={10000}
-      position={'relative'}
+      position={"relative"}
     >
       <Flex
         height={"40px"}
@@ -108,20 +107,30 @@ function Header() {
       </Flex>
 
       <Flex>
-        <Link href="#ecosystem" textDecor={'none'} zIndex={1000}  _hover={{ textDecor: "none" }}>
+        <Link
+          href="#ecosystem"
+          textDecor={"none"}
+          zIndex={1000}
+          _hover={{ textDecor: "none" }}
+        >
           <Text
             fontSize="16px"
             mr="60px"
             color={"#1c1c1c"}
             fontFamily={theme.fonts.openSans}
             fontWeight={600}
-            
           >
             Ecosystem
           </Text>
         </Link>
-        <Menu onClose={() => handleMenuToggle(0)} >
-          <MenuButton zIndex={1001} mr="33px" onClick={() => handleMenuToggle(0)}>
+        <Menu onClose={() => handleMenuToggle(0)} isOpen={menuStates[0]}>
+          <MenuButton
+            zIndex={1001}
+            mr="33px"
+            onClick={() => handleMenuToggle(0)}
+            onMouseEnter={() => handleMenuToggle(0)}
+            onMouseLeave={() => handleMenuToggle(0)}
+          >
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
               <Text
@@ -141,7 +150,7 @@ function Header() {
             </Flex>
           </MenuButton>
           <MenuList
-           zIndex={1001}
+            zIndex={1001}
             fontSize={"13px"}
             ml="-15px"
             border={"none"}
@@ -180,7 +189,9 @@ function Header() {
                 title={"Guide"}
                 icon={guide}
                 iconHover={guide_hover}
-                link={"https://onther.notion.site/Darius-L2-Testnet-Dev-Document-5023767f30754d21876b049da68f0128"}
+                link={
+                  "https://onther.notion.site/Darius-L2-Testnet-Dev-Document-5023767f30754d21876b049da68f0128"
+                }
               />
               <CustomMenuItem
                 title={"Block Explorer"}
@@ -191,8 +202,15 @@ function Header() {
             </MenuGroup>
           </MenuList>
         </Menu>
-        <Menu onClose={() => handleMenuToggle(1)}>
-          <MenuButton zIndex={1001} mr="33px" w="80px" onClick={() => handleMenuToggle(1)}>
+        <Menu onClose={() => handleMenuToggle(1)} isOpen={menuStates[1]}>
+          <MenuButton
+            zIndex={1001}
+            mr="33px"
+            w="80px"
+            onClick={() => handleMenuToggle(1)}
+            onMouseEnter={() => handleMenuToggle(1)}
+            onMouseLeave={() => handleMenuToggle(1)}
+          >
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
               <Text
@@ -212,7 +230,7 @@ function Header() {
             </Flex>
           </MenuButton>
           <MenuList
-          zIndex={1001}
+            zIndex={1001}
             fontSize={"13px"}
             ml="-15px"
             border={"none"}
@@ -223,7 +241,9 @@ function Header() {
               title={"GranTON Application"}
               icon={grant}
               iconHover={grant_hover}
-              link={"https://tokamak.notion.site/Tokamak-Network-Grant-Program-GranTON-f2384b458ea341a0987c7e73a909aa21"}
+              link={
+                "https://tokamak.notion.site/Tokamak-Network-Grant-Program-GranTON-f2384b458ea341a0987c7e73a909aa21"
+              }
             />
             {/* <CustomMenuItem
               title={"Bug Bounty"}
@@ -233,8 +253,15 @@ function Header() {
             /> */}
           </MenuList>
         </Menu>
-        <Menu onClose={() => handleMenuToggle(2)}>
-          <MenuButton zIndex={1001} mr="30px" w="80px" onClick={() => handleMenuToggle(2)}>
+        <Menu onClose={() => handleMenuToggle(2)} isOpen={menuStates[2]}>
+          <MenuButton
+            zIndex={1001}
+            mr="30px"
+            w="80px"
+            onClick={() => handleMenuToggle(2)}
+            onMouseEnter={() => handleMenuToggle(2)}
+            onMouseLeave={() => handleMenuToggle(2)}
+          >
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
               <Text
@@ -254,7 +281,7 @@ function Header() {
             </Flex>
           </MenuButton>
           <MenuList
-          zIndex={1001}
+            zIndex={1001}
             fontSize={"13px"}
             ml="-15px"
             border={"none"}
@@ -277,7 +304,9 @@ function Header() {
                 title={"Career"}
                 icon={career}
                 iconHover={career_hover}
-                link={"https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824"}
+                link={
+                  "https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824"
+                }
               />
             </MenuGroup>
             <MenuDivider borderColor={"#f4f7f8"} mx="10px" />
