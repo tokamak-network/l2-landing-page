@@ -1,5 +1,6 @@
 import { Flex, Box } from "@chakra-ui/react";
-// import "./styles.css";
+import "./styles.css";
+import { motion } from "framer-motion";
 
 export default function FeeAnimation() {
   return (
@@ -18,14 +19,14 @@ export default function FeeAnimation() {
               transform="translate(20 78.318)"
               style={{ stroke: "#1c1c1c", fill: "none" }}
             >
-              <ellipse
+              <motion.ellipse
                 cx="50"
                 cy="16"
                 rx="50"
                 ry="16"
                 style={{ stroke: "none" }}
               />
-              <ellipse
+              <motion.ellipse
                 cx="50"
                 cy="16"
                 rx="49.5"
@@ -38,19 +39,35 @@ export default function FeeAnimation() {
               transform="translate(20 63.318)"
               style={{ stroke: "#1c1c1c", fill: "none" }}
             >
-              <ellipse
+              <motion.ellipse
                 cx="50"
                 cy="23.5"
                 rx="50"
                 ry="23.5"
                 style={{ stroke: "none" }}
+                initial={{ cx: "0", cy: "0", rx: "0", ry: "0" }}
+                animate={{
+                  cx: "50",
+                  cy: "23.5",
+                  rx: "50",
+                  ry: "23.5",
+                  transition: { duration: 0.3, delay: 2, ease: "easeInOut" },
+                }}
               />
-              <ellipse
+              <motion.ellipse
                 cx="50"
                 cy="23.5"
                 rx="49.5"
                 ry="23"
                 style={{ fill: "none" }}
+                initial={{ cx: "0", cy: "0", rx: "0", ry: "0" }}
+                animate={{
+                  cx: "50",
+                  cy: "23.5",
+                  rx: "50",
+                  ry: "23.5",
+                  transition: { duration: 0.3, delay: 2, ease: "easeInOut" },
+                }}
               />
             </g>
             <g
@@ -58,19 +75,35 @@ export default function FeeAnimation() {
               transform="translate(20 54.449)"
               style={{ stroke: "#1c1c1c", fill: "none" }}
             >
-              <ellipse
+              <motion.ellipse
                 cx="50"
                 cy="27.934"
                 rx="50"
                 ry="27.934"
                 style={{ stroke: "none" }}
+                initial={{ cx: "0", cy: "0", rx: "0", ry: "0" }}
+                animate={{
+                  cx: "50",
+                  cy: "27.934",
+                  rx: "50",
+                  ry: "27.934",
+                  transition: { duration: 0.3, delay: 3, ease: "easeInOut" },
+                }}
               />
-              <ellipse
+              <motion.ellipse
                 cx="50"
                 cy="27.934"
                 rx="49.5"
                 ry="27.434"
                 style={{ fill: "none" }}
+                initial={{ cx: "0", cy: "0", rx: "0", ry: "0" }}
+                animate={{
+                  cx: "50",
+                  cy: "27.934",
+                  rx: "49.5",
+                  ry: "27.434",
+                  transition: { duration: 0.3, delay: 3, ease: "easeInOut" },
+                }}
               />
             </g>
             <g
@@ -78,23 +111,60 @@ export default function FeeAnimation() {
               transform="translate(20 39)"
               style={{ stroke: "#1c1c1c", fill: "none" }}
             >
-              <ellipse
+              <motion.ellipse
                 cx="50"
                 cy="35.659"
                 rx="50"
                 ry="35.659"
                 style={{ stroke: "none" }}
+                initial={{ cx: "0", cy: "0", rx: "0", ry: "0" }}
+                animate={{
+                  cx: "50",
+                  cy: "35.659",
+                  rx: "50",
+                  ry: "35.659",
+                  transition: {
+                    duration: 0.3,
+                    delay: 1,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                  },
+                }}
               />
-              <ellipse
+              <motion.ellipse
                 cx="50"
                 cy="35.659"
                 rx="49.5"
                 ry="35.159"
                 style={{ fill: "none" }}
+                initial={{ cx: "0", cy: "0", rx: "0", ry: "0" }}
+                animate={{
+                  cx: "50",
+                  cy: "35.659",
+                  rx: "49.5",
+                  ry: "35.159",
+                  transition: {
+                    duration: 3,
+                    delay: 1,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                  },
+                }}
               />
             </g>
           </g>
-          <g data-name="사각형 11" style={{ fill: "#fff", stroke: "#1c1c1c" }}>
+          <motion.g
+            data-name="사각형 11"
+            style={{ fill: "#fff", stroke: "#1c1c1c" }}
+            animate={{
+              scale: [1, 7 / 11], // Array of values for scale animation
+              transition: {
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+            }}
+          >
             <path
               style={{ stroke: "none" }}
               d="M0 0h11v11H0z"
@@ -105,12 +175,21 @@ export default function FeeAnimation() {
               d="M.5.5h10v10H.5z"
               transform="translate(7 20)"
             />
-          </g>
+          </motion.g>
           <path
             data-name="사각형 12"
             transform="translate(129 108)"
             style={{ fill: "#1c1c1c" }}
             d="M0 0h7v7H0z"
+            scale="1"
+            // animate={{
+            //   scale: 1,
+            //   transition: {
+            //     duration: 2,
+            //     repeat: Infinity,
+            //     repeatType: "reverse",
+            //   },
+            // }}
           />
         </g>
       </svg>
