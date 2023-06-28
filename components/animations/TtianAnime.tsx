@@ -149,66 +149,28 @@ function TitanAnime() {
               delay: 10,
             }}
           />
-            {/* <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="137"
-            ry="155"
-            fill={"transparent"}
-            stroke={"#707070"}
-            strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155, rotate: 45 }}
-            animate={{ rx: 0, ry: 155 }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              repeatType: "mirror",
-              delay: 12,
-            }}
-          /> */}
-            {/* <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="137"
-            ry="155"
-            fill={"transparent"}
-            stroke={"#707070"}
-            strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155, rotate: 45 }}
-            animate={{ rx: 0, ry: 155 }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              repeatType: "mirror",
-              delay: 14,
-            }}
-          /> */}
-
-
-          {/* 
+          
          
-        
-          */}
         </svg>
         <motion.div
           className="titan-box-vertical"
-          initial={{ offsetDistance: "100%", scale: 1 }}
-          animate={{ offsetDistance: "0%", scale: 1 }}
+          initial={{ offsetDistance: "100%" }}
+          animate={{ offsetDistance: "0%" }}
           transition={{
             duration: 10,
             repeat: Infinity,
-            repeatType: "loop",
+            repeatType: "mirror",
             ease: "linear",
           }}
         />
         <motion.div
           className="titan-box-horizontal"
-          initial={{ offsetDistance: "100%", scale: 1 }}
-          animate={{ offsetDistance: "0%", scale: 1 }}
+          initial={{ offsetDistance: "100%" }}
+          animate={{ offsetDistance: "0%" }}
           transition={{
             duration: 10,
             repeat: Infinity,
-            repeatType: "loop",
+            repeatType: "mirror",
             ease: "linear",
           }}
         />
@@ -216,12 +178,12 @@ function TitanAnime() {
         <Flex className="titan">
           <motion.div
             className="titan-box-diagonal"
-            initial={{ offsetDistance: "100%", scale: 1 }}
-            animate={{ offsetDistance: "0%", scale: 1 }}
+            initial={{ offsetDistance: "100%" }}
+            animate={{ offsetDistance: "0%" }}
             transition={{
               duration: 10,
               repeat: Infinity,
-              repeatType: "loop",
+              repeatType: "mirror",
               ease: "linear",
             }}
           />

@@ -55,7 +55,7 @@ function FundedAnime() {
           />
         </svg>
         <motion.div
-          className="funded-box"
+          className="funded-box-one"
           initial={{ offsetDistance: "100%", scale: 1 }}
           animate={{ offsetDistance: "0%", scale: 1 }}
           transition={{
@@ -67,7 +67,7 @@ function FundedAnime() {
         />
 
         <motion.div
-          className="funded-box"
+          className="funded-box-two"
           initial={{ offsetDistance: "50%", scale: 1 }}
           animate={{ offsetDistance: "-50%", scale: 1 }}
           transition={{

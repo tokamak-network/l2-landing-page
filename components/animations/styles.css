@@ -104,7 +104,18 @@
 
 
 
-.funded-box {
+.funded-box-one {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  transform: translate(1413 4247);
+  offset-path: path(
+    "M310,155A154.5,154.5 0 0,0 0.5,155A154.5,154.5 0 0,0 310,155Z"
+  );
+}
+.funded-box-two {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -121,8 +132,8 @@ transform:  translate(100);
 }
 
 .titan-box-vertical {
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   position: absolute;
   background: #2a72e5;
@@ -132,8 +143,8 @@ transform:  translate(100);
 }
 
 .titan-box-horizontal{
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   position: absolute;
   background: #2a72e5;
