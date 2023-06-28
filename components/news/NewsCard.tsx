@@ -23,8 +23,6 @@ function NewsCard(props: NewsProps) {
   const myLoader = ({ src }: any) => {
     return `${src}`;
   };
-
-  console.log('content',content);
   
 
   return (
@@ -32,7 +30,7 @@ function NewsCard(props: NewsProps) {
       w={["320px", "320px", "355px", "355px", "380px", "380px"]}
       h={tabletView ? "421px" : "100%"}
       fontFamily={theme.fonts.openSans}
-      mr={mobileView ? "0px" : (num + 1) % 3 === 0 ? "0px" : "30px"}
+      mr={mobileView ? "0px" : num === 8 ? "0px" : "30px"}
       mb={mobileView ? "36px" : tabletView ? "45px" : "20px"}
       flexDir={"column"}
       as={"a"}
@@ -49,10 +47,10 @@ function NewsCard(props: NewsProps) {
           loader={myLoader}
           src={thumb}
           alt="thumb"
-          style={{ objectFit: "contain", borderRadius: "16px" }}
+          style={{ objectFit: "cover", borderRadius: "16px" }}
           width={mobileView ? 320 : tabletView ? 355 : 380}
           height={mobileView ? 179 : tabletView ? 199 : 213}
-          unoptimized={true}
+          unoptimized
           priority
         />
       </Flex>
