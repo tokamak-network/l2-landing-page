@@ -25,7 +25,7 @@ function usePosts() {
   useEffect(() => {
     fetchPosts().then((e) => {
   if (e !== undefined) {
-    console.log("**fetchTokens err**");
+    console.log("**fet posts err**");
     console.log(e);
   }
 });

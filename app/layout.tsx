@@ -23,7 +23,6 @@ export default function RootLayout({
   //   const deviceWidth = window.outerWidth;
   //   setDWidth(deviceWidth);
   // }, []);
-console.log('mobileView, tableView,pcView',mobileView, tabletView,pcView);
 
   return (
     <html lang="en">
