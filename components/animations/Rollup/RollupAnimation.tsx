@@ -14,6 +14,5 @@ export default function RollupAnimation() {
         <Box className="box bottom-circle" />
       </Box>
     </Flex>
-   
   );
 }
