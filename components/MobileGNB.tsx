@@ -56,7 +56,6 @@ function MobileTokamakGNB() {
     setIsClient(true);
   }, []);
 
-
   if (!isClient) {
     return null; // Render nothing on the server-side
   }
@@ -93,9 +92,7 @@ function MobileTokamakGNB() {
     }
   };
 
-
-
-  const catchTouchStart = (e: any) => {    
+  const catchTouchStart = (e: any) => {
     const touchObj = e.changedTouches[0];
     touchStartX = touchObj.pageX;
   };
@@ -104,20 +101,19 @@ function MobileTokamakGNB() {
     const ref: any =
       typeof document !== "undefined" &&
       document.getElementsByClassName("gnb_mobile_menu");
-    const transition = "0.8s ease-in-out";    
+    const transition = "0.8s ease-in-out";
     let direction;
     if (rightArrow !== undefined) {
-
-      direction = rightArrow;      
+      direction = rightArrow;
     } else {
       const touchObj = e.changedTouches[0];
-      const distX = touchObj.pageX - touchStartX;      
+      const distX = touchObj.pageX - touchStartX;
       direction = touchStartX > touchObj.pageX;
     }
 
     try {
-      if (direction && ref[0]) {        
-        const xValue = toRightXvalue();        
+      if (direction && ref[0]) {
+        const xValue = toRightXvalue();
         const traslateX = `translateX(${xValue}px)`;
         ref[0].style.transition = transition;
         ref[0].style.transform = traslateX;
@@ -164,16 +160,16 @@ function MobileTokamakGNB() {
         ref[5].style.transform = traslateX;
       }
     } finally {
-      if (currentPosition ===1) {
-        currentPosition=1
+      if (currentPosition === 1) {
+        currentPosition = 1;
       }
       // if (-1 < currentPosition && currentPosition < 4) {
       //   direction ? (currentPosition += 1) : (currentPosition -= 1);
       // }
       if (currentPosition === -1) {
         currentPosition = 0;
-      } 
-     
+      }
+
       // if (currentPosition === 4 && direction === false) {
       //   currentPosition -= 1;
       // }
@@ -187,13 +183,13 @@ function MobileTokamakGNB() {
     handleNavigation(undefined, true);
     handleNavigation(undefined, true);
   }, 1000);
-  
+
   return (
     <div className="gnb_mobile_header">
       <div
         style={{ width: "117px", height: "40px", position: "relative" }}
         onClick={(e) => {
-          currentPosition-=1
+          currentPosition -= 1;
           handleNavigation(e, false);
         }}
       >
@@ -221,24 +217,26 @@ function MobileTokamakGNB() {
             style={{
               minWidth:
                 menu.title === "L2 Mainnet"
-                  ? "130px"
-                  : menu.title === "Tokamak Network DAO"
-                  ? "186px"
+                  ? "120px"
+                  : menu.title === "DAO"
+                  ? "90px"
                   : menu.title === "Tokamak Network"
                   ? "160px"
-                  : menu.title === "Simple Staking"
-                  ? "140px"
+                  : menu.title === "Staking"
+                  ? "100px"
+                  : menu.title === "Bridge & Swap"
+                  ? "136px"
                   : "",
 
               fontWeight: menu.isFoucsed ? 600 : "",
               opacity: menu.isFoucsed ? 1 : 0.25,
-              marginLeft: index === 0 ? `${(dWidth - 80-78) / 2}px` : "",
+              marginLeft: index === 0 ? `${(dWidth - 80 - 78) / 2}px` : "",
               marginRight: index === menus.length - 1 ? "31%" : "",
               fontFamily: "TitilliumWeb, sans-serif !important",
             }}
             href={menu.url}
             key={menu.title}
-            onTouchStart={(e)=> catchTouchStart(e)}
+            onTouchStart={(e) => catchTouchStart(e)}
             onTouchEnd={(e) => handleNavigation(e)}
           >
             {menu.title}
@@ -248,7 +246,7 @@ function MobileTokamakGNB() {
       <div
         style={{ position: "relative", width: "121px", height: "40px" }}
         onClick={(e) => {
-          currentPosition+=1
+          currentPosition += 1;
           handleNavigation(e, true);
         }}
       >
