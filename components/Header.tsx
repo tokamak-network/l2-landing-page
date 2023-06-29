@@ -202,57 +202,25 @@ function Header() {
             </MenuGroup>
           </MenuList>
         </Menu>
-        <Menu onClose={() => handleMenuToggle(1)} isOpen={menuStates[1]}>
-          <MenuButton
-            zIndex={1001}
-            mr="33px"
-            w="80px"
-            onClick={() => handleMenuToggle(1)}
-            onMouseEnter={() => handleMenuToggle(1)}
-            onMouseLeave={() => handleMenuToggle(1)}
+        <Flex justifyContent={"space-between"} alignItems={"center"}>
+          <Link
+            href="https://tokamak.notion.site/Tokamak-Network-Grant-Program-GranTON-f2384b458ea341a0987c7e73a909aa21"
+            textDecor={"none"}
+            zIndex={1000}
+            _hover={{ textDecor: "none" }}
+            target="_blank"
           >
-            <Flex justifyContent={"space-between"} alignItems={"center"}>
-              {" "}
-              <Text
-                color={"#1c1c1c"}
-                fontFamily={theme.fonts.openSans}
-                fontWeight={600}
-              >
-                Grant
-              </Text>
-              <Flex
-                height={"24px"}
-                width={"24px"}
-                transform={menuStates[1] === true ? "" : "rotate(180deg)"}
-              >
-                <Image src={arrow} alt="icon_arrow" />
-              </Flex>
-            </Flex>
-          </MenuButton>
-          <MenuList
-            zIndex={1001}
-            fontSize={"13px"}
-            ml="-15px"
-            border={"none"}
-            minWidth="187px"
-            boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}
-          >
-            <CustomMenuItem
-              title={"GranTON Application"}
-              icon={grant}
-              iconHover={grant_hover}
-              link={
-                "https://tokamak.notion.site/Tokamak-Network-Grant-Program-GranTON-f2384b458ea341a0987c7e73a909aa21"
-              }
-            />
-            {/* <CustomMenuItem
-              title={"Bug Bounty"}
-              icon={bug}
-              iconHover={bug_hover}
-              link={""}
-            /> */}
-          </MenuList>
-        </Menu>
+            <Text
+              fontSize="16px"
+              mr="60px"
+              color={"#1c1c1c"}
+              fontFamily={theme.fonts.openSans}
+              fontWeight={600}
+            >
+              Grant
+            </Text>
+          </Link>
+        </Flex>
         <Menu onClose={() => handleMenuToggle(2)} isOpen={menuStates[2]}>
           <MenuButton
             zIndex={1001}
