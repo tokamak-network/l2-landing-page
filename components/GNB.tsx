@@ -6,29 +6,27 @@ function GNB() {
   function Menu(props: any) {
     const theme = useTheme();
     return (
-     
-        <Link
-          h={"46px"}
-          lineHeight={"44px"}
-          textAlign={"center"}
-          cursor={"pointer"}
-          bg={props.activetab ? "#FFFFFF" : ""}
-          color={props.activetab ? "#353C48" : ""}
-          fontFamily={"Titillium Web, sans-serif"}
-          fontWeight={600}
-          {...props}
-          outline={"none"}
-          _hover={{
-            outline: "none",
-          }}
-          _focus={{
-            outline: "none",
-          }}
-          href={props.url}
-        >
-          {props.title}
-        </Link>
-     
+      <Link
+        h={"46px"}
+        lineHeight={"44px"}
+        textAlign={"center"}
+        cursor={"pointer"}
+        bg={props.activetab ? "#FFFFFF" : ""}
+        color={props.activetab ? "#353C48" : ""}
+        fontFamily={"Titillium Web, sans-serif"}
+        fontWeight={600}
+        {...props}
+        outline={"none"}
+        _hover={{
+          outline: "none",
+        }}
+        _focus={{
+          outline: "none",
+        }}
+        href={props.url}
+      >
+        {props.title}
+      </Link>
     );
   }
 
@@ -64,7 +62,6 @@ function GNB() {
         w={"76px"}
         url={"https://simple.staking.tokamak.network/"}
       ></Menu>
-      <Menu title={"TONStarter"} w={"114px"} url={"#"}></Menu>
 
       <Menu
         title={"DAO"}
