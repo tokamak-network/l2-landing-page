@@ -3,7 +3,7 @@ import "./styles.css";
 
 export default function OptimismAnime() {
   return (
-    <Flex mr="-40px" mb="-22px" mt="36px">
+    <Flex mr="-80px" mb="-22px" mt="36px">
       <Box className="container">
         <Box className="container four-point-star" />
         <Box className="container four-point-star-small" />
