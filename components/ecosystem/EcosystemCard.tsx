@@ -54,7 +54,6 @@ function EcosystemCard(props: EcoProps) {
             fontWeight={"bold"}
             fontSize={"16px"}
             color={"#464d59"}
-            
           >
             {title}
           </Text>
@@ -64,9 +63,9 @@ function EcosystemCard(props: EcoProps) {
             mb="4px"
             fontWeight={600}
             fontSize={"12px"}
-            target='_blank'
+            target="_blank"
             color={"#7a7e87"}
-            _hover={{textDecor:'none'}}
+            _hover={{ textDecor: "none" }}
           >
             {url}
           </Link>
@@ -76,13 +75,12 @@ function EcosystemCard(props: EcoProps) {
             fontSize={"10px"}
             color={"#cccccc"}
             fontFamily={theme.fonts.openSans}
-            
           >
             {status}
           </Text>
         </Flex>
       </Flex>
-      <Text mb="4px" fontWeight={"normal"} fontSize={"13px"} color={"#7a7e87"}>
+      <Text mb="4px" fontWeight={"normal"} fontSize={"12px"} color={"#7a7e87"}>
         {content}
       </Text>
     </Flex>

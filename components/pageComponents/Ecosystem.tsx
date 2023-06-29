@@ -219,7 +219,7 @@ function Eccosystem() {
       image: LYDA,
       url: "https://www.lyda.so/",
       content:
-        "LYDA is a platform to launch social tokens to transform social capitals in fandoms into economic benefits for creators and fans. LYDA eliminated the early stage investment for fan token IDO's on the technical side, and establish independent token.",
+        "LYDA is a platform that transforms social fandoms into economic benefits for creators and fans by launching social tokens. It eliminates the early stage investment for fan token IDOs and establishes independent tokens.",
       status: "",
       type: ["Social", "DAO", "NFT"],
     },
