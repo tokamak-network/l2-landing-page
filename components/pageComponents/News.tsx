@@ -42,9 +42,9 @@ function News() {
       const end2 = xx.indexOf("</p>");
       const parsed2 = xx.slice(start2 + 3);
 
-      return parsed2.slice(0, 300).replace(/(<([^>]+)>)/gi, "");
+      return parsed2.slice(0, 200).replace(/(<([^>]+)>)/gi, "");
     } else {
-      return parsed.slice(0, 300).replace(/(<([^>]+)>)/gi, "");
+      return parsed.slice(0, 200).replace(/(<([^>]+)>)/gi, "");
     }
   };
 
@@ -134,7 +134,8 @@ function News() {
   `
     : `
     .slider2 {
-      width:  1200px;
+      width:  1240px;
+      padding-left:15px;
       .slick-slider{
         width:  1200px;
       }

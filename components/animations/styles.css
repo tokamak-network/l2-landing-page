@@ -104,7 +104,18 @@
 
 
 
-.funded-box {
+.funded-box-one {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  transform: translate(1413 4247);
+  offset-path: path(
+    "M310,155A154.5,154.5 0 0,0 0.5,155A154.5,154.5 0 0,0 310,155Z"
+  );
+}
+.funded-box-two {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -116,13 +127,36 @@
   );
 }
 
+.funded-box-one-mobile {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  transform: translate(1413 4247);
+  offset-path: path(
+    "M260,130A123,123 0 0,0 0.4,130A123,123 0 0,0 260,130Z"
+  );
+}
+.funded-box-two-mobile {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  transform: translate(1413 4247);
+  offset-path: path(
+    "M260,130A123,123 0 0,0 0.4,130A123,123 0 0,0 260,130Z"
+  );
+}
+
 .dotted {
 transform:  translate(100);
 }
 
 .titan-box-vertical {
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   position: absolute;
   background: #2a72e5;
@@ -132,26 +166,14 @@ transform:  translate(100);
 }
 
 .titan-box-horizontal{
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   position: absolute;
   background: #2a72e5;
   offset-path: path(
     "M0 200h400v1H0z"
   );
-}
-
-.titan {
-  left: -500px;
-  position: relative;
-  transform: rotate(45deg);
-  top: -42px;
- 
-}
-
-.diagonal {
-  transform: rotate(45deg);
 }
 
 .titan-box-diagonal{
@@ -165,3 +187,50 @@ transform:  translate(100);
   );
   
 }
+
+.titan-box-vertical-mobile {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  offset-path: path(
+    "M162 0v322h0.1V0z"
+  );
+}
+
+.titan-box-horizontal-mobile{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  offset-path: path(
+    "M0 162h322v0.1H0z"
+  );
+}
+
+
+.titan-box-diagonal-mobile{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  background: #2a72e5;
+  offset-path: path(
+    "M269 -239v419h0.1V0z"
+  );
+  
+}
+.titan {
+  left: -500px;
+  position: relative;
+  transform: rotate(45deg);
+  top: -42px;
+ 
+}
+
+.diagonal {
+  transform: rotate(45deg);
+}
+

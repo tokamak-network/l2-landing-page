@@ -2,7 +2,7 @@ import { Flex, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import "./styles.css";
 
-function FundedAnime() {
+function FundedAnimeMobile() {
   const transition = {
     duration: 10,
     repeat: Infinity,
@@ -13,9 +13,9 @@ function FundedAnime() {
   return (
     <Flex>
       <Flex className="funded">
-        <svg xmlns="http://www.w3.org/2000/svg" width="310" height="310">
+        <svg xmlns="http://www.w3.org/2000/svg" width="260" height="260">
           <motion.path
-            d="M310,155A154.5,154.5 0 0,0 0.5,155A154.5,154.5 0 0,0 310,155Z"
+            d="M260,130A123,123 0 0,0 0.4,130A123,123 0 0,0 260,130Z"
             fill="transparent"
             strokeWidth="1"
             stroke="#707070"
@@ -26,8 +26,8 @@ function FundedAnime() {
             transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
           />
 
-          <motion.path
-            d="M113,155A56.5,154.5 0 0,0 0,155A56.5,154.5 0 0,0 113,155Z"
+          {/* <motion.path
+            d="M260,155A130,180 0 0,0 0,155A130,180 0 0,0 260,130Z"
             fill="transparent"
             strokeWidth="1"
             strokeDasharray={"4 4"}
@@ -38,13 +38,24 @@ function FundedAnime() {
             transform={"translate(100)"}
             opacity={1}
             transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
+          /> */}
+          <motion.ellipse
+            cx="130" cy="130" rx="47.806" ry="130"
+            fill={"transparent"}
+            stroke={"#707070"}
+            strokeWidth="1"
+            // initial={{ strokeDashoffset: 0 }}
+            // animate={{ strokeDashoffset: 150 }}
+            // className={"dotted"}
+            // strokeDasharray={"4 4"}
+            transition={{ duration: 10, repeat: Infinity, repeatType: "loop" }}
           />
 
           <motion.ellipse
-            cy="155"
-            cx="155"
-            ry="33"
-            rx="155"
+            cx="130"
+            cy="130"
+            ry="27.677"
+            rx="130"
             fill={"transparent"}
             stroke={"#707070"}
             initial={{ strokeDashoffset: 0 }}
@@ -55,7 +66,7 @@ function FundedAnime() {
           />
         </svg>
         <motion.div
-          className="funded-box-one"
+          className="funded-box-one-mobile"
           initial={{ offsetDistance: "100%", scale: 1 }}
           animate={{ offsetDistance: "0%", scale: 1 }}
           transition={{
@@ -67,7 +78,7 @@ function FundedAnime() {
         />
 
         <motion.div
-          className="funded-box-two"
+          className="funded-box-two-mobile"
           initial={{ offsetDistance: "50%", scale: 1 }}
           animate={{ offsetDistance: "-50%", scale: 1 }}
           transition={{
@@ -82,4 +93,4 @@ function FundedAnime() {
   );
 }
 
-export default FundedAnime;
+export default FundedAnimeMobile;

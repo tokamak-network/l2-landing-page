@@ -1,11 +1,14 @@
 import { Flex, Link, Text, useTheme } from "@chakra-ui/react";
-import useMediaView from "@/app/hooks/useMediaView";
 import DariusGraphic from "../../app/assets/darius_graphic.svg";
 import Image from "next/image";
 import discord from "../../app/assets/navi_icon_discord_mobile.svg";
 import TitanAnime from "../animations/TtianAnime";
+import TitanAnimeMobile from "../animations/TitanAnimeMobile";
+import useMediaView from "../../app/hooks/useMediaView";
+
 const Darius = () => {
   const theme = useTheme();
+  const { mobileView, tabletView, pcView } = useMediaView();
 
   return (
     <Flex
@@ -22,8 +25,8 @@ const Darius = () => {
       >
         <Image src={DariusGraphic} alt="funded image" />
       </Flex> */}
-      <TitanAnime/>
-      <Flex 
+      {mobileView ? <TitanAnimeMobile /> : <TitanAnime />}
+      <Flex
         flexDir={"column"}
         alignItems={[
           "center",
@@ -77,7 +80,7 @@ const Darius = () => {
             fontSize={"14px"}
             fontFamily={theme.fonts.openSans}
             _hover={{ textDecor: "none" }}
-            mb={['20px','20px','0px','0px','0px','0px']}
+            mb={["20px", "20px", "0px", "0px", "0px", "0px"]}
           >
             Guide
           </Link>

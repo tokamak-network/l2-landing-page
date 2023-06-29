@@ -2,7 +2,7 @@ import { Flex, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import "./styles.css";
 
-function TitanAnime() {
+function TitanAnimeMobile() {
   const transition = {
     duration: 10,
     repeat: Infinity,
@@ -12,24 +12,24 @@ function TitanAnime() {
 
   return (
     <Flex>
-      <Flex width="402px" height="405.468px">
-        <svg xmlns="http://www.w3.org/2000/svg" width="402" height="405.468">
+      <Flex width="322px" height="324.778px" mb='23.2px'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="322" height="324.778">
           <motion.path
-            d="M0 200h400v0.1H0z"
+            d="M0 162h322v0.1H0z"
             fill="transparent"
             strokeWidth="1"
             stroke="#7a7e87"
             strokeLinejoin={"miter"}
           />
           <motion.path
-            d="M200 0v400h0.1V0z"
+            d="M162 0v322h0.1V0z"
             fill="transparent"
             strokeWidth="1"
             stroke="#7a7e87"
             strokeLinejoin={"miter"}
           />
           <motion.path
-            d="M284 -250v760h0.1V0z"
+            d="M229 -190v416h0.1V0z"
             fill="transparent"
             strokeWidth="1"
             stroke="#7a7e87"
@@ -37,25 +37,25 @@ function TitanAnime() {
             strokeLinejoin={"miter"}
           />
           <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="155"
-            ry="155"
+            cx="162"
+            cy="162"
+            rx="124"
+            ry="124"
             fill={"transparent"}
             stroke={"#707070"}
             initial={{ strokeDashoffset: 150 }}
             animate={{ strokeDashoffset: 150 }}
           />
           <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="35"
-            ry="155"
+            cx="162"
+            cy="162"
+            rx="30"
+            ry="124"
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155, rotate: 45 }}
-            animate={{ rx: 0, ry: 155 }}
+            initial={{ rx: 124, ry: 124, rotate: 45 }}
+            animate={{ rx: 0, ry: 124 }}
             transition={{
               duration: 10,
               repeat: Infinity,
@@ -63,15 +63,15 @@ function TitanAnime() {
             }}
           />
           <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="74"
-            ry="155"
+            cx="162"
+            cy="162"
+            rx="59"
+            ry="124"
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155, rotate: 45 }}
-            animate={{ rx: 0, ry: 155 }}
+            initial={{ rx: 124, ry: 124, rotate: 45 }}
+            animate={{ rx: 0, ry: 124 }}
             transition={{
               duration: 10,
               repeat: Infinity,
@@ -79,17 +79,16 @@ function TitanAnime() {
               delay: 2,
             }}
           />
-
           <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="108"
-            ry="155"
+            cx="162"
+            cy="162"
+            rx="59"
+            ry="124"
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155, rotate: 45 }}
-            animate={{ rx: 0, ry: 155 }}
+            initial={{ rx: 124, ry: 124, rotate: 45 }}
+            animate={{ rx: 0, ry: 124 }}
             transition={{
               duration: 10,
               repeat: Infinity,
@@ -97,17 +96,16 @@ function TitanAnime() {
               delay: 4,
             }}
           />
-
           <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="137"
-            ry="155"
+            cx="162"
+            cy="162"
+            rx="59"
+            ry="124"
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155, rotate: 45 }}
-            animate={{ rx: 0, ry: 155 }}
+            initial={{ rx: 124, ry: 124, rotate: 45 }}
+            animate={{ rx: 0, ry: 124 }}
             transition={{
               duration: 10,
               repeat: Infinity,
@@ -115,16 +113,16 @@ function TitanAnime() {
               delay: 6,
             }}
           />
-            <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="137"
-            ry="155"
+          <motion.ellipse
+            cx="162"
+            cy="162"
+            rx="59"
+            ry="124"
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155, rotate: 45 }}
-            animate={{ rx: 0, ry: 155 }}
+            initial={{ rx: 124, ry: 124, rotate: 45 }}
+            animate={{ rx: 0, ry: 124 }}
             transition={{
               duration: 10,
               repeat: Infinity,
@@ -132,16 +130,16 @@ function TitanAnime() {
               delay: 8,
             }}
           />
-            <motion.ellipse
-            cx="200"
-            cy="200"
-            rx="137"
-            ry="155"
+          <motion.ellipse
+            cx="162"
+            cy="162"
+            rx="59"
+            ry="124"
             fill={"transparent"}
             stroke={"#707070"}
             strokeDasharray={"4 4"}
-            initial={{ rx: 155, ry: 155, rotate: 45 }}
-            animate={{ rx: 0, ry: 155 }}
+            initial={{ rx: 124, ry: 124, rotate: 45 }}
+            animate={{ rx: 0, ry: 124 }}
             transition={{
               duration: 10,
               repeat: Infinity,
@@ -149,11 +147,9 @@ function TitanAnime() {
               delay: 10,
             }}
           />
-          
-         
         </svg>
         <motion.div
-          className="titan-box-vertical"
+          className="titan-box-vertical-mobile"
           initial={{ offsetDistance: "100%" }}
           animate={{ offsetDistance: "0%" }}
           transition={{
@@ -164,7 +160,7 @@ function TitanAnime() {
           }}
         />
         <motion.div
-          className="titan-box-horizontal"
+          className="titan-box-horizontal-mobile"
           initial={{ offsetDistance: "100%" }}
           animate={{ offsetDistance: "0%" }}
           transition={{
@@ -177,7 +173,7 @@ function TitanAnime() {
 
         <Flex className="titan">
           <motion.div
-            className="titan-box-diagonal"
+            className="titan-box-diagonal-mobile"
             initial={{ offsetDistance: "100%" }}
             animate={{ offsetDistance: "0%" }}
             transition={{
@@ -193,4 +189,4 @@ function TitanAnime() {
   );
 }
 
-export default TitanAnime;
+export default TitanAnimeMobile;
