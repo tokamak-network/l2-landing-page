@@ -65,7 +65,7 @@ function Roadmap() {
       test: false,
     },
     {
-      title: "Titan L2 Open",
+      title: "Titan L2 Mainnet Open",
       subtitle: "MAINNET",
       tabLeft: "",
       desktopLeft: "",
@@ -244,7 +244,7 @@ function Roadmap() {
         test: "true",
       },
       {
-        title: "Titan L2 Open",
+        title: "Titan L2 Mainnet Open",
         subtitle: "MAINNET",
         completed: true,
         top: "14px",
@@ -372,15 +372,35 @@ function Roadmap() {
                         <Image src={check} alt="check" />
                       </Flex>
                     )}
-                    <Text
-                      // border={"1px solid red"}
+                    {item.title === "TokamakOP L2 On-Demand Open" ? (
+                      <Text
+                        color={item.completed ? "#2a72e5" : "#7a7e87"}
+                        w="120px"
+                        fontSize={"14px"}
+                      >
+                        Tokamak{" "}
+                        <span
+                          style={{
+                            verticalAlign: "super",
+                            fontSize: "13x",
+                            marginLeft: "-2px",
+                          }}
+                        >
+                          Op
+                        </span>{" "}
+                        L2 On-Demand Open
+                      </Text>
+                    ) : (
+                      <Text
+                        w="140px"
+                        fontSize={"14px"}
+                        textAlign={"center"}
+                        color={item.completed ? "#1c1c1c" : "#7a7e87"}
+                      >
+                        {item.title}
+                      </Text>
+                    )}
 
-                      w="140px"
-                      fontSize={"14px"}
-                      textAlign={"center"}
-                    >
-                      {item.title}
-                    </Text>
                     <Text
                       mt="9px"
                       color={

@@ -149,8 +149,8 @@ function BlueAnimations() {
     },
     {
       src: blue22,
-      top: "123.6px",
-      left: "77.3%",
+      top: "143.6px",
+      left: "80.3%",
     },
     {
       src: blue23,
@@ -159,7 +159,7 @@ function BlueAnimations() {
     },
     {
       src: blue24,
-      top: "-593.9px",
+      top: "-580.9px",
       left: "81.9%",
     },
     {
@@ -326,15 +326,15 @@ function BlueAnimations() {
     ];
     const moveX = clientX - window.innerWidth / 2;
     const moveY = clientY - window.innerHeight / 2;
-    const offsetFactor = 50;
+
     imgAnimation.start({
-      x: -(moveX / 19),
-      y: -(moveY / 19),
+      x: -(moveX / 88),
+      y: -(moveY / 88),
     });
     animArray.forEach((anime: any, index: number) => {
       anime.start({
-        x: -(moveX / 149),
-        y: -(moveY / 149),
+        x: -(moveX / randomNumbers[index]),
+        y: -(moveY / randomNumbers[index]),
       });
     });
   };

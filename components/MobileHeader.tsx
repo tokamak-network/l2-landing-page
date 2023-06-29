@@ -226,58 +226,18 @@ const {link, image, title} = props
                     </>
                   )}
                 </AccordionItem>
-                <AccordionItem border={"none"}>
-                  {({ isExpanded }) => (
-                    <>
-                      <h2>
-                        <AccordionButton
-                          p="0px"
-                          bg="transparent"
-                          _hover={{ bg: "transparent" }}
-                          _focus={{ bg: "transparent" }}
-                          _active={{ bg: "transparent" }}
-                        >
-                          <Flex
-                            h="65px"
-                            fontSize={"20px"}
-                            fontWeight={600}
-                            color={"#1c1c1c"}
-                            alignItems={"center"}
-                            onClick={() => handleMenuToggle(0)}
-                            w="100%"
-                            justifyContent={"space-between"}
-                          >
-                            Grant
-                          </Flex>
-                          {isExpanded ? (
-                            <Flex
-                              height={"24px"}
-                              width={"24px"}
-                              transition={"transform 0.2s"}
-                            >
-                              <Image src={arrow} alt="icon_arrow" />
-                            </Flex>
-                          ) : (
-                            <Flex
-                              height={"24px"}
-                              width={"24px"}
-                              transform={"rotate(180deg)"}
-                              transition={"transform 0.2s"}
-                            >
-                              <Image src={arrow} alt="icon_arrow" />
-                            </Flex>
-                          )}
-                        </AccordionButton>
-                      </h2>
-                      <AccordionPanel pb={4} flexDir={"column"} p="0px">
-                      
-                        <CustomLink image={grant} link={'https://tokamak.notion.site/Grant-Announcement-EN-503f8396ee604673b0023e0183810e75'} title={'GranTON Application'}/>
-                        {/* <CustomLink image={bug} link={''} title={'Bug Bounty'}/> */}
-                      
-                      </AccordionPanel>
-                    </>
-                  )}
-                </AccordionItem>
+                <Link href="https://tokamak.notion.site/Grant-Announcement-EN-503f8396ee604673b0023e0183810e75" onClick={onClose} isExternal>
+              <Flex
+                h="65px"
+                fontSize={"20px"}
+                fontWeight={600}
+                color={"#1c1c1c"}
+                alignItems={"center"}
+              >
+                Grant
+              </Flex>
+              </Link>
+
                 <AccordionItem border={"none"}>
                   {({ isExpanded }) => (
                     <>

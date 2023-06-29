@@ -40,134 +40,6 @@ function Eccosystem() {
     { title: "NFT", width: "50px" },
   ];
 
-  const tabSettings = {
-    accessibility: true,
-    speed: 500,
-    variableWidth: false,
-    swipeToSlide: false,
-    centerPadding: "30px",
-    infinite: false,
-    className: "slider1",
-    centerMode: false,
-    dots: true,
-    slidesToShow: 2,
-    initialSlide: 0,
-    slidesToScroll: 2,
-    arrows: false,
-    rows: 3,
-    slidesPerRow: 1,
-  };
-  const settings = {
-    accessibility: true,
-    speed: 500,
-    variableWidth: false,
-    swipeToSlide: false,
-    centerPadding: "30px",
-    infinite: false,
-    className: "slider1",
-    centerMode: false,
-    dots: true,
-    slidesToShow: 3,
-    initialSlide: 0,
-    slidesToScroll: 3,
-    arrows: false,
-    rows: 2,
-    slidesPerRow: 1,
-    // beforeChange: (next: any) => setCurrentIndex(next),
-    // afterChange: (current: any) => setCurrentIndex(current),
-  };
-
-  const slickStyle = tabletView
-    ? `.slider1 {
-      width:  800px;
-
-    .slick-slider{
-      width:  800px;
-    }
-    .slick-list {
-      margin-left: 30px
-    }
-    .slick-slide{
-      height: 650px !important;
-      margin-bottom: 60px
-    }
-    .slick-dots{
-      position: relative;
-      display: flex !important;
-      justify-content: center
-    }
-    .slick-dots li {
-      width: 9px
-    }
-    .slick-dots li button {
-      width: 9px;
-      height: 9px;
-      padding: 0px
-    }
-    .slick-dots li button:before {
-      color: #dfe4ee;
-      opacity: 1;
-      width: 9px;
-      height: 9px;
-      padding: 0px
-    }
-    .slick-dots li.slick-active button:before{
-      color: #2a72e5;
-      opacity: 1;
-      width: 9px;
-      height: 9px;
-      padding: 0px
-    }
-  }`
-    : `
-  .slider1 {
-    width: 1230px;
-    left: 15px;
-
-    .slick-slider{
-      width:  1230px !important;
-      // padding-left:30px
-    }
-    .slick-list {
-      //  margin-left: 30px
-    }
-    .slick-slide{
-      height: 454px;
-      margin-bottom: 60px;
-    }
-    .slick-slide slick-active{
-      width: 380px !important
-    }
-    .slick-dots{
-      display:flex !important;
-      margin-top:60px !important;
-      justify-content: center
-    }
-    .slick-dots li {
-      // height: 9px;
-      width: 9px
-    }
-    .slick-dots li button {
-      width: 9px;
-      height: 9px;
-      padding: 0px
-    }
-    .slick-dots li button:before {
-      color: #dfe4ee;
-      opacity: 1;
-      width: 9px;
-      height: 9px;
-      padding: 0px
-    }
-    .slick-dots li.slick-active button:before{
-      color: #2a72e5;
-      opacity: 1;
-      width: 9px;
-      height: 9px;
-      padding: 0px
-    }
-  }
-  `;
   const cards: ICard[] = [
     {
       title: "TONStarter",
@@ -176,7 +48,7 @@ function Eccosystem() {
       content:
         "TONStarter is a decentralized launchpad platform for public fundraising and strong liquidity economics. Integrating with Titan will improve the user experience with lower fees and more competitive investment options.",
       status: "COMING SOON",
-      type: ["Launchpad"],
+      type: ["Launchpad",'Bridge'],
     },
     {
       title: "Tokamak Fast Withdrawal",
@@ -240,6 +112,134 @@ function Eccosystem() {
       : setFilteredCards(cards.filter((card) => card.type.includes(type)));
   };
 
+  const tabSettings = {
+    accessibility: true,
+    speed: 500,
+    variableWidth: false,
+    swipeToSlide: false,
+    centerPadding: "30px",
+    infinite: false,
+    className: "slider1",
+    centerMode: false,
+    dots: true,
+    slidesToShow: 2,
+    initialSlide: 0,
+    slidesToScroll: 2,
+    arrows: false,
+    rows: filteredCards.length <3 ? 1: filteredCards.length <5? 2 : 3,
+    slidesPerRow: 1,
+  };
+  const settings = {
+    accessibility: true,
+    speed: 500,
+    variableWidth: false,
+    swipeToSlide: false,
+    centerPadding: "30px",
+    infinite: false,
+    className: "slider1",
+    centerMode: false,
+    dots: true,
+    slidesToShow: 3,
+    initialSlide: 0,
+    slidesToScroll: 3,
+    arrows: false,
+    rows: filteredCards.length > 3 ? 2 : 1,
+    slidesPerRow: 1,
+    // beforeChange: (next: any) => setCurrentIndex(next),
+    // afterChange: (current: any) => setCurrentIndex(current),
+  };
+  const slickStyle = tabletView
+    ? `.slider1 {
+      width:  800px;
+
+    .slick-slider{
+      width:  800px;
+    }
+    .slick-list {
+      margin-left: 30px
+    }
+    .slick-slide{
+      height: 650px !important;
+      margin-bottom: 60px
+    }
+    .slick-dots{
+      position: relative;
+      display: flex !important;
+      justify-content: center
+    }
+    .slick-dots li {
+      width: 9px
+    }
+    .slick-dots li button {
+      width: 9px;
+      height: 9px;
+      padding: 0px
+    }
+    .slick-dots li button:before {
+      color: #dfe4ee;
+      opacity: 1;
+      width: 9px;
+      height: 9px;
+      padding: 0px
+    }
+    .slick-dots li.slick-active button:before{
+      color: #2a72e5;
+      opacity: 1;
+      width: 9px;
+      height: 9px;
+      padding: 0px
+    }
+  }`
+    : `
+  .slider1 {
+    width: 1230px;
+    left: 15px;
+
+    .slick-slider{
+      width:  1230px !important;
+      // padding-left:30px
+    }
+    .slick-list {
+      //  margin-left: 30px
+    }
+    .slick-slide{
+      height: ${filteredCards.length > 4 ? "454px" : "212px"};
+      margin-bottom: 60px;
+    }
+    .slick-slide slick-active{
+      width: 380px !important
+    }
+    .slick-dots{
+      display:flex !important;
+      margin-top:60px !important;
+      justify-content: center
+    }
+    .slick-dots li {
+      // height: 9px;
+      width: 9px
+    }
+    .slick-dots li button {
+      width: 9px;
+      height: 9px;
+      padding: 0px
+    }
+    .slick-dots li button:before {
+      color: #dfe4ee;
+      opacity: 1;
+      width: 9px;
+      height: 9px;
+      padding: 0px
+    }
+    .slick-dots li.slick-active button:before{
+      color: #2a72e5;
+      opacity: 1;
+      width: 9px;
+      height: 9px;
+      padding: 0px
+    }
+  }
+  `;
+
   const CustomButton = (props: {
     title: string;
     num: number;
@@ -287,6 +287,7 @@ function Eccosystem() {
       </Button>
     );
   };
+
   return (
     <Flex
       zIndex={10}
@@ -386,18 +387,20 @@ function Eccosystem() {
               status={card.status}
             />
           ))}
-          <Button
-            bg="transparent"
-            border={"1px solid #dfe4ee"}
-            _focus={{ bg: "transparent" }}
-            _active={{ bg: "transparent" }}
-            height={"29px"}
-            width={"96px"}
-            borderRadius={"24px"}
-            onClick={() => setPageIndex(pageIndex + 1)}
-          >
-            More
-          </Button>
+          {filteredCards.length > getPaginatedData().length && (
+            <Button
+              bg="transparent"
+              border={"1px solid #dfe4ee"}
+              _focus={{ bg: "transparent" }}
+              _active={{ bg: "transparent" }}
+              height={"29px"}
+              width={"96px"}
+              borderRadius={"24px"}
+              onClick={() => setPageIndex(pageIndex + 1)}
+            >
+              More
+            </Button>
+          )}
         </Flex>
       ) : tabletView ? (
         <Flex justifyContent={"center"} mt="40px">

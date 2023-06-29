@@ -228,7 +228,7 @@ function News() {
               pubDate={post.pubDate}
             />
           ))}
-          <Button
+        {postList.length > getPaginatedData().length &&  <Button
             bg="transparent"
             border={"1px solid #dfe4ee"}
             _focus={{ bg: "transparent" }}
@@ -239,7 +239,7 @@ function News() {
             onClick={() => setPageIndex(pageIndex + 1)}
           >
             More
-          </Button>
+          </Button>}
         </Flex>
       ) : tabletView ? (
         <Flex alignItems="center">
