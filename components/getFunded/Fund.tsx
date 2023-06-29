@@ -11,7 +11,7 @@ const Fund = () => {
 
   return (
     <Flex
-      w={["320px", "320px", "740px", "740px", "1200px", "1200px"]}
+      w={["100%", "100%", "740px", "740px", "1200px", "1200px"]}
       flexDir={[
         "column-reverse",
         "column-reverse",
@@ -20,6 +20,7 @@ const Fund = () => {
         "row",
         "row",
       ]}
+      px={['20px', '20px','0px','0px','0px','0px']}
       mb={["90px", "90px", "120px", "120px", "181px", "181px"]}
       fontFamily={theme.fonts.openSans}
       justifyContent={"space-between"}
@@ -46,7 +47,7 @@ const Fund = () => {
           GET FUNDED
         </Text>
         <Text
-          w={["320px", "320px", "740px", "740px", "700px", "700px"]}
+          w={["100%", "100%", "740px", "740px", "700px", "700px"]}
           fontWeight={"normal"}
           color={"#7a7e87"}
           fontSize={["16px", "16px", "18px", "18px", "18px", "18px"]}

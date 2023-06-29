@@ -435,9 +435,10 @@ function Roadmap() {
         fontSize={"16px"}
         fontFamily={theme.fonts.openSans}
         color={"#7a7e87"}
-        w={["320px", "320px", "760px", "760px", "760px", "760px"]}
+        w={["100%", "100%", "760px", "760px", "760px", "760px"]}
         mb={"50px"}
         textAlign={"center"}
+        px={['20px','20px', '0px','0px','0px','0px']}
       >
         The Titan roadmap outlines protocol improvements that will be adjusted
         based on market conditions and other factors.{" "}
