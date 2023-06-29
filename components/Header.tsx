@@ -129,7 +129,6 @@ function Header() {
             mr="33px"
             onClick={() => handleMenuToggle(0)}
             onMouseEnter={() => handleMenuToggle(0)}
-            onMouseLeave={() => handleMenuToggle(0)}
           >
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
@@ -228,7 +227,6 @@ function Header() {
             w="80px"
             onClick={() => handleMenuToggle(2)}
             onMouseEnter={() => handleMenuToggle(2)}
-            onMouseLeave={() => handleMenuToggle(2)}
           >
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
