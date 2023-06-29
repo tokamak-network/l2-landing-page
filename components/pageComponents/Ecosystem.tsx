@@ -174,7 +174,7 @@ function Eccosystem() {
       image: TONStarter,
       url: "https://tonstarter.tokamak.network/",
       content:
-        "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. Integration to Titan is expected to improve the user experience by offering lower fees and more competitive ways to boost your investment.",
+        "TONStarter is a decentralized launchpad platform for public fundraising and strong liquidity economics. Integrating with Titan will improve the user experience with lower fees and more competitive investment options.",
       status: "COMING SOON",
       type: ["Launchpad"],
     },
@@ -183,7 +183,7 @@ function Eccosystem() {
       image: Native,
       url: "https://bridge.tokamak.network/#/",
       content:
-        "Tokamak Fast Withdrawal is a quick way to move assets from L2 to L1 using assets staked in Staking V2. Users can quickly withdraw assets without delay based on the liquidity provided by Staker, and liquidity providers can receive fees paid by users.",
+        "Tokamak Fast Withdrawal enables users to move assets from L2 to L1 quickly, using assets staked in Staking V2. Users can withdraw assets promptly based on the liquidity provided by Staker by paying fee.",
       status: "COMING SOON",
       type: ["Bridge"],
     },
@@ -192,16 +192,16 @@ function Eccosystem() {
       image: TONStarter,
       url: "",
       content:
-        "Bridge & Swap is a unified Dapp that supports both bridge and swap functionality to Titan Network.",
+        "Tokamak Bridge is a unified Dapp that supports both Swap and Bridge functionality. With it’s fun card game-like interface, and reward-full TON ecosystem, Tokamak Bridge is an all-in-one solution for cryptocurrency enthusiasts.",
       status: "",
-      type: ['Bridge',"DEX"],
+      type: ["Bridge", "DEX"],
     },
     {
       title: "TONDEX",
       image: DEX,
       url: "",
       content:
-        "TONStarter is a decentralized launchpad platform that supports public fundraising, and strong liquidity economics. L2 migration.",
+        "TONDEX is a decentralized exchange for trading tokens in the TON ecosystem. It offers a familiar trading experience for beginners by incorporating market and limit orders from CEX interfaces.",
       status: "COMING SOON",
       type: ["DEX"],
     },
@@ -210,18 +210,18 @@ function Eccosystem() {
       image: DOM,
       url: "https://dragonsofmidgard.com/",
       content:
-        "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. 5555 Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
+        "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
       status: "",
-      type: ["Game", 'NFT'],
+      type: ["Game", "NFT"],
     },
     {
       title: "LYDA",
       image: LYDA,
       url: "https://www.lyda.so/",
       content:
-        "LYDA is a platform to launch social tokens to transform social capitals in fandoms into economic benefits for creators and fans. LYDA eliminated the early stage investment for fan token IDO’s on the technical side, …",
+        "LYDA is a platform to launch social tokens to transform social capitals in fandoms into economic benefits for creators and fans. LYDA eliminated the early stage investment for fan token IDO's on the technical side, and establish independent token.",
       status: "",
-      type: ["Social",'DAO','NFT'],
+      type: ["Social", "DAO", "NFT"],
     },
   ];
 
