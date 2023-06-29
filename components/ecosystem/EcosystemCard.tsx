@@ -21,7 +21,7 @@ function EcosystemCard(props: EcoProps) {
     <Flex
       fontFamily={theme.fonts.openSans}
       w={["320px", "320px", "355px", "355px", "380px", "380px"]}
-      height={["192px", "192px", "212px", "212px", "212px", "212px"]}
+      height={["", "", "212px", "212px", "212px", "212px"]}
       border="solid 1px #f5f5f5"
       borderRadius={"16px"}
       p="20px"
