@@ -11,9 +11,19 @@ type RoadmapProps = {
   subtitle: string;
   test: boolean;
 };
+
 function RoadmapCard(props: RoadmapProps) {
   const { top, left, completed, title, subtitle, test } = props;
   const theme = useTheme();
+  const renderTitle = () => {
+    return (
+      <span>
+        Tokamak<sup>OP</sup>
+        <br />
+        L2 On-Demand Open
+      </span>
+    );
+  };
   return (
     <Box
       top={top}
@@ -59,7 +69,7 @@ function RoadmapCard(props: RoadmapProps) {
           textAlign={"center"}
           px={title === "L2 Mainnet Open" ? "65px" : "35px"}
         >
-          {title.split("\n")}
+          {title === "TokamakOP L2 On-Demand Open" ? renderTitle() : title}
         </Text>
         <Text
           mt="25px"

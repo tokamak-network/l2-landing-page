@@ -105,7 +105,7 @@ function Roadmap() {
       test: false,
     },
     {
-      title: "TokamakOP \n L2 On-Demand Open",
+      title: "TokamakOP L2 On-Demand Open",
       subtitle: "",
       tabLeft: "",
       desktopLeft: "-160px",
@@ -272,7 +272,7 @@ function Roadmap() {
         test: "false",
       },
       {
-        title: "TitTan Holešky Open",
+        title: "Titan Holešky Open",
         subtitle: "TESTNET",
         completed: false,
         top: "20px",
