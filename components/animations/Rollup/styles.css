@@ -15,7 +15,7 @@
     left: 50%;
     transform: translateX(-5%);
     position: relative;
-    animation: moveEllipse 4s infinite alternate;
+    animation: moveEllipse 2s infinite alternate;
 }
 
 @keyframes moveEllipse {
@@ -37,7 +37,7 @@
     left: 50%;
     transform: translateX(-50%);
     position: relative;
-    animation: moveDotEllipse 4s infinite alternate;
+    animation: moveDotEllipse 2s infinite alternate;
 }
 
 @keyframes moveDotEllipse {
@@ -69,7 +69,7 @@
     top: 1%;
     left: -50%;
     transform: translate(-50%, -50%);
-    animation: moveDot 10s infinite linear;
+    animation: moveDot 5s infinite linear;
 }
 
 @keyframes moveDot {

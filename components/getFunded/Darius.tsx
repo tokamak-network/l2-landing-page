@@ -12,11 +12,12 @@ const Darius = () => {
 
   return (
     <Flex
-      w={["320px", "320px", "740px", "740px", "1200px", "1200px"]}
+    w={["100%", "100%", "740px", "740px", "1200px", "1200px"]}
       flexDir={["column", "column", "column", "column", "row", "row"]}
       fontFamily={theme.fonts.openSans}
       justifyContent={"space-between"}
       alignItems={"center"}
+      px={['20px', '20px','0px','0px','0px','0px']}
     >
       {/* <Flex
         h={["260px", "260px", "310px", "310px", "310px", "310px"]}
@@ -47,7 +48,7 @@ const Darius = () => {
           GET STARTED WITH TITAN
         </Text>
         <Text
-          w={["", "", "730px", "730px", "580px", "580px"]}
+          w={["100%", "100%", "730px", "730px", "580px", "580px"]}
           fontWeight={"normal"}
           color={"#7a7e87"}
           fontSize={["16px", "16px", "18px", "18px", "18px", "18px"]}
