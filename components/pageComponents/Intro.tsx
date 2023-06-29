@@ -61,11 +61,10 @@ function Intro() {
           zIndex={1000}
           fontWeight={"normal"}
         >
-          Introducing Titan, the cutting-edge solution that combines speed,
-          affordability, developer-friendliness, and the security of Ethereum.
-          It empowers users to engage in real-time, flexible, cost-effective
-          transactions, including the upcoming native fast-withdrawal
-          transactions.
+          Introducing Titan, cutting-edge L2 that combines Ethereum’s speed,
+          affordability, and security. Empowers users to engage in real-time,
+          flexible, and cost-effective transactions, including native
+          fast-withdrawal.
         </Text>
 
         <Flex
