@@ -190,7 +190,7 @@ function Eccosystem() {
     {
       title: "Tokamak Bridge",
       image: TONStarter,
-      url: "",
+      url: "https://bridge.tokamak.network/",
       content:
         "Tokamak Bridge is a unified Dapp that supports both Swap and Bridge functionality. With it’s fun card game-like interface, and reward-full TON ecosystem, Tokamak Bridge is an all-in-one solution for cryptocurrency enthusiasts.",
       status: "",
@@ -369,7 +369,6 @@ function Eccosystem() {
           Add your Dapp
         </Link>
       </Flex>
-
       {mobileView ? (
         <Flex
           flexDir={"column"}
