@@ -71,7 +71,7 @@ const Darius = () => {
             justifyContent={"center"}
             alignItems={"center"}
             fontWeight={600}
-            href=""
+            href="https://tokamaknetwork.gitbook.io/home/02-service-guide/Titan"
             textDecor={"none"}
             backgroundImage="linear-gradient(to bottom, #1f8efa, #2a72e5)"
             boxShadow={"0 3px 8px 0 rgba(49, 127, 203, 0.25)"}

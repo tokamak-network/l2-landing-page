@@ -174,7 +174,7 @@ function Header() {
                 title={"Guide"}
                 icon={guide}
                 iconHover={guide_hover}
-                link={""}
+                link={"https://tokamaknetwork.gitbook.io/home/02-service-guide/Titan"}
               />
               <CustomMenuItem
                 title={"Block Explorer"}
