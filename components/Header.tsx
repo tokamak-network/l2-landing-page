@@ -155,6 +155,7 @@ function Header() {
             border={"none"}
             minWidth="187px"
             boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}
+            onMouseLeave={() => handleMenuToggle(0)}
           >
             <MenuGroup
               title="MAINNET"
@@ -253,6 +254,7 @@ function Header() {
             border={"none"}
             minWidth="187px"
             boxShadow={"0 1px 4px 0 rgba(96, 97, 112, 0.14)"}
+            onMouseLeave={() => handleMenuToggle(2)}
           >
             <MenuGroup
               title="ABOUT"
