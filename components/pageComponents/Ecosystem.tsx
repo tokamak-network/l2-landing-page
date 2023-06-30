@@ -53,7 +53,7 @@ function Eccosystem() {
     {
       title: "Tokamak Fast Withdrawal",
       image: Native,
-      url: "https://bridge.tokamak.network/#/",
+      url: " ",
       content:
         "Tokamak Fast Withdrawal enables users to move assets from L2 to L1 quickly, using assets staked in Staking V2. Users can withdraw assets promptly based on the liquidity provided by Staker by paying fee.",
       status: "COMING SOON",
