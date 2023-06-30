@@ -86,7 +86,6 @@ const Darius = () => {
             Guide
           </Link>
           <Link
-            //   mt={mobileView ? "20px" : ""}
             mr="15px"
             h="45px"
             w={["238px", "238px", "164px", "164px", "160px", "160px"]}
