@@ -19,7 +19,7 @@ function MobileTokamakGNB() {
     },
     {
       title: "L2 Mainnet",
-      url: "https://tokamak.network/#/",
+      url: "http://titan.tokamak.network/",
       isFoucsed: true,
     },
     {
