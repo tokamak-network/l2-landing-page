@@ -172,7 +172,8 @@ function Footer() {
           justifyContent={"space-between"}
           height={["540px", "540px", "179px", "179px", "179px", "179px"]}
           mb={["30px", "30px", "60px", "60px", "60px", "60px"]}
-          px={["20px", "20px", "30px", "30px", "0px", "0px"]}
+          pr={["20px", "20px", "30px", "30px", "0px", "0px"]}
+          pl={["40px", "40px", "30px", "30px", "0px", "0px"]}
         >
           {data.map((info: any, index: number) => {
             return (
@@ -181,7 +182,7 @@ function Footer() {
                 flexDir={"column"}
                 width={mobileView ? "40%" : ""}
                 minW={mobileView ? "150px" : ""}
-                height={"179px"}
+                // height={"179px"}
                 // mr={width < 701 ? index%2 === 0? "20px" : "":''}
               >
                 <Flex
@@ -205,7 +206,7 @@ function Footer() {
                       fontSize={"14px"}
                       mb="4px"
                     >
-                      {sub.text === "TokamakOPTIMISM" ? 
+                      {sub.text === "TokamakOPTIMISM" ? (
                         <Text>
                           Tokamak{" "}
                           <span
@@ -217,22 +218,23 @@ function Footer() {
                           >
                             Op
                           </span>
-                        </Text>:
-                        sub.text === "TokamakzkEVM" ? <Text>
-                        Tokamak{" "}
-                        <span
-                          style={{
-                            verticalAlign: "super",
-                            fontSize: "12px",
-                            marginLeft: "-2px",
-                          }}
-                        >
-                          ZK+
-                        </span>
-                      </Text>:
-                       
+                        </Text>
+                      ) : sub.text === "TokamakzkEVM" ? (
+                        <Text>
+                          Tokamak{" "}
+                          <span
+                            style={{
+                              verticalAlign: "super",
+                              fontSize: "12px",
+                              marginLeft: "-2px",
+                            }}
+                          >
+                            ZK+
+                          </span>
+                        </Text>
+                      ) : (
                         <Text> {sub.text}</Text>
-                      }
+                      )}
                     </Link>
                   );
                 })}
