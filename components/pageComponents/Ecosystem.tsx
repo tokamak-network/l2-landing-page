@@ -48,7 +48,7 @@ function Eccosystem() {
       content:
         "TONStarter is a decentralized launchpad platform for public fundraising and strong liquidity economics. Integrating with Titan will improve the user experience with lower fees and more competitive investment options.",
       status: "COMING SOON",
-      type: ["Launchpad",'Bridge'],
+      type: ["Launchpad", "Bridge"],
     },
     {
       title: "Tokamak Fast Withdrawal",
@@ -126,7 +126,7 @@ function Eccosystem() {
     initialSlide: 0,
     slidesToScroll: 2,
     arrows: false,
-    rows: filteredCards.length <3 ? 1: filteredCards.length <5? 2 : 3,
+    rows: filteredCards.length < 3 ? 1 : filteredCards.length < 5 ? 2 : 3,
     slidesPerRow: 1,
   };
   const settings = {
@@ -360,7 +360,7 @@ function Eccosystem() {
         </Flex>
         <Link
           target="blank"
-          href="https://j8vmrrhl32u.typeform.com/to/PVC3jyum"
+          href="https://forms.gle/RnH1fNjiU5tz3osK7"
           width={"120px"}
           fontSize={"14px"}
           fontWeight={600}
