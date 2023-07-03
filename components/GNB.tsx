@@ -15,6 +15,7 @@ function GNB() {
         color={props.activetab ? "#353C48" : ""}
         fontFamily={"Titillium Web, sans-serif"}
         fontWeight={600}
+        target={props.title === "Bridge & Swap" ? "_blank" : "_self"}
         {...props}
         outline={"none"}
         _hover={{
