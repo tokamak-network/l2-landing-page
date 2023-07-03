@@ -208,7 +208,7 @@ const {link, image, title} = props
                           MAINNET
                         </Flex>
                         <CustomLink image={github} link={'https://github.com/tokamak-network'} title={'Github'}/>
-                        <CustomLink image={guide} link={''} title={'Guide'}/>
+                        <CustomLink image={guide} link={'https://tokamaknetwork.gitbook.io/home/02-service-guide/titan'} title={'Guide'}/>
                         <CustomLink image={explorer} link={'https://explorer.titan.tokamak.network'} title={'Block Explorer'}/>
                         <Flex
                           h={"50px"}
