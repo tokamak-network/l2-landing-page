@@ -49,28 +49,28 @@ function GNB() {
       <Menu
         title={"L2 Mainnet"}
         activetab={"true"}
-        w={"137px"}
+        w={"112px"}
         url={"https://titan.tokamak.network"}
       ></Menu>
       <Menu
         title={"Bridge & Swap"}
-        w={"190px"}
-        url={"https://bridge.tokamak.network/#/"}
+        w={"136px"}
+        url={"https://bridge.tokamak.network"}
       ></Menu>
       <Menu
         title={"Staking"}
-        w={"76px"}
+        w={"90px"}
         url={"https://simple.staking.tokamak.network/"}
       ></Menu>
 
       <Menu
         title={"DAO"}
-        w={"100px"}
+        w={"68px"}
         url={"https://dao.tokamak.network/#/"}
       ></Menu>
       <Menu
         title={"Launchpad"}
-        w={"100px"}
+        w={"110px"}
         url={"https://tonstarter.tokamak.network/"}
       ></Menu>
     </Flex>
