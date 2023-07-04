@@ -12,12 +12,12 @@ const Darius = () => {
 
   return (
     <Flex
-    w={["100%", "100%", "740px", "740px", "1200px", "1200px"]}
+      w={["100%", "100%", "740px", "740px", "1200px", "1200px"]}
       flexDir={["column", "column", "column", "column", "row", "row"]}
       fontFamily={theme.fonts.openSans}
       justifyContent={"space-between"}
       alignItems={"center"}
-      px={['20px', '20px','0px','0px','0px','0px']}
+      px={["20px", "20px", "0px", "0px", "0px", "0px"]}
     >
       {/* <Flex
         h={["260px", "260px", "310px", "310px", "310px", "310px"]}
@@ -82,6 +82,7 @@ const Darius = () => {
             fontFamily={theme.fonts.openSans}
             _hover={{ textDecor: "none" }}
             mb={["20px", "20px", "0px", "0px", "0px", "0px"]}
+            target="_blank"
           >
             Guide
           </Link>
