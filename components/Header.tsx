@@ -11,6 +11,7 @@ import {
   MenuItem,
   MenuGroup,
   MenuDivider,
+  Button,
   useBreakpointValue,
   useMediaQuery,
 } from "@chakra-ui/react";
@@ -42,7 +43,8 @@ import team from "../app/assets/navi_icon_team.svg";
 import team_hover from "../app/assets/navi_icon_team_hover.svg";
 import career from "../app/assets/navi_icon_career.svg";
 import career_hover from "../app/assets/navi_icon_career_hover.svg";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
 // import { HashLink } from "react-router-hash-link";
 
 function Header() {
@@ -52,9 +54,41 @@ function Header() {
 
   const handleMenuToggle = (index: number) => {
     const updatedMenuStates = [...menuStates];
-    updatedMenuStates[index] = !updatedMenuStates[index];
+
+    if (index === 0) {
+      updatedMenuStates[0] = !updatedMenuStates[0];
+      updatedMenuStates[1] = false;
+      updatedMenuStates[2] = false;
+    } else if (index === 1) {
+      updatedMenuStates[1] = !updatedMenuStates[1];
+      updatedMenuStates[0] = false;
+      updatedMenuStates[2] = false;
+    } else {
+      updatedMenuStates[2] = !updatedMenuStates[2];
+      updatedMenuStates[0] = false;
+      updatedMenuStates[1] = false;
+    }
     setMenuStates(updatedMenuStates);
   };
+  
+  const handleClick = (index:number) => {
+    const updatedMenuStates = [...menuStates];
+
+    if (index === 0) {
+      updatedMenuStates[0] = true;
+      updatedMenuStates[1] = false;
+      updatedMenuStates[2] = false;
+    } else if (index === 1) {
+      updatedMenuStates[1] = true;
+      updatedMenuStates[0] = false;
+      updatedMenuStates[2] = false;
+    } else {
+      updatedMenuStates[2] = !true;
+      updatedMenuStates[0] = false;
+      updatedMenuStates[1] = false;
+    }    
+    setMenuStates(updatedMenuStates);
+  }
 
   useEffect(() => {
     function handleResize() {
@@ -89,6 +123,10 @@ function Header() {
       </Link>
     );
   };
+
+
+  console.log(menuStates);
+  
   return (
     <Flex
       justifyContent={"space-between"}
@@ -123,12 +161,30 @@ function Header() {
             Ecosystem
           </Text>
         </Link>
+
         <Menu onClose={() => handleMenuToggle(0)} isOpen={menuStates[0]}>
           <MenuButton
             zIndex={1001}
             mr="33px"
-            onClick={() => handleMenuToggle(0)}
-            onMouseEnter={() => handleMenuToggle(0)}
+            onClick={() => handleClick(0)}
+            onMouseOver={() => handleMenuToggle(0)}
+            // onMouseLeave={() => handleMenuToggle(0)}
+            bg={"transparent"}
+            _hover={{
+              background: "transparent",
+              border: "none",
+              outline: "none",
+            }}
+            _focus={{
+              background: "transparent",
+              border: "none",
+              outline: "none",
+            }}
+            _active={{
+              background: "transparent",
+              border: "none",
+              outline: "none",
+            }}
           >
             <Flex justifyContent={"space-between"} alignItems={"center"}>
               {" "}
@@ -174,7 +230,9 @@ function Header() {
                 title={"Guide"}
                 icon={guide}
                 iconHover={guide_hover}
-                link={"https://tokamaknetwork.gitbook.io/home/02-service-guide/titan"}
+                link={
+                  "https://tokamaknetwork.gitbook.io/home/02-service-guide/titan"
+                }
               />
               <CustomMenuItem
                 title={"Block Explorer"}
@@ -226,7 +284,7 @@ function Header() {
             zIndex={1001}
             mr="30px"
             w="80px"
-            onClick={() => handleMenuToggle(2)}
+            onClick={() => handleClick(2)}
             onMouseEnter={() => handleMenuToggle(2)}
           >
             <Flex justifyContent={"space-between"} alignItems={"center"}>
