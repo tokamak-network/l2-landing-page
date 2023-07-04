@@ -106,7 +106,7 @@ function Intro() {
             alignItems={"center"}
             fontWeight={600}
             borderRadius={"24px"}
-            target="blank"
+            target="_blank"
             zIndex={1000}
             bg="#ffffff"
             color={"#1c1c1c"}
