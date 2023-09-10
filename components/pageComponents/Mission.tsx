@@ -66,7 +66,7 @@ function Mission() {
           num={1}
           image={fee}
           title={"Improved Fee"}
-          content="Titan automatically relays L2->L1 standard messages without having to pay additional fee on L1 after 7 days wait. It also offers flexible transaction scheme that allows users to pay for transaction costs not just in ETH but in ERC20 tokens such as TON."
+          content="Titan automatically relays L2->L1 standard messages without having to pay additional fee on L1 after 7 days wait (this service is deprecated). It also offers flexible transaction scheme that allows users to pay for transaction costs not just in ETH but in ERC20 tokens such as TON."
         />
         <MissionCard
           num={2}
