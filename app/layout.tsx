@@ -28,6 +28,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <title>Titan - Tokamak</title>
+      <meta name="robots" content="all" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://titan.tokamak.network/" />
+      <meta property="og:title" content="Titan - Tokamak" />
+      <meta
+        name="description"
+        content="Titan is an L2 network that is a customized fork of the Optimism codebase. It is deployed and operated by Tokamak Network."
+      ></meta>
+      <meta
+        property="og:description"
+        content="Titan is an L2 network that is a customized fork of the Optimism codebase. It is deployed and operated by Tokamak Network."
+      ></meta>
+      <meta name="keywords" content="titan network, tokamak network, L2, rollup, ethereum" />
       </head>
       <body>
       <Providers>
