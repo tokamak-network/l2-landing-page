@@ -123,9 +123,6 @@ function Header() {
       </Link>
     );
   };
-
-
-  console.log(menuStates);
   
   return (
     <Flex
