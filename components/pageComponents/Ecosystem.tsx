@@ -12,6 +12,7 @@ import DEX from "../../app/assets/tonDEX_symbol.svg";
 import DOM from "../../app/assets/DOM_symbol.png";
 import Native from "../../app/assets/staking_symbol.svg";
 import TONStarter from "../../app/assets/TON_symbol.svg";
+import Bridge from '../../app/assets/Bridge.svg'
 function Eccosystem() {
   const theme = useTheme();
   const [selected, setSelected] = useState("All");
@@ -61,7 +62,7 @@ function Eccosystem() {
     },
     {
       title: "Tokamak Bridge",
-      image: TONStarter,
+      image: Bridge,
       url: "https://bridge.tokamak.network/",
       content:
         "Tokamak Bridge is a unified Dapp that supports both Swap and Bridge functionality. With it’s fun card game-like interface, and reward-full TON ecosystem, Tokamak Bridge is an all-in-one solution for cryptocurrency enthusiasts.",
@@ -83,7 +84,7 @@ function Eccosystem() {
       url: "https://dragonsofmidgard.com/",
       content:
         "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
-      status: "",
+      status: "COMING SOON",
       type: ["Game", "NFT"],
     },
     {
@@ -92,7 +93,7 @@ function Eccosystem() {
       url: "https://www.lyda.so/",
       content:
         "LYDA is a platform that transforms social fandoms into economic benefits for creators and fans by launching social tokens. It eliminates the early stage investment for fan token IDOs and establishes independent tokens.",
-      status: "",
+      status: "COMING SOON",
       type: ["Social", "DAO", "NFT"],
     },
   ];

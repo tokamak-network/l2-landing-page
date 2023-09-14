@@ -39,13 +39,14 @@ function EcosystemCard(props: EcoProps) {
     >
       <Flex mb="21px">
         <Flex
-          h="64px"
-          w="64px"
+          // h="64px"
+          // w="64px"
+          height={'60px'} width={'60px'}
           // border={"1px solid #f5f5f5"}
           mr="20px"
           borderRadius={"16px"}
         >
-          <Image src={image} alt="" />
+          <Image src={image} alt=""/>
         </Flex>
         <Flex flexDir={"column"}>
           <Text
