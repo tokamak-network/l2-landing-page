@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="symbol" transform="translate(-380 -2662)">
+    <g id="Base" transform="translate(380 2662)" fill="#fff" stroke="#f5f5f5" stroke-width="1">
+      <rect width="64" height="64" rx="16" stroke="none"/>
+      <rect x="0.5" y="0.5" width="63" height="63" rx="15.5" fill="none"/>
+    </g>
+    <g id="symbol-2" data-name="symbol" transform="translate(387 2671.999)">
+      <path id="패스_298" data-name="패스 298" d="M49.443,20.686,37.5,0h-25l-.557.965L0,21.651l7.961,13.79,3.981,6.9.557.966h25l7.961-13.791,3.981-6.9L50,21.651Z" transform="translate(0 0)" fill="#05274c"/>
+      <path id="패스_299" data-name="패스 299" d="M50.108,26.114l-2.867,4.965H25.585l2.867-4.965ZM33.526,37.974H21.6l2.867-4.965H36.392Z" transform="translate(-2.894 -3.498)" fill="#85bcfa"/>
+      <path id="패스_300" data-name="패스 300" d="M21.395,16.27,13.99,29.1,11.124,24.13l7.4-12.825Z" transform="translate(-1.49 -1.514)" fill="#2470ed"/>
+      <path id="패스_301" data-name="패스 301" d="M25.462,24.232,14.634,42.987l-2.867-4.964L22.6,19.267Z" transform="translate(-1.577 -2.581)" fill="#2470ed"/>
+      <path id="패스_302" data-name="패스 302" d="M27.836,20.984h0L17.007,2.229H22.74L33.568,20.984Zm7.961,0L29.506,10.09h5.733L41.53,20.984Z" transform="translate(-2.278 -0.298)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

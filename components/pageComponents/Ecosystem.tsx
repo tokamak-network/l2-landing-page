@@ -13,6 +13,7 @@ import DOM from "../../app/assets/DOM_symbol.png";
 import Native from "../../app/assets/staking_symbol.svg";
 import TONStarter from "../../app/assets/TON_symbol.svg";
 import Bridge from '../../app/assets/Bridge.svg'
+import TitanNFT from '../../app/assets/NFT_symbol.svg'
 function Eccosystem() {
   const theme = useTheme();
   const [selected, setSelected] = useState("All");
@@ -79,14 +80,15 @@ function Eccosystem() {
       type: ["DEX"],
     },
     {
-      title: "Dragons of Midgard",
-      image: DOM,
-      url: "https://dragonsofmidgard.com/",
+      title: "Titan NFT",
+      image: TitanNFT,
+      url: "https://nft.event.tokamak.network/",
       content:
-        "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
-      status: "COMING SOON",
-      type: ["Game", "NFT"],
+        "Titan NFT service commemorates the opening of Titan L2 Network. One hundred NFTs were minted and are available for purchase on Titan. By purchasing them, you will receive free merchandise shipped right to your door.",
+      status: "",
+      type: ["NFT"],
     },
+   
     {
       title: "LYDA",
       image: LYDA,
@@ -96,6 +98,16 @@ function Eccosystem() {
       status: "COMING SOON",
       type: ["Social", "DAO", "NFT"],
     },
+    {
+      title: "Dragons of Midgard",
+      image: DOM,
+      url: "https://dragonsofmidgard.com/",
+      content:
+        "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
+      status: "COMING SOON",
+      type: ["Game", "NFT"],
+    },
+  
   ];
 
   const [filteredCards, setFilteredCards] = useState<ICard[]>(cards);
