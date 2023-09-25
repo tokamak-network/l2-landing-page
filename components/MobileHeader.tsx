@@ -220,7 +220,7 @@ const {link, image, title} = props
                           TESTNET
                         </Flex>
                         <CustomLink image={guide} link={'https://onther.notion.site/Darius-L2-Testnet-Dev-Document-5023767f30754d21876b049da68f0128'} title={'Guide'}/>
-                        <CustomLink image={explorer} link={'https://goerli.explorer.tokamak.network/'} title={'Block Explorer'}/>
+                        <CustomLink image={explorer} link={'https://explorer.titan-goerli.tokamak.network/'} title={'Block Explorer'}/>
                         
                       </AccordionPanel>
                     </>
@@ -291,7 +291,7 @@ const {link, image, title} = props
                         >
                           ABOUT
                         </Flex>
-                        <CustomLink image={team} link={'https://tokamak.network/#/about'} title={'Team'}/>
+                        <CustomLink image={team} link={'https://tokamak.network/about'} title={'Team'}/>
                         <CustomLink image={career} link={'https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824'} title={'Career'}/>
                         <Flex
                           h={"50px"}

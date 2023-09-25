@@ -252,7 +252,7 @@ function Header() {
                 title={"Block Explorer"}
                 icon={explorer}
                 iconHover={explorer_hover}
-                link={"https://goerli.explorer.tokamak.network/"}
+                link={"https://explorer.titan-goerli.tokamak.network/"}
               />
             </MenuGroup>
           </MenuList>
@@ -321,7 +321,7 @@ function Header() {
                 title={"Team"}
                 icon={team}
                 iconHover={team_hover}
-                link={"https://tokamak.network/#/about"}
+                link={"https://tokamak.network/about"}
               />
               <CustomMenuItem
                 title={"Career"}
