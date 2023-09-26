@@ -303,7 +303,7 @@ const {link, image, title} = props
                           COMMUNITY
                         </Flex>
                         <CustomLink image={discord} link={'https://discord.com/invite/J4chV2zuAK'} title={'Discord'}/>
-                        <CustomLink image={kakao} link={'https://open.kakao.com/o/g2zlglHd'} title={'Kakao (KR)'}/>
+                        {/* <CustomLink image={kakao} link={'https://open.kakao.com/o/g2zlglHd'} title={'Kakao (KR)'}/> */}
                         <CustomLink image={telegram} link={'https://t.me/tokamak_network'} title={'Telegram (EN)'}/>
                         <CustomLink image={twitter} link={'https://twitter.com/tokamak_network'} title={'Twitter'}/>
                         <CustomLink image={medium} link={'https://medium.com/onther-tech'} title={'Medium'}/>                        

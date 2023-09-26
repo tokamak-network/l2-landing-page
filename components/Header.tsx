@@ -345,12 +345,12 @@ function Header() {
                 iconHover={discord_hover}
                 link={"https://discord.com/invite/J4chV2zuAK"}
               />
-              <CustomMenuItem
+              {/* <CustomMenuItem
                 title={"Kakao (KR)"}
                 icon={kakao}
                 iconHover={kakao_hover}
                 link={"https://open.kakao.com/o/g2zlglHd"}
-              />
+              /> */}
               <CustomMenuItem
                 title={"Telegram (EN)"}
                 icon={telegram}

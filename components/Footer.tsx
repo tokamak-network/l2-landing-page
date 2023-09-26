@@ -26,7 +26,7 @@ function Footer() {
       subTitles: [
         {
           text: "Team",
-          Link: "https://tokamak.network/#/about",
+          Link: "https://tokamak.network/about",
         },
         {
           text: "Careers",
@@ -117,10 +117,10 @@ function Footer() {
           text: "Twitter",
           Link: "https://twitter.com/tokamak_network",
         },
-        {
-          text: "KakaoTalk (KR)",
-          Link: "https://open.kakao.com/o/g2zlglHd",
-        },
+        // {
+        //   text: "KakaoTalk (KR)",
+        //   Link: "https://open.kakao.com/o/g2zlglHd",
+        // },
         {
           text: "Discord (EN)",
           Link: "https://discord.com/invite/J4chV2zuAK",
