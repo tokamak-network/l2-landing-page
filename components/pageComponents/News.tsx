@@ -84,7 +84,7 @@ function News() {
     const startIndex = 0;
     const endIndex = startIndex + pageLimit * pageIndex;
     return postList.slice(startIndex, endIndex);
-  };
+  }; 
 
   const slickerStyles = tabletView
     ?
@@ -96,7 +96,7 @@ function News() {
     margin-left: 30px
   }
   .slick-slide{
-    height: 890px;
+    height: 420px;
     margin-bottom: 60px;
     width: 385px
   }
@@ -143,7 +143,7 @@ function News() {
         //  margin-left: 20px
       }
       .slick-slide{
-        height: 420px;
+        height: 170px;
         margin-bottom: 60px;
       }
       .slick-slide slick-active{
