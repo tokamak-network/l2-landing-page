@@ -84,7 +84,7 @@ function News() {
     const startIndex = 0;
     const endIndex = startIndex + pageLimit * pageIndex;
     return postList.slice(startIndex, endIndex);
-  };
+  }; 
 
   const slickerStyles = tabletView
     ?
