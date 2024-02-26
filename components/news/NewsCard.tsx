@@ -28,7 +28,7 @@ function NewsCard(props: NewsProps) {
   return (
     <Flex
       w={["320px", "320px", "355px", "355px", "380px", "380px"]}
-      h={tabletView ? "421px" : "100%"}
+      h={tabletView ? "200px" : "100%"}
       fontFamily={theme.fonts.openSans}
       mr={mobileView ? "0px" : num === 8 ? "0px" : "30px"}
       mb={mobileView ? "36px" : tabletView ? "45px" : "20px"}
@@ -37,7 +37,7 @@ function NewsCard(props: NewsProps) {
       href={link}
       target="blank"
     >
-      <Flex
+      {/* <Flex
         borderRadius={"16px"}
         border={"1px solid #dfe4ee"}
         width={mobileView ? 320 : tabletView ? 355 : 380}
@@ -53,7 +53,7 @@ function NewsCard(props: NewsProps) {
           unoptimized
           priority
         />
-      </Flex>
+      </Flex> */}
       <Text color={"#7a7e87"} fontSize={"12px"} mt="21px" fontWeight={600}>
         {dayjs(pubDate, "YYYY-MM-DD HH:mm:ss")
           .locale("en")
