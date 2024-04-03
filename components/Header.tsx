@@ -245,7 +245,7 @@ function Header() {
                 icon={guide}
                 iconHover={guide_hover}
                 link={
-                  "https://onther.notion.site/Darius-L2-Testnet-Dev-Document-5023767f30754d21876b049da68f0128"
+                  "https://docs.tokamak.network/home/02-service-guide/titan"
                 }
               />
               <CustomMenuItem

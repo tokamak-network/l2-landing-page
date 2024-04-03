@@ -219,7 +219,7 @@ const {link, image, title} = props
                         >
                           TESTNET
                         </Flex>
-                        <CustomLink image={guide} link={'https://onther.notion.site/Darius-L2-Testnet-Dev-Document-5023767f30754d21876b049da68f0128'} title={'Guide'}/>
+                        <CustomLink image={guide} link={'https://docs.tokamak.network/home/02-service-guide/titan'} title={'Guide'}/>
                         <CustomLink image={explorer} link={'https://explorer.titan-goerli.tokamak.network/'} title={'Block Explorer'}/>
                         
                       </AccordionPanel>
