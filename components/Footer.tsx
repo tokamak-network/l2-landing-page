@@ -102,7 +102,7 @@ function Footer() {
         },
         {
           text: "Documentation",
-          Link: "https://tokamaknetwork.gitbook.io/",
+          Link: "https://docs.tokamak.network",
         },
       ],
     },

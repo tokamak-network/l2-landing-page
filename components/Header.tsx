@@ -228,7 +228,7 @@ function Header() {
                 icon={guide}
                 iconHover={guide_hover}
                 link={
-                  "https://tokamaknetwork.gitbook.io/home/02-service-guide/titan"
+                  "https://docs.tokamak.network/home/02-service-guide/titan"
                 }
               />
               <CustomMenuItem
