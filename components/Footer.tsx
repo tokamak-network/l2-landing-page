@@ -30,7 +30,7 @@ function Footer() {
         },
         {
           text: "Careers",
-          Link: "https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824",
+          Link: "https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1",
         },
         {
           text: "Partners",
