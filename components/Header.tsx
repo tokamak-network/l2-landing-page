@@ -70,8 +70,8 @@ function Header() {
     }
     setMenuStates(updatedMenuStates);
   };
-  
-  const handleClick = (index:number) => {
+
+  const handleClick = (index: number) => {
     const updatedMenuStates = [...menuStates];
 
     if (index === 0) {
@@ -86,9 +86,9 @@ function Header() {
       updatedMenuStates[2] = !true;
       updatedMenuStates[0] = false;
       updatedMenuStates[1] = false;
-    }    
+    }
     setMenuStates(updatedMenuStates);
-  }
+  };
 
   useEffect(() => {
     function handleResize() {
@@ -123,7 +123,7 @@ function Header() {
       </Link>
     );
   };
-  
+
   return (
     <Flex
       justifyContent={"space-between"}
@@ -328,7 +328,7 @@ function Header() {
                 icon={career}
                 iconHover={career_hover}
                 link={
-                  "https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824"
+                  "https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1"
                 }
               />
             </MenuGroup>
