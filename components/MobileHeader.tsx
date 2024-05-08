@@ -14,7 +14,7 @@ import {
   AccordionButton,
   AccordionPanel,
   Link,
-  Text
+  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import L2BL from "../app/assets/L2-BI.svg";
@@ -49,29 +49,32 @@ function MobileHeader() {
   };
 
   const CustomLink = (props: any) => {
-const {link, image, title} = props
+    const { link, image, title } = props;
     return (
       <Link
-      // border={'1px solid red'}
-     display={'flex'}
-      href={link}
-      isExternal
-      height='50px' 
-      alignItems={'center'}
-      style={{ textDecoration: "none"}}
-    >
-      <Flex ml='30px'>
-        <Flex mr="12px">
-          <Image src={image} alt="icon" />
+        // border={'1px solid red'}
+        display={"flex"}
+        href={link}
+        isExternal
+        height="50px"
+        alignItems={"center"}
+        style={{ textDecoration: "none" }}
+      >
+        <Flex ml="30px">
+          <Flex mr="12px">
+            <Image src={image} alt="icon" />
+          </Flex>
+          <Text
+            fontFamily={theme.fonts.openSans}
+            fontSize={"16px"}
+            color={"#1c1c1c"}
+          >
+            {title}
+          </Text>
         </Flex>
-        <Text fontFamily={theme.fonts.openSans} fontSize={'16px'} color={'#1c1c1c'}>
-        {title}
-        </Text>
-       
-      </Flex>
-    </Link>
-    )
-  }
+      </Link>
+    );
+  };
 
   return (
     <Flex
@@ -80,7 +83,13 @@ const {link, image, title} = props
       alignItems={"center"}
       justifyContent={"space-between"}
     >
-      <Flex   _hover={{cursor:'pointer'}} height={"40px"} ml={"20px"} width={"126px"} zIndex={1001}>
+      <Flex
+        _hover={{ cursor: "pointer" }}
+        height={"40px"}
+        ml={"20px"}
+        width={"126px"}
+        zIndex={1001}
+      >
         <Image src={L2BL} alt="tokamak_symbol" height={40} width={126}></Image>
       </Flex>
       <Flex zIndex={1001}>
@@ -89,7 +98,7 @@ const {link, image, title} = props
           h="48px"
           w="48px"
           borderRadius={"8px"}
-          _hover={{cursor:'pointer'}}
+          _hover={{ cursor: "pointer" }}
           mr="20px"
           border="1px solid #e8edf2"
           justifyContent={"center"}
@@ -105,13 +114,17 @@ const {link, image, title} = props
               alignItems={"center"}
               pr={"10px"}
               pl={"20px"}
-              bg='#fff'
+              bg="#fff"
               py="19px"
               display={"flex"}
               flexDir={"row"}
               justifyContent={"space-between"}
             >
-              <Flex height={"40px"} width={"133px"}  _hover={{cursor:'pointer'}}>
+              <Flex
+                height={"40px"}
+                width={"133px"}
+                _hover={{ cursor: "pointer" }}
+              >
                 <Image
                   src={L2BL}
                   alt="tokamak_symbol"
@@ -128,7 +141,7 @@ const {link, image, title} = props
                 alignItems={"center"}
                 borderRadius={"8px"}
                 mr="20px"
-                _hover={{cursor:'pointer'}}
+                _hover={{ cursor: "pointer" }}
                 onClick={onClose}
               >
                 <Image
@@ -140,17 +153,17 @@ const {link, image, title} = props
               </Flex>
             </DrawerHeader>
 
-            <DrawerBody bg='#fff' fontFamily={theme.fonts.openSans} px="30px">
+            <DrawerBody bg="#fff" fontFamily={theme.fonts.openSans} px="30px">
               <Link href="#ecosystem" onClick={onClose}>
-              <Flex
-                h="65px"
-                fontSize={"20px"}
-                fontWeight={600}
-                color={"#1c1c1c"}
-                alignItems={"center"}
-              >
-                Ecosystem
-              </Flex>
+                <Flex
+                  h="65px"
+                  fontSize={"20px"}
+                  fontWeight={600}
+                  color={"#1c1c1c"}
+                  alignItems={"center"}
+                >
+                  Ecosystem
+                </Flex>
               </Link>
               <Accordion allowToggle>
                 <AccordionItem border={"none"}>
@@ -207,9 +220,23 @@ const {link, image, title} = props
                         >
                           MAINNET
                         </Flex>
-                        <CustomLink image={github} link={'https://github.com/tokamak-network'} title={'Github'}/>
-                        <CustomLink image={guide} link={' https://docs.tokamak.network/home/02-service-guide/titan'} title={'Guide'}/>
-                        <CustomLink image={explorer} link={'https://explorer.titan.tokamak.network'} title={'Block Explorer'}/>
+                        <CustomLink
+                          image={github}
+                          link={"https://github.com/tokamak-network"}
+                          title={"Github"}
+                        />
+                        <CustomLink
+                          image={guide}
+                          link={
+                            " https://docs.tokamak.network/home/02-service-guide/titan"
+                          }
+                          title={"Guide"}
+                        />
+                        <CustomLink
+                          image={explorer}
+                          link={"https://explorer.titan.tokamak.network"}
+                          title={"Block Explorer"}
+                        />
                         <Flex
                           h={"50px"}
                           fontFamily={theme.fonts.openSans}
@@ -219,24 +246,39 @@ const {link, image, title} = props
                         >
                           TESTNET
                         </Flex>
-                        <CustomLink image={guide} link={'https://docs.tokamak.network/home/02-service-guide/titan'} title={'Guide'}/>
-                        <CustomLink image={explorer} link={'https://explorer.titan-goerli.tokamak.network/'} title={'Block Explorer'}/>
-                        
+                        <CustomLink
+                          image={guide}
+                          link={
+                            "https://docs.tokamak.network/home/02-service-guide/titan"
+                          }
+                          title={"Guide"}
+                        />
+                        <CustomLink
+                          image={explorer}
+                          link={
+                            "https://explorer.titan-goerli.tokamak.network/"
+                          }
+                          title={"Block Explorer"}
+                        />
                       </AccordionPanel>
                     </>
                   )}
                 </AccordionItem>
-                <Link href="https://tokamak.notion.site/Grant-Announcement-EN-503f8396ee604673b0023e0183810e75" onClick={onClose} isExternal>
-              <Flex
-                h="65px"
-                fontSize={"20px"}
-                fontWeight={600}
-                color={"#1c1c1c"}
-                alignItems={"center"}
-              >
-                Grant
-              </Flex>
-              </Link>
+                <Link
+                  href="https://tokamak.notion.site/Grant-Announcement-EN-503f8396ee604673b0023e0183810e75"
+                  onClick={onClose}
+                  isExternal
+                >
+                  <Flex
+                    h="65px"
+                    fontSize={"20px"}
+                    fontWeight={600}
+                    color={"#1c1c1c"}
+                    alignItems={"center"}
+                  >
+                    Grant
+                  </Flex>
+                </Link>
 
                 <AccordionItem border={"none"}>
                   {({ isExpanded }) => (
@@ -291,8 +333,18 @@ const {link, image, title} = props
                         >
                           ABOUT
                         </Flex>
-                        <CustomLink image={team} link={'https://tokamak.network/about'} title={'Team'}/>
-                        <CustomLink image={career} link={'https://medium.com/onther-tech/onther-looking-to-recruit-blockchain-contributor-984ea4368824'} title={'Career'}/>
+                        <CustomLink
+                          image={team}
+                          link={"https://tokamak.network/about"}
+                          title={"Team"}
+                        />
+                        <CustomLink
+                          image={career}
+                          link={
+                            "https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1?pvs=74"
+                          }
+                          title={"Career"}
+                        />
                         <Flex
                           h={"50px"}
                           fontFamily={theme.fonts.openSans}
@@ -302,11 +354,27 @@ const {link, image, title} = props
                         >
                           COMMUNITY
                         </Flex>
-                        <CustomLink image={discord} link={'https://discord.com/invite/J4chV2zuAK'} title={'Discord'}/>
+                        <CustomLink
+                          image={discord}
+                          link={"https://discord.com/invite/J4chV2zuAK"}
+                          title={"Discord"}
+                        />
                         {/* <CustomLink image={kakao} link={'https://open.kakao.com/o/g2zlglHd'} title={'Kakao (KR)'}/> */}
-                        <CustomLink image={telegram} link={'https://t.me/tokamak_network'} title={'Telegram (EN)'}/>
-                        <CustomLink image={twitter} link={'https://twitter.com/tokamak_network'} title={'Twitter'}/>
-                        <CustomLink image={medium} link={'https://medium.com/onther-tech'} title={'Medium'}/>                        
+                        <CustomLink
+                          image={telegram}
+                          link={"https://t.me/tokamak_network"}
+                          title={"Telegram (EN)"}
+                        />
+                        <CustomLink
+                          image={twitter}
+                          link={"https://twitter.com/tokamak_network"}
+                          title={"Twitter"}
+                        />
+                        <CustomLink
+                          image={medium}
+                          link={"https://medium.com/onther-tech"}
+                          title={"Medium"}
+                        />
                       </AccordionPanel>
                     </>
                   )}
