@@ -6,7 +6,7 @@ function usePosts() {
 
   const fetchPosts = useCallback(async () => {
     try {
-      const postsReq = await fetch("https://price-api.tokamak.network/posts")
+      const postsReq = await fetch("https://price.api.tokamak.network/posts")
         .then((res) => res.json())
         .then((result) => result);
         
