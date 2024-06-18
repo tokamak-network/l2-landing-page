@@ -256,7 +256,7 @@ function MobileHeader() {
                         <CustomLink
                           image={explorer}
                           link={
-                            "https://explorer.titan-goerli.tokamak.network/"
+                            "https://explorer.titan-sepolia.tokamak.network/"
                           }
                           title={"Block Explorer"}
                         />
