@@ -252,7 +252,7 @@ function Header() {
                 title={"Block Explorer"}
                 icon={explorer}
                 iconHover={explorer_hover}
-                link={"https://explorer.titan-goerli.tokamak.network/"}
+                link={"https://explorer.titan-sepolia.tokamak.network/"}
               />
             </MenuGroup>
           </MenuList>
