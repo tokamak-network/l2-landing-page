@@ -95,7 +95,7 @@ function Roadmap() {
       test: false,
     },
     {
-      title: "TONStarter L2 Launchpad Open",
+      title: "TokamakOP L2 On-Demand Open",
       subtitle: "",
       tabLeft: "120px",
       desktopLeft: "-120px",
@@ -104,16 +104,16 @@ function Roadmap() {
       completed: false,
       test: false,
     },
-    {
-      title: "TokamakOP L2 On-Demand Open",
-      subtitle: "",
-      tabLeft: "",
-      desktopLeft: "-160px",
-      tabTop: "40px",
-      desktopTop: "",
-      completed: false,
-      test: false,
-    },
+    // {
+    //   title: "TokamakOP L2 On-Demand Open",
+    //   subtitle: "",
+    //   tabLeft: "",
+    //   desktopLeft: "-160px",
+    //   tabTop: "40px",
+    //   desktopTop: "",
+    //   completed: false,
+    //   test: false,
+    // },
   ];
 
   const TabletHive = () => {
@@ -240,21 +240,21 @@ function Roadmap() {
         title: "Titan Goerli Open",
         subtitle: "TESTNET",
         completed: true,
-        top: "42px",
+        top: "22px",
         test: "true",
       },
       {
         title: "Titan L2 Mainnet Open",
         subtitle: "MAINNET",
         completed: true,
-        top: "14px",
+        top: "34px",
         test: "false",
       },
       {
         title: "Tokamak Bridge Open",
         subtitle: "",
         completed: true,
-        top: "24px",
+        top: "34px",
         test: "false",
       },
       {
@@ -279,17 +279,10 @@ function Roadmap() {
         test: "true",
       },
       {
-        title: "TONStarter L2 Launchpad Open",
-        subtitle: "",
-        completed: false,
-        top: "34px",
-        test: "false",
-      },
-      {
         title: "Improved Fee Structure Integration",
         subtitle: "",
         completed: false,
-        top: "21px",
+        top: "20px",
         test: "false",
       },
       {
@@ -303,9 +296,16 @@ function Roadmap() {
         title: "Optimism OP Stack Maintenance",
         subtitle: "CONTINUOUS",
         completed: false,
-        top: "40px",
-        test: "false",
+        top: "34px",
+        test: false,
       },
+      // {
+      //   title: "Optimism OP Stack Maintenance",
+      //   subtitle: "CONTINUOUS",
+      //   completed: false,
+      //   top: "40px",
+      //   test: "false",
+      // },
     ];
 
     return (

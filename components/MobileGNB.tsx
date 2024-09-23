@@ -37,11 +37,11 @@ function MobileTokamakGNB() {
       url: "https://dao.tokamak.network//",
       isFoucsed: false,
     },
-    {
-      title: "Launchpad",
-      url: "https://tonstarter.tokamak.network/",
-      isFoucsed: false,
-    },
+    // {
+    //   title: "Launchpad",
+    //   url: "https://tonstarter.tokamak.network/",
+    //   isFoucsed: false,
+    // },
   ];
 
   let currentPosition = 1;

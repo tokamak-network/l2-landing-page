@@ -75,10 +75,10 @@ function Footer() {
           text: "DAO",
           Link: "https://dao.tokamak.network/#/",
         },
-        {
-          text: "Launchpad",
-          Link: "https://tonstarter.tokamak.network/",
-        },
+        // {
+        //   text: "Launchpad",
+        //   Link: "https://tonstarter.tokamak.network/",
+        // },
         {
           text: "Price Dashboard",
           Link: "https://price.tokamak.network/#/",

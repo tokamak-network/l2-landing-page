@@ -37,21 +37,21 @@ function Eccosystem() {
     { title: "DAO", width: "54px" },
     { title: "DEX", width: "50px" },
     { title: "Game", width: "64px" },
-    { title: "Launchpad", width: "98px" },
+    // { title: "Launchpad", width: "98px" },
     { title: "Social", width: "64px" },
     { title: "NFT", width: "50px" },
   ];
 
   const cards: ICard[] = [
-    {
-      title: "TONStarter",
-      image: TONStarter,
-      url: "https://tonstarter.tokamak.network/",
-      content:
-        "TONStarter is a decentralized launchpad platform for public fundraising and strong liquidity economics. Integrating with Titan will improve the user experience with lower fees and more competitive investment options.",
-      status: "COMING SOON",
-      type: ["Launchpad", "Bridge"],
-    },
+    // {
+    //   title: "TONStarter",
+    //   image: TONStarter,
+    //   url: "https://tonstarter.tokamak.network/",
+    //   content:
+    //     "TONStarter is a decentralized launchpad platform for public fundraising and strong liquidity economics. Integrating with Titan will improve the user experience with lower fees and more competitive investment options.",
+    //   status: "COMING SOON",
+    //   type: ["Launchpad", "Bridge"],
+    // },
     {
       title: "Tokamak Fast Withdrawal",
       image: Native,
