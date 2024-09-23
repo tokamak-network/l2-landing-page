@@ -54,11 +54,11 @@ const Fund = () => {
           mb={["36px", "36px", "60px", "60px", "60px", "60px"]}
           textAlign={["center", "center", "center", "center", "left", "left"]}
         >
-          GranTON & TONStarter programs allocate substantial resources to
+          GranTON programs allocate substantial resources to
           projects that promote ecosystem expansion and critical services.
           <br></br>
           Individuals or Teams can use these programs to receive funding from
-          Tokamak Foundation (GranTON) or the public (TONStarter) for building
+          Tokamak Foundation (GranTON) for building
           their next big project.
         </Text>
         <Flex
@@ -89,7 +89,7 @@ const Fund = () => {
           >
             Apply to GranTON
           </Link>
-          <Link
+          {/* <Link
             //   mt={mobileView ? "20px" : ""}
             mr="15px"
             h="45px"
@@ -110,7 +110,7 @@ const Fund = () => {
             _hover={{ textDecor: "none" }}
           >
             Get funding from TONStarter
-          </Link>
+          </Link> */}
         </Flex>
       </Flex>
       {/* <Flex
