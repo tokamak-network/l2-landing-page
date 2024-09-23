@@ -114,7 +114,7 @@ function Footer() {
           Link: "https://medium.com/tokamak-network",
         },
         {
-          text: "Twitter",
+          text: "X",
           Link: "https://twitter.com/tokamak_network",
         },
         // {
@@ -122,11 +122,11 @@ function Footer() {
         //   Link: "https://open.kakao.com/o/g2zlglHd",
         // },
         {
-          text: "Discord (EN)",
+          text: "Discord",
           Link: "https://discord.com/invite/J4chV2zuAK",
         },
         {
-          text: "Telegram",
+          text: "Telegram (EN)",
           Link: "https://t.me/tokamak_network",
         },
         {
