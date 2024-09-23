@@ -89,24 +89,24 @@ function Eccosystem() {
       type: ["NFT"],
     },
    
-    {
-      title: "LYDA",
-      image: LYDA,
-      url: "https://www.lyda.so/",
-      content:
-        "LYDA is a platform that transforms social fandoms into economic benefits for creators and fans by launching social tokens. It eliminates the early stage investment for fan token IDOs and establishes independent tokens.",
-      status: "COMING SOON",
-      type: ["Social", "DAO", "NFT"],
-    },
-    {
-      title: "Dragons of Midgard",
-      image: DOM,
-      url: "https://dragonsofmidgard.com/",
-      content:
-        "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
-      status: "COMING SOON",
-      type: ["Game", "NFT"],
-    },
+    // {
+    //   title: "LYDA",
+    //   image: LYDA,
+    //   url: "https://www.lyda.so/",
+    //   content:
+    //     "LYDA is a platform that transforms social fandoms into economic benefits for creators and fans by launching social tokens. It eliminates the early stage investment for fan token IDOs and establishes independent tokens.",
+    //   status: "COMING SOON",
+    //   type: ["Social", "DAO", "NFT"],
+    // },
+    // {
+    //   title: "Dragons of Midgard",
+    //   image: DOM,
+    //   url: "https://dragonsofmidgard.com/",
+    //   content:
+    //     "Dragons of Midgard is a playable NFT Collectible PVP game set in the medieval era in the kingdom of midgard. Unique Dragons living and evolving on the Ethereum Blockchain controlled by AURA.",
+    //   status: "COMING SOON",
+    //   type: ["Game", "NFT"],
+    // },
   
   ];
 
@@ -216,7 +216,7 @@ function Eccosystem() {
       //  margin-left: 30px
     }
     .slick-slide{
-      height: ${filteredCards.length > 4 ? "454px" : "212px"};
+      height: ${filteredCards.length >= 4 ? "454px" : "212px"};
       margin-bottom: 60px;
     }
     .slick-slide slick-active{
