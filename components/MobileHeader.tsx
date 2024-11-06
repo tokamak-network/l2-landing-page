@@ -189,7 +189,7 @@ function MobileHeader() {
                             w="100%"
                             justifyContent={"space-between"}
                           >
-                            Developers
+                            Developer
                           </Flex>
                           {isExpanded ? (
                             <Flex

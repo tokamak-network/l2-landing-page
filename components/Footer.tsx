@@ -98,7 +98,7 @@ function Footer() {
     //   ],
     // },
     {
-      title: "Developers",
+      title: "Developer",
       subTitles: [
         {
           text: "Grant",

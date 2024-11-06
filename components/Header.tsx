@@ -192,7 +192,7 @@ function Header() {
                 fontFamily={theme.fonts.openSans}
                 fontWeight={600}
               >
-                Developers
+                Developer
               </Text>
               <Flex
                 height={"24px"}
