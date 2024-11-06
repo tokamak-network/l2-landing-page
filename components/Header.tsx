@@ -385,7 +385,7 @@ function Header() {
                 title={"Linkedin"}
                 icon={linkedin}
                 iconHover={linkedin_hover}
-                link={"https://t.me/tokamak_network"}
+                link={"https://www.linkedin.com/company/tokamaknetwork/"}
               />
             </MenuGroup>
           </MenuList>
