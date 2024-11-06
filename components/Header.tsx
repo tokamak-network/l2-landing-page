@@ -45,6 +45,8 @@ import career from "../app/assets/navi_icon_career.svg";
 import career_hover from "../app/assets/navi_icon_career_hover.svg";
 import help from "../app/assets/navi_icon_help.svg";
 import help_hover from "../app/assets/navi_icon_help_hover.svg";
+import linkedin from "../app/assets/navi_icon_linkedin.svg";
+import linkedin_hover from "../app/assets/navi_icon_linkedin_hover.svg";
 import { useState, useEffect, useRef } from "react";
 
 // import { HashLink } from "react-router-hash-link";
@@ -326,7 +328,7 @@ function Header() {
                 link={"https://tokamak.network/about"}
               />
               <CustomMenuItem
-                title={"Career"}
+                title={"Onboarding"}
                 icon={career}
                 iconHover={career_hover}
                 link={
@@ -350,6 +352,18 @@ function Header() {
               fontWeight={600}
             >
               <CustomMenuItem
+                title={"Medium"}
+                icon={medium}
+                iconHover={medium_hover}
+                link={"https://medium.com/onther-tech"}
+              />
+              <CustomMenuItem
+                title={"X (Twitter)"}
+                icon={twitter}
+                iconHover={twitter_hover}
+                link={"https://twitter.com/tokamak_network"}
+              />
+              <CustomMenuItem
                 title={"Discord"}
                 icon={discord}
                 iconHover={discord_hover}
@@ -368,16 +382,10 @@ function Header() {
                 link={"https://t.me/tokamak_network"}
               />
               <CustomMenuItem
-                title={"Twitter"}
-                icon={twitter}
-                iconHover={twitter_hover}
-                link={"https://twitter.com/tokamak_network"}
-              />
-              <CustomMenuItem
-                title={"Medium"}
-                icon={medium}
-                iconHover={medium_hover}
-                link={"https://medium.com/onther-tech"}
+                title={"Linkedin"}
+                icon={linkedin}
+                iconHover={linkedin_hover}
+                link={"https://t.me/tokamak_network"}
               />
             </MenuGroup>
           </MenuList>

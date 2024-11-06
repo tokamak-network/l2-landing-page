@@ -36,6 +36,7 @@ import medium from "../app/assets/navi_icon_medium_mobile.svg";
 import team from "../app/assets/navi_icon_team_mobile.svg";
 import career from "../app/assets/navi_icon_career_mobile.svg";
 import help from "../app/assets/navi_icon_help_mobile.svg";
+import linkedin from "../app/assets/navi_icon_linkedin_mobile.svg";
 
 function MobileHeader() {
   const theme = useTheme();
@@ -344,7 +345,7 @@ function MobileHeader() {
                           link={
                             "https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1?pvs=74"
                           }
-                          title={"Career"}
+                          title={"Onboarding"}
                         />
                         <CustomLink
                           image={help}
@@ -363,6 +364,16 @@ function MobileHeader() {
                           COMMUNITY
                         </Flex>
                         <CustomLink
+                          image={medium}
+                          link={"https://medium.com/onther-tech"}
+                          title={"Medium"}
+                        />
+                        <CustomLink
+                          image={twitter}
+                          link={"https://twitter.com/tokamak_network"}
+                          title={"X (Twitter)"}
+                        />
+                        <CustomLink
                           image={discord}
                           link={"https://discord.com/invite/J4chV2zuAK"}
                           title={"Discord"}
@@ -374,14 +385,9 @@ function MobileHeader() {
                           title={"Telegram (EN)"}
                         />
                         <CustomLink
-                          image={twitter}
-                          link={"https://twitter.com/tokamak_network"}
-                          title={"Twitter"}
-                        />
-                        <CustomLink
-                          image={medium}
-                          link={"https://medium.com/onther-tech"}
-                          title={"Medium"}
+                          image={linkedin}
+                          link={"https://www.linkedin.com/company/tokamaknetwork/"}
+                          title={"Linkedin"}
                         />
                       </AccordionPanel>
                     </>
