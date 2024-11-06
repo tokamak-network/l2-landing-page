@@ -43,6 +43,8 @@ import team from "../app/assets/navi_icon_team.svg";
 import team_hover from "../app/assets/navi_icon_team_hover.svg";
 import career from "../app/assets/navi_icon_career.svg";
 import career_hover from "../app/assets/navi_icon_career_hover.svg";
+import help from "../app/assets/navi_icon_help.svg";
+import help_hover from "../app/assets/navi_icon_help_hover.svg";
 import { useState, useEffect, useRef } from "react";
 
 // import { HashLink } from "react-router-hash-link";
@@ -329,6 +331,14 @@ function Header() {
                 iconHover={career_hover}
                 link={
                   "https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1"
+                }
+              />
+              <CustomMenuItem
+                title={"Get Help"}
+                icon={help}
+                iconHover={help_hover}
+                link={
+                  "https://docs.google.com/forms/d/e/1FAIpQLSc6pHHABsnIZ2MvcEa57VCtSNTRXHAaFjBLQYf1LbiMB_81OA/viewform?usp=sf_link"
                 }
               />
             </MenuGroup>

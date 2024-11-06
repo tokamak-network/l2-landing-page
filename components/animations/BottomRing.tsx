@@ -18,7 +18,7 @@ function BottomRing() {
       minH={"500px"}
       maxH={"930px"}
       overflow={"hidden"}
-      top={"4525px"}
+      top={"4425px"}
       zIndex={0}
     >
       <Flex className="bottom-container" 

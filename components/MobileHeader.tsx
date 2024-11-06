@@ -35,6 +35,7 @@ import twitter from "../app/assets/navi_icon_Twitter_mobile.svg";
 import medium from "../app/assets/navi_icon_medium_mobile.svg";
 import team from "../app/assets/navi_icon_team_mobile.svg";
 import career from "../app/assets/navi_icon_career_mobile.svg";
+import help from "../app/assets/navi_icon_help_mobile.svg";
 
 function MobileHeader() {
   const theme = useTheme();
@@ -344,6 +345,13 @@ function MobileHeader() {
                             "https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1?pvs=74"
                           }
                           title={"Career"}
+                        />
+                        <CustomLink
+                          image={help}
+                          link={
+                            "https://docs.google.com/forms/d/e/1FAIpQLSc6pHHABsnIZ2MvcEa57VCtSNTRXHAaFjBLQYf1LbiMB_81OA/viewform?usp=sf_link"
+                          }
+                          title={"Get Help"}
                         />
                         <Flex
                           h={"50px"}

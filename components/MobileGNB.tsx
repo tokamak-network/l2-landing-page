@@ -23,6 +23,11 @@ function MobileTokamakGNB() {
       isFoucsed: true,
     },
     {
+      title: "L2 On-Demand",
+      url: "https://rolluphub.tokamak.network/",
+      isFoucsed: false,
+    },
+    {
       title: "Bridge & Swap",
       url: "https://bridge.tokamak.network/#/",
       isFoucsed: false,
@@ -218,6 +223,8 @@ function MobileTokamakGNB() {
               minWidth:
                 menu.title === "L2 Mainnet"
                   ? "120px"
+                  : menu.title === "L2 On-Demand"
+                  ? "137px"
                   : menu.title === "DAO"
                   ? "90px"
                   : menu.title === "Tokamak Network"

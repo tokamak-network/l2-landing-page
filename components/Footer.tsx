@@ -29,66 +29,74 @@ function Footer() {
           Link: "https://tokamak.network/about",
         },
         {
-          text: "Careers",
+          text: "Onboarding",
           Link: "https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1",
         },
         {
-          text: "Partners",
+          text: "Partners & Grant",
           Link: "https://tokamak.network/#partners",
+        },
+        {
+          text: "Get Help",
+          Link: "https://docs.google.com/forms/d/e/1FAIpQLSc6pHHABsnIZ2MvcEa57VCtSNTRXHAaFjBLQYf1LbiMB_81OA/viewform?usp=sf_link",
         },
       ],
     },
     {
-      title: "Mainnet",
+      title: "L2 Mainnet",
       subTitles: [
         {
           text: "Titan",
           Link: "http://titan.tokamak.network/",
         },
-      ],
-    },
-    {
-      title: "L2 On-Demand",
-      subTitles: [
         {
-          text: "TokamakOPTIMISM",
-          Link: "https://tokamak.network/#layer2",
-        },
-        {
-          text: "TokamakzkEVM",
-          Link: "https://tokamak.network/#layer2",
+          text: "ㄴExplorer / Bridge",
+          Link: "",
         },
       ],
     },
-    {
-      title: "Ecosystem",
-      subTitles: [
-        {
-          text: "Bridge & Swap",
-          Link: "https://bridge.tokamak.network",
-        },
-        {
-          text: "Staking",
-          Link: "https://simple.staking.tokamak.network/staking",
-        },
-        {
-          text: "DAO",
-          Link: "https://dao.tokamak.network/#/",
-        },
-        // {
-        //   text: "Launchpad",
-        //   Link: "https://tonstarter.tokamak.network/",
-        // },
-        {
-          text: "Price Dashboard",
-          Link: "https://price.tokamak.network/#/",
-        },
-        {
-          text: "Block Explorer",
-          Link: "https://explorer.titan.tokamak.network",
-        },
-      ],
-    },
+    // {
+    //   title: "L2 On-Demand",
+    //   subTitles: [
+    //     {
+    //       text: "TokamakOPTIMISM",
+    //       Link: "https://rolluphub.tokamak.network",
+    //     },
+    //     {
+    //       text: "TokamakzkEVM",
+    //       Link: "https://rolluphub.tokamak.network",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Ecosystem",
+    //   subTitles: [
+    //     {
+    //       text: "Bridge & Swap",
+    //       Link: "https://bridge.tokamak.network",
+    //     },
+    //     {
+    //       text: "Staking",
+    //       Link: "https://simple.staking.tokamak.network/staking",
+    //     },
+    //     {
+    //       text: "DAO",
+    //       Link: "https://dao.tokamak.network/#/",
+    //     },
+    //     // {
+    //     //   text: "Launchpad",
+    //     //   Link: "https://tonstarter.tokamak.network/",
+    //     // },
+    //     {
+    //       text: "Price Dashboard",
+    //       Link: "https://price.tokamak.network/#/",
+    //     },
+    //     {
+    //       text: "Block Explorer",
+    //       Link: "https://explorer.titan.tokamak.network",
+    //     },
+    //   ],
+    // },
     {
       title: "Developers",
       subTitles: [
@@ -97,7 +105,7 @@ function Footer() {
           Link: "https://tokamak.notion.site/Tokamak-Network-Grant-Program-f2384b458ea341a0987c7e73a909aa21",
         },
         {
-          text: "Github",
+          text: "GitHub",
           Link: "https://github.com/tokamak-network",
         },
         {
@@ -114,7 +122,7 @@ function Footer() {
           Link: "https://medium.com/tokamak-network",
         },
         {
-          text: "X",
+          text: "X (Twitter)",
           Link: "https://twitter.com/tokamak_network",
         },
         // {
@@ -197,7 +205,7 @@ function Footer() {
                   return (
                     <Link
                       href={sub.Link}
-                      isExternal
+                      isExternal={true}
                       style={{ textDecoration: "none" }}
                       fontFamily={"Open Sans, sans-serif"}
                       key={index}
@@ -205,6 +213,14 @@ function Footer() {
                       fontWeight={600}
                       fontSize={"14px"}
                       mb="4px"
+                      onClick={
+                        sub.text === "ㄴExplorer / Bridge"
+                          ? (e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                            }
+                          : () => {}
+                      }
                     >
                       {sub.text === "TokamakOPTIMISM" ? (
                         <Text>
@@ -230,6 +246,43 @@ function Footer() {
                             }}
                           >
                             ZK+
+                          </span>
+                        </Text>
+                      ) : sub.text === "ㄴExplorer / Bridge" ? (
+                        <Text>
+                          <span>ㄴ</span>
+                          <span
+                            // onMouseEnter={(e: any) =>
+                            //   (e.target.style.textDecoration = "underline")
+                            // }
+                            // onMouseLeave={(e: any) =>
+                            //   (e.target.style.textDecoration = "none")
+                            // }
+                            onClick={() => {
+                              window.open(
+                                "https://explorer.titan.tokamak.network/",
+                                "_blank"
+                              );
+                            }}
+                          >
+                            Explorer
+                          </span>
+                          <span> / </span>
+                          <span
+                            // onMouseEnter={(e: any) =>
+                            //   (e.target.style.textDecoration = "underline")
+                            // }
+                            // onMouseLeave={(e: any) =>
+                            //   (e.target.style.textDecoration = "none")
+                            // }
+                            onClick={() => {
+                              window.open(
+                                "https://bridge.tokamak.network/",
+                                "_blank"
+                              );
+                            }}
+                          >
+                            Bridge
                           </span>
                         </Text>
                       ) : (

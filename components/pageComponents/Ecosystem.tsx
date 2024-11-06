@@ -373,7 +373,7 @@ function Eccosystem() {
         </Flex>
         <Link
           target="blank"
-          href="https://forms.gle/RnH1fNjiU5tz3osK7"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSciD1YH_str5dsiOQp3cMw9hblvDH5QDvB32fZ1yRsHf88mKw/viewform?usp=sf_link"
           width={"120px"}
           fontSize={"14px"}
           fontWeight={600}
