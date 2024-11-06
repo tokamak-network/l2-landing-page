@@ -219,7 +219,7 @@ function Header() {
               fontWeight={600}
             >
               <CustomMenuItem
-                title={"Github"}
+                title={"GitHub"}
                 icon={github}
                 iconHover={github_hover}
                 link={"https://github.com/tokamak-network"}

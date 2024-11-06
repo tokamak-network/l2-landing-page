@@ -224,7 +224,7 @@ function MobileHeader() {
                         <CustomLink
                           image={github}
                           link={"https://github.com/tokamak-network"}
-                          title={"Github"}
+                          title={"GitHub"}
                         />
                         <CustomLink
                           image={guide}
